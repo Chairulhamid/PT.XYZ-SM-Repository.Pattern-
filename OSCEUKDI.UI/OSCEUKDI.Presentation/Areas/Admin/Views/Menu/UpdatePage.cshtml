@@ -1,0 +1,280 @@
+﻿@{
+    ViewBag.Title = "Update Menu";
+    ViewBag.MenuName = "Menu";
+    ViewBag.MenuPage = "Form Update";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdminOSCE.cshtml";
+}
+@section css{
+    @Scripts.Render("~/bundles/jquery")
+}
+@model OSCEUKDI.Entities.Models.Menu
+<div class="">
+    <div class="title_left">
+        <a href="javascript:history.back()" class="btn btn-circle text-secondary"><i class="fa fa-arrow-left"></i></a>
+        <span class="text-secondary h3"><strong>Update </strong></span><em><strong class="text-info">Data</strong></em>
+    </div>
+    <div class="clearfix"></div>
+    <div class="alert alert-warning d-none  alert-dismissible  text-white" id="danger-alert" role="alert">
+        <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+        <span id="alertText" class=""></span>
+    </div>
+    <div class="col-md-12 ">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Menu</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li>
+                        <a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <br />
+                <form class="form-label-left input_mask">
+                    <div class="form-group row">
+                        <div class="col-md-6 col-sm-6  form-group has-feedback">
+                            <h6 for="">Menu Name <b class="text-danger">*</b> </h6>
+                            <input type="hidden" id="id_Menu" value="@Model.ID" />
+                            <input type="text" class="form-control input-data" name="MenuName" id="MenuName" placeholder="Menu Name" value="@Model.MenuName">
+                        </div>
+                        <div class="col-md-6 col-sm-6  form-group has-feedback">
+                            <h6 for="">Menu Description <b class="text-danger">*</b> </h6>
+                            <textarea class="form-control" name="MenuDescription" id="MenuDescription" rows="1" placeholder="Menu Description" spellcheck="false">@Model.MenuDescription</textarea>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-6 col-sm-6  form-group has-feedback">
+                            <h6 for="">Menu Url <b class="text-danger">*</b> </h6>
+                            <input type="text" class="form-control input-data" name="MenuUrl" id="MenuUrl" placeholder="Menu Url" value="@Model.MenuUrl">
+                        </div>
+                        <div class="col-md-6 col-sm-6  form-group has-feedback">
+                            <h6 for="">Menu Icon <b class="text-danger">*</b> </h6>
+                            <input type="text" class="form-control input-data" name="MenuIcon" id="MenuIcon" placeholder="Menu Icon" value="@Model.MenuIcon">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-6 col-sm-6  form-group has-feedback" id="DivJenisMenu">
+                            <h6 for="">Jenis Menu <b class="text-danger">*</b> </h6>
+                            <input type="hidden" name="MenuP" id="MenuP" value="@Model.MenuParent" />
+                            <select class="form-control  input-data" name="JenisMenu" id="JenisMenu">
+                                @if (Model.MenuParent == null)
+                                {
+                                    <option value="parent" selected>Menu Parent</option>
+                                    <option value="sub"> Sub Menu Parent</option>
+                                }
+                                else
+                                {
+                                    <option value="parent">Menu Parent</option>
+                                    <option value="sub" selected> Sub Menu Parent</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="col-md-6 col-sm-6  form-group has-feedback">
+                            <h6 for="">Menu Order <b class="text-danger">*</b> </h6>
+                            <input type="text" class="form-control input-data" name="MenuOrder" id="MenuOrder" placeholder="Menu Order" value="@Model.MenuOrder">
+                        </div>
+                    </div>
+                    <div class="form-group row d-none" id="DivMenuParent">
+                        <div class="col-md-12 col-sm-12  form-group has-feedback">
+                            <h6 for="">Menu Parent <b class="text-danger">*</b> </h6>
+                            <select class="form-control " name="MenuParent" id="MenuParent">
+                                @if (Model.MenuParent != null)
+                                {
+                                    <option value="@Model.MenuParent" selected>@ViewData["MenuParentUpdt"]</option>
+                                }
+                                else
+                                {
+                                    <option value="" selected disabled>Pilih Menu Parent</option>
+                                }
+                                @{
+                                    foreach (var data in ViewData["MenuParent"] as IEnumerable<OSCEUKDI.Entities.ViewModel.VMMenu>)
+                                    {
+                                        <option value="@data.Nilai">@data.Nama</option>
+                                    }
+                                }
+                            </select>
+                        </div>
+                    </div>
+                    <div class="ln_solid"></div>
+                    <div class="form-group row">
+                        <div class="col-md-12 col-sm-12 text-center">
+                            <button type='button' class="btn btn-round btn-success" onclick="PostUpdate()">
+                                <i class="fa fa-save" aria-hidden="true"></i> Save
+                            </button>
+                            <button type='button' class="btn btn-round btn-secondary" onclick="history.back()">
+                                <i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i> Back
+                            </button>
+                            <button type='reset' class="btn btn-round btn-danger">
+                                <i class="fa fa-refresh" aria-hidden="true"></i> Reset
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+@*<div class="col-12">
+        <div class="card my-4">
+            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                <div class="bg-gradient-faded-secondary-vertical shadow-dark border-radius-lg pt-4 pb-3">
+                    <h5 class="text-light  ps-3 text-uppercase  text-center"><b>Update Menu</b></h5>
+                </div>
+            </div>
+            <div class="container">
+                <div class="card-header py-1">
+                </div><hr style="border:outset" />
+                <div class="alert alert-danger alert-dismissible d-none text-white" id="danger-alert" role="alert">
+                    <i class="material-icons text-white ">
+                        warning
+                    </i>
+                    <span id="alertText" class=""></span>
+                </div>
+                <div class="p-4">
+                    <form>
+                        <div class="input-group input-group-static mb-4">
+                            <h6 for="MenuName">Menu Name <b class="text-danger">*</b> </h6>
+                            <input type="hidden" id="id_Menu" value="@Model.ID" />
+                            <input type="text" class="form-control input-data" name="MenuName" id="MenuName" placeholder="MENU NAME" value="@Model.MenuName">
+                        </div>
+                        <div class="input-group input-group-static mb-4">
+                            <h6 for="MenuDescription">Menu Description </h6>
+                            <textarea class="form-control" name="MenuDescription" id="MenuDescription" rows="1" placeholder="MENU DESCRIPTION" spellcheck="false">@Model.MenuDescription</textarea>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="input-group input-group-static mb-4">
+                                    <h6 for="MenuUrl">Menu Url <b class="text-danger">*</b> </h6>
+                                    <input type="text" class="form-control input-data" name="MenuUrl" id="MenuUrl" placeholder="MENU URL" value="@Model.MenuUrl">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-group input-group-static mb-4" id="DivJenisMenu">
+                                    <h6 for="IsActive">Jenis Menu <b class="text-danger">*</b></h6>
+                                    <input type="hidden" name="MenuP" id="MenuP" value="@Model.MenuParent"  />
+                                    <select class="form-control pb-4" name="JenisMenu" id="JenisMenu">
+                                        @if (Model.MenuParent == null)
+                                        {
+                                            <option value="parent" selected>Menu Parent</option>
+                                            <option value="sub"> Sub Menu Parent</option>
+                                        }
+                                        else
+                                        {
+                                            <option value="parent">Menu Parent</option>
+                                            <option value="sub" selected> Sub Menu Parent</option>
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-group input-group-static mb-4">
+                                    <h6 for="MenuIcon">Menu Icon <b class="text-danger">*</b> </h6>
+                                    <input type="text" class="form-control input-data" name="MenuIcon" id="MenuIcon" placeholder="MENU ICON" value="@Model.MenuIcon">
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="input-group input-group-static mb-4">
+                                    <h6 for="MenuOrder">Menu Order <b class="text-danger">*</b> </h6>
+                                    <input type="number" class="form-control input-data" name="MenuOrder" id="MenuOrder" placeholder="MENU ORDER" value="@Model.MenuOrder">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-group input-group-static mb-4">
+                                    <h6 for="IsActive">Status <b class="text-danger">*</b></h6>
+                                    @{
+                                        if (Model.IsActive)
+                                        {
+                                            <div class="row">
+                                                <div class="form-check mb-3">
+                                                    <br />
+                                                    <input class="form-check-input input-data" type="radio" name="IsActive" id="IsActive" value="true" checked>
+                                                    <label class="custom-control-label" for="IsActive">AKTIF</label>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-check">
+                                                    <br />
+                                                    <input class="form-check-input input-data" type="radio" name="IsActive" id="IsActive" value="false">
+                                                    <label class="custom-control-label" for="IsActive">TIDAK AKTIF</label>
+                                                </div>
+                                            </div>
+                                        }
+                                        else
+                                        {
+                                            <div class="row">
+                                                <div class="form-check mb-3">
+                                                    <br />
+                                                    <input class="form-check-input input-data" type="radio" name="IsActive" id="IsActive" value="true">
+                                                    <label class="custom-control-label" for="IsActive">AKTIF</label>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-check">
+                                                    <br />
+                                                    <input class="form-check-input input-data" type="radio" name="IsActive" id="IsActive" value="false" checked>
+                                                    <label class="custom-control-label" for="IsActive">TIDAK AKTIF</label>
+                                                </div>
+                                            </div>
+
+                                        }
+                                }
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="input-group input-group-static mb-4 d-none " id="DivMenuParent">
+                                    <h6 for="MenuParent">Menu Parent <b class="text-danger">*</b> </h6>
+                                    <select class="form-control pb-4" name="MenuParent" id="MenuParent">
+                                        @if (Model.MenuParent != null)
+                                        {
+                                        <option value="@Model.MenuParent" selected disabled>@ViewData["MenuParentUpdt"]</option>
+                                        } else
+                                        {
+                                        <option value="" selected disabled>Pilih Menu Parent</option>
+                                        }
+                                        @{
+                                            foreach (var data in ViewData["MenuParent"] as IEnumerable<OSCEUKDI.Entities.ViewModel.VMMenu>)
+                                            {
+                                                <option value="@data.Nilai">@data.Nama</option>
+                                            }
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <div class="col-sm-6 col-md-offset-10">
+                                <button type="button" class="btn btn-success" onclick="PostUpdate()">
+                                    <i class="material-icons opacity-10">update</i>
+                                    Update
+                                </button>
+                                <button type="button" class="btn btn-danger" onclick="history.back()">
+                                    <i class="material-icons opacity-10">arrow_back</i>
+                                    Back
+                                </button>
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>*@
+@section scripts{
+    <script src="~/Scripts/Admin/Menu/main.js"></script>
+    <script src="~/Scripts/Admin/Menu/crud.js"></script>
+    <script>
+        $(document).ready(function () {
+            var tmpMenParent = $('#MenuP').val();
+            if (tmpMenParent != "") {
+                $('#DivMenuParent').removeClass('d-none')
+            }
+        })
+    </script>
+}

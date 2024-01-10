@@ -1,0 +1,92 @@
+﻿body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333333;
+    background-color: #fff;
+}
+
+small.describe {
+    font-size: 14px;
+}
+
+
+/*--Datatable--*/
+.table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+table.dataTable.no-footer{
+    border:none;
+}
+.dataTables_wrapper .dataTables_processing {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    width: 30%;
+    height: 40px;
+    margin-left: -20%;
+    margin-top: -25px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    background: none;
+}
+
+thead tr {
+    background-color: #FF8A04;
+    border: 0;
+}
+
+.table-spacing {
+    border-spacing: 0px 0.5rem!important;
+}
+.body-content {
+    padding-right: 0px!important;
+    padding-left: 0px!important;
+}
+
+/*--Datatable--*/
+
+
+
+
+/*data table grid costume*/
+
+.spacing-table {
+    border-collapse: separate;
+    border-spacing: 0 5px; /* this is the ultimate fix */
+}
+
+.spacing-table th {
+    text-align: left;
+    padding: 5px 15px;
+}
+
+.spacing-table td {
+    border-width: 1px 0;
+    width: 50%;
+    border-color: coral;
+    border-style: solid;
+}
+
+.spacing-table td:first-child {
+    border-left-width: 1px;
+    border-radius: 1px 0 0 1px;
+}
+
+.spacing-table td:last-child {
+    border-right-width: 1px;
+    border-radius: 0 1px 1px 0;
+}
+
+.spacing-table tbody {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    border-spacing: 0 7px;
+}

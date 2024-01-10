@@ -1,0 +1,98 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Areas/PortaL/Views/Shared/_LayoutLogin.cshtml";
+}
+
+<section id="hero" class="main">
+    <div class="hero-container">
+        <h3>Computer Based Scoring - <strong>OSCE</strong></h3>
+        <h1>SIGN IN CBS OSCE-FKIK UAJ</h1>
+        <h2>UNIVERSITAS KATOLIK INDONESIA ATMA JAYA</h2>
+        <p>
+            <a href="#" class="btn-get-started scrollto login-btn">Login</a>
+            <a class="btn-get-started scrollto signup-btn">Daftar</a>
+        </p>
+    </div>
+</section>
+
+<!-- section login side bar -->
+<div class="side-login">
+    <!-- cancel btn -->
+    <a href="#" class="login-cancel-btn">
+        <i class="fas fa-arrow-left"></i>
+    </a>
+    <!-- headeing -->
+    <strong><i class="fa fa-medkit"></i > <span class="m-1"> Sign In Mahasiswa</span> </strong>
+    <!-- form -->
+    <form action="@Url.Action("LoginInternal", "Home")" id="loginForm" method="post">
+        <div class="form-group">
+            <input type="text" name="username" id="username" placeholder="Nomor Induk Mahasiswa/Student ID" class="form-control input-md" />
+        </div>
+        <div class="form-group">
+            <input type="password" name="password" id="password" placeholder="Password" class="form-control input-md" />
+        </div>
+        @*<input type="submit" value="Login" class="btn" style="background-color: #1abb9c; color: white; padding: 5px 30px; font-weight: bold; font-size: 20px;" />*@
+        <input type="submit" name="login" value="Login" style="cursor:pointer" class="login">
+    </form>
+    <!-- relative bottom text -->
+    <div class="relative-text">
+        <p>
+            &copy;
+            <script>
+                document.write(new Date().getFullYear())
+            </script>,
+            FK-Universitas Katolik Indonesia Atma Jaya - All Right Reserved - SIGN IN OSCE-FKIK UAJ.
+        </p>
+    </div>
+</div>
+
+
+<!-- section sign up side bar -->
+<div class="side-sign-up">
+    <!-- cancel btn -->
+    <a href="#" class="sign-up-cancel-btn">
+        <i class="fas fa-arrow-left"></i>
+    </a>
+    <!-- headeing -->
+    <strong><i class="fa fa-medkit"></i> <span class="m-1">Sign Up Mahasiswa</span></strong>
+    <!-- form -->
+
+    <form action="<?= base_url('auth/daftar'); ?>" method="POST">
+        <!-- Fullname -->
+        <label for="">Full Name<samp>*</samp></label>
+        <div class="fullname">
+            <i class="far fa-user"></i>
+            <input type="text" name="nama" placeholder="Masukan Nama Panjang..." required>
+        </div>
+        <!-- email -->
+        <label for="">Email<samp>*</samp></label>
+        <div class="email">
+            <i class="far fa-paper-plane"></i>
+            <input type="email" name="email" placeholder="Masukan Email..." required>
+        </div>
+        <!-- password -->
+        <label for="">Password<samp>*</samp></label>
+        <div class="password">
+            <i class="fas fa-lock"></i>
+            <input type="password" name="password1" placeholder="Masukan Password..." required>
+        </div>
+        <!-- Confirm password -->
+        <label for="">Confirm Password<samp>*</samp></label>
+        <div class="password">
+            <i class="fas fa-lock"></i>
+            <input type="password" name="password2" placeholder="Ulangi Password..." required>
+        </div>
+        <!-- login btn -->
+        <div>
+            <button type="submit" class="signup btn btn-default submit">Daftar</button>
+        </div>
+        <!-- <input type="submit" name="signup" value="Sign Up" class="signup"> -->
+    </form>
+    <!-- relative bottom text -->
+    <div class="relative-text">
+        <span>Come and Join Us</span>
+
+    </div>
+</div>
+

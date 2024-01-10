@@ -1,0 +1,689 @@
+﻿
+@{
+    Layout = "~/Areas/Portal/Views/shared/_LayoutHome.cshtml";
+    ViewBag.Title = "Data Diri";
+}
+
+<style>
+    .files input {
+        outline: 2px dashed #92b0b3;
+        outline-offset: -10px;
+        -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
+        transition: outline-offset .15s ease-in-out, background-color .15s linear;
+        padding: 120px 0px 85px 35%;
+        text-align: center !important;
+        margin: 0;
+        width: 100% !important;
+    }
+
+        .files input:focus {
+            outline: 2px dashed #92b0b3;
+            outline-offset: -10px;
+            -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
+            transition: outline-offset .15s ease-in-out, background-color .15s linear;
+            border: 1px solid #92b0b3;
+        }
+
+    .files {
+        position: relative
+    }
+
+        .files:after {
+            pointer-events: none;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 50px;
+            right: 0;
+            height: 56px;
+            content: "";
+            background-image: url(https://image.flaticon.com/icons/png/128/109/109612.png);
+            display: block;
+            margin: 0 auto;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+    .color input {
+        background-color: #f1f1f1;
+    }
+
+    .files:before {
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        pointer-events: none;
+        width: 100%;
+        right: 0;
+        height: 57px;
+        content: " or drag it here. ";
+        display: block;
+        margin: 0 auto;
+        color: #2ea591;
+        font-weight: 600;
+        text-transform: capitalize;
+        text-align: center;
+    }
+</style>
+
+<!-- Modal -->
+<div class="modal fade" id="dataPendukung" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document" style="width: 70%;">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color: #FF8A04;">
+                <h5 class="card-title" style="font-weight: bold; font-size: 30px; color: black; text-align: center">
+                    UPLOAD DOKUMEN PENDUKUNG
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </h5>
+            </div>
+            <div class="modal-body">
+                <div class="container" style="width: 100%;">
+                    <form class="form-horizontal" enctype="multipart/form-data" id="filePendukung">
+                        <table class="table">
+                            <tr>
+                                <td style="width: 20%; vertical-align: middle; text-align:center; height: 100%;"><span>Upload Foto Diri</span></td>
+                                <td>
+                                    <div class="form-group files">
+                                        <input type="file" class="form-control" id="fotoDiri" name="fotoDiri" multiple="">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 20%; vertical-align: middle; text-align:center; height: 100%;"><span>Upload Foto KTP</span></td>
+                                <td>
+                                    <div class="form-group files">
+                                        <input type="file" class="form-control" id="fotoKTP" name="fotoKTP" multiple="">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 20%; vertical-align: middle; text-align:center; height: 100%;"><span>Upload Foto KIM</span></td>
+                                <td>
+                                    <div class="form-group files">
+                                        <input type="file" class="form-control" id="fotoKIM" name="fotoKIM" multiple="">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 20%; vertical-align: middle; text-align:center; height: 100%;"><span>Upload Transkrip Nilai</span></td>
+                                <td>
+                                    <div class="form-group files">
+                                        <input type="file" class="form-control" id="transkripNilai" name="transkripNilai" multiple="">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 20%; vertical-align: middle; text-align:center; height: 100%;"><span>Upload Surat Keterangan</span></td>
+                                <td>
+                                    <div class="form-group files">
+                                        <input type="file" class="form-control" id="suratKeterangan" name="suratKeterangan" multiple="">
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- // 20221115 Bite -->
+                            <tr>
+                                <td style="width: 20%; vertical-align: middle; text-align:center; height: 100%;"><span>Upload Bukti Bayar (Jika ada pembayaran)</span></td>
+                                <td>
+                                    <div class="form-group files">
+                                        <input type="file" class="form-control" id="buktiBayar" name="buktiBayar" multiple="">
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                    <button class="btn" style="margin: 15px; margin-bottom: 0px; margin-right: 0px; float: right; background-color: rgb(0, 166, 81); color: white; padding: 5px 30px; font-weight: bold; font-size: 16px; " data-dismiss="modal" aria-label="Close" onclick="generateTable()">UPLOAD DATA PENDUKUNG</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="hiddenField">
+    <input type="hidden" id="id" />
+</div>
+
+<div class="card center-block" style="background-color: white; margin-bottom: 15px;">
+    <div class="card-body" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); ">
+        <h5 class="card-title" style="padding-top: 15px; padding-right: 15px; padding-left: 15px; font-weight: bold; font-size: 20px; color: black; ">
+            FORMULIR PENDAFTARAN DIRI DAN PENDUKUNG <br />
+            <p style="font-weight: normal; font-size: 15px; color: #c1baba;">Lengkapi formulir data diri agar dapat mendaftar mata kuliah MBKM yang diinginkan</p>
+        </h5>
+        <hr />
+        <div class="container" style="width: 100%; padding-bottom: 15px;">
+
+            <div class="card-body" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); ">
+                <h5 class="card-title" style="background-color: #FF8A04; padding: 15px; font-weight: bold; font-size: 18px; color: black;">DATA DIRI</h5>
+
+                <div class="container" style="width: 100%;">
+                    <table class="table">
+                        <tr>
+                            <td style="width: 20%;">Nama Lengkap</td>
+                            <td>
+                                <div class="form-group">
+                                    <input type="text" name="namaLengkap" id="namaLengkap" class="form-control input-md" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 20%;">Jenis Kelamin</td>
+                            <td>
+                                <select name="Gender" id="gender" class="form-control input-md">
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 20%;">Tempat Lahir</td>
+                            <td>
+                                <div class="form-group">
+                                    <input type="text" name="tempatLahir" id="tempatLahir" class="form-control input-md" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 20%;">Tanggal Lahir</td>
+                            <td>
+                                <input type="date" name="tanggalLahir" id="tanggalLahir" class="form-control input-md" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 20%;">Agama</td>
+                            <td>
+                                <select name="agama" id="agama" class="form-control input-md">
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 20%;">Kewarganegaraan</td>
+                            <td>
+                                <select name="kewarganegaraan" id="kewarganegaraan" class="form-control input-md">
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 20%;">No. KTP</td>
+                            <td>
+                                <input type="text" name="noKtp" id="noKtp" class="form-control input-md" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="card-body" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); ">
+                <h5 class="card-title" style="background-color: #FF8A04; padding: 15px; font-weight: bold; font-size: 18px; color: black;">INFORMASI KONTAK</h5>
+
+                <div class="container" style="width: 100%;">
+                    <table class="table">
+                        <tr>
+                            <td style="width: 20%;">Alamat Email</td>
+                            <td>
+                                <div class="form-group">
+                                    <input type="email" name="email" id="email" class="form-control input-md" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 20%;">No. Handphone</td>
+                            <td>
+                                <div class="form-group">
+                                    <input type="text" name="noHP" id="noHP" placeholder="+62xxxxxxxxxxx" class="form-control input-md" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 20%;">No. Telepon</td>
+                            <td>
+                                <div class="form-group">
+                                    <input type="text" name="noTelp" id="noTelp" placeholder="+62xxxxxxxxxxx" class="form-control input-md" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 20%;">Alamat Rumah</td>
+                            <td>
+                                <div class="form-group">
+                                    <textarea name="alamat" id="alamat" class="form-control" style="width: 100%;" rows="5"></textarea>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="card-body" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); ">
+                <h5 class="card-title" style="background-color: #FF8A04; padding: 15px; font-weight: bold; font-size: 18px; color: black;">
+                    KONTAK DARURAT
+                    <p style="font-weight: normal; font-size: 16px;">(Kontak yang akan dihubungi dalam kondisi darurat)</p>
+                </h5>
+
+                <div class="container" style="width: 100%;">
+                    <table class="table">
+                        <tr>
+                            <td style="width: 20%;">Nama</td>
+                            <td>
+                                <div class="form-group">
+                                    <input type="text" name="namaDarurat" id="namaDarurat" class="form-control input-md" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 20%;">Hubungan</td>
+                            <td>
+                                <select name="hubungan" id="hubungan" class="form-control input-md">
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 20%;">No. Handphone</td>
+                            <td>
+                                <div class="form-group">
+                                    <input type="text" name="noHPDarurat" id="noHPDarurat" placeholder="+62xxxxxxxxxxx" class="form-control input-md" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 20%;">No. Telepon</td>
+                            <td>
+                                <div class="form-group">
+                                    <input type="text" name="noTelpDarurat" id="noTelpDarurat" placeholder="+62xxxxxxxxxxx" class="form-control input-md" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 20%;">Alamat Email</td>
+                            <td>
+                                <input type="email" name="emailDarurat" id="emailDarurat" class="form-control input-md" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 20%;">Alamat Rumah</td>
+                            <td>
+                                <textarea name="alamatDarurat" id="alamatDarurat" class="form-control" style="width: 100%;" rows="5"></textarea>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="card-body" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); ">
+                <h5 class="card-title" style="background-color: #FF8A04; padding: 15px; font-weight: bold; font-size: 18px; color: black;">
+                    INFORMASI AKADEMIK
+                </h5>
+
+                <div class="container" style="width: 100%;">
+                    <table class="table">
+                        <tr>
+                            <td style="width: 20%;">Universitas Asal</td>
+                            <td>
+                                <input type="text" name="universitasAsal" id="universitasAsal" class="form-control input-md" required disabled />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 20%;">Jenjang Studi<h style="color: red;"> *</h></td>
+                            <td>
+                                <select name="jenjangStudi" id="jenjangStudi" class="form-control input-md" required></select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 20%;">Program Studi</td>
+                            <td>
+                                <div class="form-group">
+                                    <input type="text" name="programStudi" id="programStudi" class="form-control input-md" />
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style="width: 20%;">NIM Asal</td>
+                            <td>
+                                <div class="form-group">
+                                    <input type="text" name="nimAsal" id="nimAsal" class="form-control input-md" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 20%;">Status</td>
+                            <td>
+                                <div class="form-group">
+                                    <input type="text" name="status" id="status" class="form-control input-md" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 20%;">Catatan Verifikasi BAA</td>
+                            <td>
+                                <div class="form-group">
+                                    <textarea id="catatanVerifikasi" class="form-control" style="width: 100%;" rows="5"></textarea>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="card-body" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); " id="dokumenPendukung">
+                <h5 class="card-title" style="background-color: #FF8A04; padding: 15px; font-weight: bold; font-size: 18px; color: black;">
+                    DOKUMEN PENDUKUNG
+                </h5>
+                <div id="tblPendukung">
+                </div>
+                
+            </div>
+
+            <button id="edit" class="btn" style="margin: 15px; margin-bottom: 0px; margin-right: 0px; float: right; background-color: #FF8A04; color: black; padding: 5px 30px; font-weight: bold; font-size: 16px;">EDIT</button>
+            <button id="simpan" class="btn" style="margin: 15px; margin-bottom: 0px; margin-right: 0px; float: right; background-color: #FF8A04; color: black; padding: 5px 30px; font-weight: bold; font-size: 16px; ">SIMPAN</button>
+            <button id="upload" class="btn" style="margin: 15px; margin-bottom: 0px; margin-right: 0px; float: right; background-color: rgb(0, 166, 81); color: white; padding: 5px 30px; font-weight: bold; font-size: 16px; " data-toggle="modal" data-target="#dataPendukung" data-backdrop="false">UPLOAD DATA PENDUKUNG</button>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        var files = {};
+        $(document).ready(function () {
+            var alertMessage = '@TempData["alertMessage"]';
+            if (alertMessage.length != 0) {
+                alert(alertMessage);
+            }
+            //$('.file-upload').file_upload();
+            $("#upload").hide();
+            $("#simpan").hide();
+            $("#dokumenPendukung").hide();
+            $("input").attr("disabled", true);
+            $("select").attr("disabled", true);
+            $("textarea").attr("disabled", true);
+            try {
+                if ("@ViewData["status"].ToString()" == "MENUNGGU VERIFIKASI") {
+                    $("#edit").show();
+                }
+            } catch (e) {
+            }
+            loadFromLookup("Agama", "agama", "Agama");
+            loadFromLookup("WargaNegara", "kewarganegaraan", "Kewarganegaraan");
+            loadFromLookup("KontakDarurat", "hubungan", "Hubungan");
+            loadFromLookup("Gender", "gender", "Jenis Kelamin");
+            loadFromLookup("JenjangStudi", "jenjangStudi", "Jenjang Studi");
+            getDataMahasiswa();
+        });
+        $("#edit").click(function () {
+            $("input").removeAttr("disabled");
+            $("select").removeAttr("disabled");
+            $("textarea").removeAttr("disabled");
+            $("#simpan").show();
+            $("#upload").show();
+            $("#edit").hide();
+            $("#universitasAsal").attr("disabled", true);
+            $("#status").attr("disabled", true);
+            $("#catatanVerifikasi").attr("disabled", true);
+            if ($("#universitasAsal").val() == 'UNIKA Atma Jaya') {
+                $("#programStudi").attr("disabled", true);
+            }
+        });
+        $("#simpan").click(function () {
+            if (isEmpty("jenjangStudi", "Jenjang Studi")) {
+                return;
+            }
+            $.ajax({
+                type: "GET",
+                url: "@Url.Action("GetDataMahasiswa", "DataDiri")"
+            }).then(function (mahasiswa) {
+                var data = new FormData($('#filePendukung')[0]);
+                data.append("ID", $("#id").val());
+                data.append("Nama", $("#namaLengkap").val());
+                data.append("Gender", $("#gender").val());
+
+                data.append("TempatLahir", $("#tempatLahir").val());
+                data.append("TanggalLahir", $("#tanggalLahir").val());
+                data.append("Agama", $("#agama").val());
+                data.append("WargaNegara", $("#kewarganegaraan").val());
+                data.append("NoKTP", $("#noKtp").val());
+                data.append("Email", $("#email").val());
+                data.append("NoHp", $("#noHP").val());
+                data.append("Telepon", $("#noTelp").val());
+                data.append("Alamat", $("#alamat").val());
+                data.append("NamaDarurat", $("#namaDarurat").val());
+                data.append("HubunganDarurat", $("#hubungan").val());
+                data.append("NoHPDarurat", $("#noHPDarurat").val());
+                data.append("TeleponDarurat", $("#noTelpDarurat").val());
+                data.append("EmailDarurat", $("#emailDarurat").val());
+                data.append("AlamatDarurat", $("#alamatDarurat").val());
+                data.append("JenjangStudi", $("#jenjangStudi").val());
+                data.append("ProdiAsal", $("#programStudi").val());
+                data.append("NIMAsal", $("#nimAsal").val());
+
+                //data.append("fotoDiri", fotoDiri);
+                //data.append("fotoKTP", fotoKTP);
+                //data.append("fotoKIM", fotoKIM);
+                //data.append("transkripNilai", transkripNilai);
+                //data.append("suratKeterangan", suratKeterangan);
+                $.ajax({
+                    type: "POST",
+                    url: "@Url.Action("UpdateDataDiri", "DataDiri")",
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    data: data
+                }).then(function (response) {
+                    if (response.status == 200) {
+                        $("input").attr("disabled", true);
+                        $("select").attr("disabled", true);
+                        $("textarea").attr("disabled", true);
+                        $("#simpan").hide();
+                        $("#upload").hide();
+                    }
+                    alert(response.message);
+                });
+            });
+        });
+        function generateTable() {
+            $("#dokumenPendukung").show();
+            $('#tblPendukung').html('<table class="table" id="tablePendukung"><thead><tr style="background-color: white;"><td>No.</td><td>Tipe File</td><td>Nama File</td><td style="text-align: center;">Action</td></tr></thead></table>');
+            var index = 1;
+            var isFoto, isKtp, isKim, isTranskrip, isSK;
+            if ($('#fotoDiri')[0].files.length == 1) {
+                var tmp = new Object();
+                tmp.FileType = "FotoDiri";
+                tmp.FileName = $('#fotoDiri')[0].files[0].name;
+                tmp.URL = URL.createObjectURL($('#fotoDiri')[0].files[0]);
+                tmp.InputID = "#fotoDiri";
+                isFoto = tmp;
+                index++;
+            }
+            if ($('#fotoKTP')[0].files.length == 1) {
+                var tmp = new Object();
+                tmp.FileType = "KTP";
+                tmp.FileName = $('#fotoKTP')[0].files[0].name;
+                tmp.URL = URL.createObjectURL($('#fotoKTP')[0].files[0]);
+                tmp.InputID = "#fotoKTP";
+                isKtp = tmp;
+                index++;
+            }
+            if ($('#fotoKIM')[0].files.length == 1) {
+                var tmp = new Object();
+                tmp.FileType = "FotoKIM";
+                tmp.FileName = $('#fotoKIM')[0].files[0].name;
+                tmp.URL = URL.createObjectURL($('#fotoKIM')[0].files[0]);
+                tmp.InputID = "#fotoKIM";
+                isKim = tmp;
+                index++;
+            }
+            if ($('#transkripNilai')[0].files.length == 1) {
+                var tmp = new Object();
+                tmp.FileType = "TranskripNilai";
+                tmp.FileName = $('#transkripNilai')[0].files[0].name;
+                tmp.URL = URL.createObjectURL($('#transkripNilai')[0].files[0]);
+                tmp.InputID = "#transkripNilai";
+                isTranskrip = tmp;
+                index++;
+            }
+            if ($('#suratKeterangan')[0].files.length == 1) {
+                var tmp = new Object();
+                tmp.FileType = "SuratKeterangan";
+                tmp.FileName = $('#suratKeterangan')[0].files[0].name;
+                tmp.URL = URL.createObjectURL($('#suratKeterangan')[0].files[0]);
+                tmp.InputID = "#suratKeterangan";
+                isSK = tmp;
+                index++;
+            }
+            if (isFoto) {
+                files["FotoDiri"] = isFoto;
+            } else {
+                delete files["FotoDiri"];
+            }
+            if (isKtp) {
+                files["KTP"] = isKtp;
+            } else {
+                delete files["KTP"];
+            }
+            if (isKim) {
+                files["FotoKIM"] = isKim;
+            } else {
+                delete files["FotoKIM"];
+            }
+            if (isTranskrip) {
+                files["transkripNilai"] = isTranskrip;
+            } else {
+                delete files["transkripNilai"];
+            }
+            if (isSK) {
+                files["suratKeterangan"] = isSK;
+            } else {
+                delete files["suratKeterangan"];
+            }
+            if (index == 1) {
+                $("#dokumenPendukung").hide();
+            } else {
+                generateRow();
+            }
+        };
+        function generateRow() {
+            var i = 1;
+            for (var key in files) {
+                $('#tablePendukung tr:last').after('<tr style="background-color: white;"><td>' + i++ + '.</td><td>' + key + '</td><td>' + files[key].FileName + '</td><td style="text-align: center;"><a href="' + files[key].URL + '" target="_blank"><i class="fas fa-file-download"></i></a> <a onclick="javascript: $(\'' + files[key].InputID + '\').val(\'\'); delete files.' + key + '; generateTable();"><i class="fas fa-trash"></i></a></td></tr>');
+            }
+        }
+        function generateTableFromDB(id) {
+            $("#dokumenPendukung").show();
+            $('#tblPendukung').html('<table class="table" id="tablePendukung"><thead><tr><td>No.</td><td>Tipe File</td><td>Nama File</td><td style="text-align: center;">Action</td></tr></thead></table>');
+            $.ajax({
+                type: "GET",
+                url: "@Url.Action("GetAllAttachment", "DataDiri")?id=" + id
+            }).then(function (response) {
+                if (response.length == 0) {
+                    $("#dokumenPendukung").hide();
+                }
+                for (var i = 0; i < response.length; i++) {
+                    var tmp = new Object();
+                    tmp.FileType = response[i].FileType;
+                    tmp.FileName = response[i].FileName;
+                    tmp.URL = '@Url.Action("DownloadFile", "DataDiri")?id=' + response[i].ID;
+                    files[response[i].FileType] = tmp;
+                    $('#tablePendukung tr:last').after('<tr style="background-color: white;"><td>' + (i + 1) + '.</td><td>' + response[i].FileType + '</td><td>' + response[i].FileName + '</td><td style="text-align: center;"><a href="@Url.Action("DownloadFile", "DataDiri")?id=' + response[i].ID + '" ><i class="fas fa-file-download"></i></a></td></tr>');
+                }
+            });
+        }
+        function getDataMahasiswa() {
+            $.ajax({
+                type: "GET",
+                url: "@Url.Action("GetDataMahasiswa", "DataDiri")"
+            }).then(function (response) {
+               // console.log(response)
+                if (response.NIMAsal == response.NIM && response.NIMAsal && response.NIM) {
+                    $("#edit").show();
+                }
+                $("#id").val(response.ID);
+                try {
+                    if ("@ViewData["status"].ToString()" != "DAFTAR") {
+                        generateTableFromDB(response.ID);
+                    }
+                } catch (e) {
+                }
+                $("#namaLengkap").val(response.Nama);
+                if (response.Gender != null) {
+                    setLookupValue("Gender", response.Gender, "gender");
+                }
+                $("#tempatLahir").val(response.TempatLahir);
+                response.TanggalLahir = new Date(response.TanggalLahir)
+                $("#tanggalLahir").val(response.TanggalLahir.getFullYear() + "-" + appendZero(response.TanggalLahir.getMonth()+1, 2) + "-" + appendZero(response.TanggalLahir.getDate(), 2));
+                if (response.Agama != null) {
+                    setLookupValue("Agama", response.Agama, "agama");
+                }
+                if (response.WargaNegara != null) {
+                    setLookupValue("WargaNegara", response.WargaNegara, "kewarganegaraan");
+                }
+                $("#noKtp").val(response.NoKTP);
+                $("#email").val(response.Email);
+                $("#noHP").val(response.NoHp);
+                $("#noTelp").val(response.Telepon);
+                $("#emailDarurat").val(response.EmailDarurat);
+                $("#alamat").val(response.Alamat);
+                $("#namaDarurat").val(response.NamaDarurat);
+                if (response.HubunganDarurat != null) {
+                    setLookupValue("KontakDarurat", response.HubunganDarurat, "hubungan");
+                }
+                $("#noHPDarurat").val(response.NoHPDarurat);
+                $("#noTelpDarurat").val(response.TeleponDarurat);
+                $("#alamatDarurat").val(response.AlamatDarurat);
+                $("#universitasAsal").val(response.NamaUniversitas);
+                if (response.JenjangStudi != null) {
+                    setLookupValue("JenjangStudi", response.JenjangStudi, "jenjangStudi");
+                    $("#jenjangStudi").val(response.JenjangStudi);
+                }
+                $("#programStudi").val(response.ProdiAsal);
+                $("#nimAsal").val(response.NIMAsal);
+                $("#status").val(response.StatusVerifikasi);
+                $("#catatanVerifikasi").val(response.Catatan);
+            });
+        }
+        function loadFromLookup(tipe, id, nama) {
+            $("#" + id).select2({
+                placeholder: "-- Pilih " + nama + " --",
+                width: "100%",
+                ajax: {
+                    url: "@Url.Action("getLookupByTipe", "DataDiri")",
+                    dataType: 'json',
+                    method: "POST",
+                    delay: 250,
+                    cache: false,
+                    data: function (params) {
+                        return {
+                            Tipe: tipe
+                        };
+                    },
+                    processResults: function (data, params) {
+                        return {
+                            results: $.map(data, function (item) { return { id: item.Nilai, value: item.Nilai, text: item.Nama } })
+                        };
+                    },
+                }
+            });
+        }
+        function setLookupValue(tipe, value, id) {
+            $.ajax({
+                type: "GET",
+                url: "@Url.Action("getLookupByValue", "DataDiri")?tipe=" + tipe + "&value=" + value
+            }).then(function (response) {
+                var option = $("<option selected='selected'></option>").val(response.Nilai).text(response.Nama);
+                $("#" + id).append(option).trigger('change');
+            });
+        }
+        function appendZero(string, length) {
+            string += "";
+            while (string.length < length) {
+                string = "0" + string;
+            }
+            return string;
+        }
+        function isEmpty(id, nama) {
+            if (!$("#" + id).val()) {
+                alert(nama + ' tidak boleh kosong!');
+                $("#" + id).focus();
+                return true;
+            }
+            return false;
+        }
+    </script>
+}

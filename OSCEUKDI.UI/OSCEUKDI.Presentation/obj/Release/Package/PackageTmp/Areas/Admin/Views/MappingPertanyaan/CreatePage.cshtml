@@ -1,0 +1,191 @@
+﻿@{
+    ViewBag.Title = "Mapping Station";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdminOSCE.cshtml";
+}
+@section css{
+    <link href="~/Content/select2.min.css" rel="stylesheet" />
+    @Scripts.Render("~/bundles/jquery")
+}
+
+<div class="">
+    <div class="title_left">
+        <a href="javascript:history.back()" class="btn btn-circle text-secondary"><i class="fa fa-arrow-left"></i></a>
+        <span class="text-secondary h3"><strong>Tambah </strong></span><em><strong class="text-info">Data</strong></em>
+    </div>
+    <div class="clearfix"></div>
+    <div class="alert alert-warning d-none  alert-dismissible  text-white" id="danger-alert" role="alert">
+        <i class="fa fa-exclamation-triangle" style="font-size:20px" aria-hidden="true"></i>
+        <span id="alertText" class="" style="font-size:20px"></span>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>Mapping Station</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                        <li>
+                            <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                        </li>
+                        <li>
+                            <a class="close-link"><i class="fa fa-close"></i></a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <form class="" action="" method="post">
+                        <div class="form-group row">
+                            <div class="col-md-6 col-sm-6  form-group has-feedback">
+                                <h6 for="">Acad Career <b class="text-danger">*</b> </h6>
+                                <select name="ACADCareer" id="ACADCareer" class="form-control input-data">
+                                    <option value="" selected disabled>Pilih Acad Career</option>
+                                    @{
+                                        foreach (var dt in ViewData["ACAD"] as IEnumerable<OSCEUKDI.Entities.ViewModel.VMDropDown>)
+                                        {
+                                            <option value="@dt.Nama">@dt.Nama</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                            <div class="col-md-6 col-sm-6  form-group has-feedback">
+                                <h6 for="">Tahun Semester <b class="text-danger">*</b> </h6>
+                                <select name="TahunSemester" id="TahunSemester" class="form-control input-data">
+                                    <option value="" selected disabled>Pilih Tahun Semester</option>
+                                    @{
+                                        foreach (var dt in ViewData["semester"] as IEnumerable<OSCEUKDI.Entities.ViewModel.VMDropDownTahunSemester>)
+                                        {
+                                            <option value="@dt.Nilai">@dt.Nama</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6 col-sm-6  form-group has-feedback">
+                                <h6 for="">Jadwal Test <b class="text-danger">*</b> </h6>
+                                <select disabled name="JadwalTest" id="JadwalTest" class="form-control fit input-data">
+                                    <option value="" selected disabled>Pilih Jadwal Test</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 col-sm-6  form-group has-feedback">
+                                <h6 for="">Ruang Ujian <b class="text-danger">*</b> </h6>
+                                <select name="RuangUjian" id="RuangUjian" class="form-control input-data">
+                                    <option value="" selected disabled>Pilih Ruang Ujian</option>
+                                    @{
+                                        foreach (var dt in ViewData["RuangUjian"] as IEnumerable<OSCEUKDI.Entities.ViewModel.VMDropDown>)
+                                        {
+                                            <option value="@dt.Nilai">@dt.Nama</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                        </div>
+
+                        <h4 class="col-form-label">Pertanyaan <span class="required text-danger"> * </span></h4>
+                        <select disabled name="Pertanyaan" id="Pertanyaan" class="form-control fit input-data">
+                            <option value="" selected disabled>Pilih Pertanyaan</option>
+                        </select>
+                        <h4 class="col-form-label">Nomor Station <span class="required text-danger"> * </span></h4>
+                        <input type="number" class="form-control input-data" id="NomorStation" name="NomorStation" placeholder="Nomor Station">
+
+                        <div class="form-group row mt-3">
+                            <div class="col-md-4 col-sm-4  form-group has-feedback">
+                                <h6 for="">NIP Dosen Utama <b class="text-danger">*</b> </h6>
+                                <select name="NIPDosenInti" id="NIPDosenInti" class="form-control input-data input-md">
+                                    <option value="" selected disabled>Pilih</option>
+                                    @{
+                                        foreach (var dt in ViewData["Dosen"] as IEnumerable<OSCEUKDI.Entities.ViewModel.VMDropDown>)
+                                        {
+                                            <option value="@dt.Nilai">@dt.Nama - @dt.Nilai </option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                            <div class="col-md-4 col-sm-4  form-group has-feedback">
+                                <h6 for="">NIP Dosen Cadangan </h6>
+                                <select name="NIPDosen2" id="NIPDosen2" class="form-control input-md">
+                                    <option value="" selected disabled>Pilih</option>
+                                    @{
+                                        foreach (var dt in ViewData["Dosen"] as IEnumerable<OSCEUKDI.Entities.ViewModel.VMDropDown>)
+                                        {
+                                            <option value="@dt.Nilai">@dt.Nama - @dt.Nilai </option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                            <div class="col-md-4 col-sm-4  form-group has-feedback">
+                                <h6 for="">NIP Dosen Cadangan </h6>
+                                <select name="NIPDosen3" id="NIPDosen3" class="form-control input-md">
+                                    <option value="" selected disabled>Pilih</option>
+                                    @{
+                                        foreach (var dt in ViewData["Dosen"] as IEnumerable<OSCEUKDI.Entities.ViewModel.VMDropDown>)
+                                        {
+                                            <option value="@dt.Nilai">@dt.Nama - @dt.Nilai </option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                        <div class="ln_solid ">
+
+                            <div class="form-group mt-3">
+                                <div class="col-md-12 text-center">
+                                    <button type='button' class="btn btn-round btn-success" onclick="PostCreate()">
+                                        <i class="fa fa-save" aria-hidden="true"></i> Save
+                                    </button>
+                                    <button type='button' class="btn btn-round btn-secondary" onclick="history.back()">
+                                        <i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i> Back
+                                    </button>
+                                    <button type='reset' class="btn btn-round btn-danger">
+                                        <i class="fa fa-refresh" aria-hidden="true"></i> Reset
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script src="~/Scripts/Admin/MappingPertanyaan/crud.js"></script>
+    <script src="~/Scripts/select2.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#ACADCareer").select2({
+                placeholder: "-- Pilih Acad Career --",
+                width: "100%"
+            });
+            $("#TahunSemester").select2({
+                placeholder: "-- Pilih Tahun Semester --",
+                width: "100%"
+            });
+            $("#JadwalTest").select2({
+                placeholder: "-- Pilih Jadwal Test --",
+                width: "100%"
+            });
+            $("#RuangUjian").select2({
+                placeholder: "-- Pilih Ruang Ujian --",
+                width: "100%"
+            });
+            $("#Pertanyaan").select2({
+                placeholder: "-- Pilih Pertanyaan --",
+                width: "100%"
+            });
+            $("#NIPDosenInti").select2({
+                placeholder: "-- Pilih Dosen --",
+                width: "100%"
+            });
+            $("#NIPDosen2").select2({
+                placeholder: "-- Pilih Dosen --",
+                width: "100%"
+            });
+            $("#NIPDosen3").select2({
+                placeholder: "-- Pilih Dosen --",
+                width: "100%"
+            });
+        })
+    </script>
+}

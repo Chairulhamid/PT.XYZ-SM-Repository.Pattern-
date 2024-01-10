@@ -1,0 +1,69 @@
+﻿
+
+@{
+    ViewBag.Title = "Create Menu";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdminOSCE.cshtml";
+}
+@section css{
+    @* <link rel="stylesheet" type="text/css" href="~/Content/Admin/inputResponsive.css">*@
+    @Scripts.Render("~/bundles/jquery")
+    <link href="~/Content/summernote/summernote.min.css" rel="stylesheet" />
+    <link href="/assets/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <script src="~/Scripts/sweetalert2.all.min.js"></script>
+}
+
+<div class="col-12">
+    <div class="card my-4">
+        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+            <div class="bg-gradient-faded-secondary-vertical shadow-dark border-radius-lg pt-4 pb-3">
+                <h4 class="text-light  ps-3 text-uppercase  text-center"><b>Create Menu</b></h4>
+            </div>
+        </div>
+        <div class="container">
+            <div class="card-header py-1">
+            </div><hr style="border:outset" />
+            <div class="p-4">
+                <form>
+                    <div class="input-group input-group-static mb-4">
+                        <h6 for="Code">CODE</h6>
+                        <input type="text" class="form-control input-data" name="Code" id="Code" placeholder="INPUT CODE">
+                    </div>
+                    <div class="input-group input-group-static mb-4">
+                        <h6 for="RoleName">ROLE NAME</h6>
+                        <input type="text" class="form-control input-data" name="RoleName" id="RoleName" placeholder="INPUT ROLE NAME">
+                    </div>
+                    <div class="input-group input-group-static mb-4">
+                        <h6 for="IsActive">STATUS ROLE</h6>
+                        <div class="form-check mb-3">
+                            <br />
+                            <input class="form-check-input input-data" type="radio" name="IsActive" id="IsActive" value="true">
+                            <label class="custom-control-label" for="IsActive">AKTIF</label>
+                        </div>
+                        <div class="form-check">
+                            <br />
+                            <input class="form-check-input input-data" type="radio" name="IsActive" id="IsActive" value="false">
+                            <label class="custom-control-label" for="IsActive">TIDAK AKTIF</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-6 col-md-offset-10">
+                            <button type="button" class="btn btn-success" onclick="PostCreate()">
+                                <i class="material-icons opacity-10">save</i>
+                                Save
+                            </button>
+                            <button type="button" class="btn btn-danger" onclick="BackPage()">
+                                <i class="material-icons opacity-10">arrow_back</i>
+                                Back
+                            </button>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    @*<script src="/Scripts/Admin/Role/main.js"></script>
+    <script src="~/Scripts/Admin/Role/crud.js"></script>*@
+}

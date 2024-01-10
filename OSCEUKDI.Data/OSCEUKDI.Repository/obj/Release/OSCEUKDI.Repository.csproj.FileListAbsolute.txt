@@ -1,0 +1,295 @@
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\OSCEUKDI.Repository.dll.config
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\OSCEUKDI.Repository.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\OSCEUKDI.Repository.pdb
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\EntityFramework.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\EntityFramework.SqlServer.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Bcl.HashCode.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Data.SqlClient.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.EntityFrameworkCore.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Extensions.Caching.Abstractions.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Extensions.Caching.Memory.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Extensions.Configuration.Binder.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Extensions.Configuration.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Extensions.DependencyInjection.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Extensions.Logging.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Extensions.Options.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Extensions.Primitives.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Identity.Client.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.IdentityModel.Logging.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.IdentityModel.Protocols.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.IdentityModel.Tokens.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Newtonsoft.Json.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\OSCEUKDI.Common.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\OSCEUKDI.Entities.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\OSCEUKDI.Services.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\System.Buffers.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\System.Collections.Immutable.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\System.ComponentModel.Annotations.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\System.Diagnostics.DiagnosticSource.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\System.IdentityModel.Tokens.Jwt.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\System.Linq.Dynamic.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\System.Memory.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\System.Numerics.Vectors.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\System.Threading.Tasks.Extensions.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\BCrypt.Net-Next.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\OSCEUKDI.Common.pdb
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\OSCEUKDI.Services.pdb
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\OSCEUKDI.Services.dll.config
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\OSCEUKDI.Entities.pdb
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\OSCEUKDI.Entities.dll.config
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\EntityFramework.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\EntityFramework.SqlServer.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Bcl.HashCode.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Data.SqlClient.pdb
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Data.SqlClient.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.EntityFrameworkCore.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.EntityFrameworkCore.Abstractions.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.EntityFrameworkCore.Relational.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Extensions.Caching.Abstractions.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Extensions.Caching.Memory.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Extensions.Configuration.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Extensions.Configuration.Abstractions.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Extensions.Configuration.Binder.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Extensions.DependencyInjection.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Extensions.Logging.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Extensions.Logging.Abstractions.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Extensions.Options.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Extensions.Primitives.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Identity.Client.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.IdentityModel.JsonWebTokens.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.IdentityModel.Logging.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.IdentityModel.Protocols.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.IdentityModel.Tokens.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Newtonsoft.Json.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\System.Buffers.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\System.Collections.Immutable.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\System.Diagnostics.DiagnosticSource.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\System.IdentityModel.Tokens.Jwt.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\System.Memory.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\System.Numerics.Vectors.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\System.Threading.Tasks.Extensions.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\BCrypt.Net-Next.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\de\Microsoft.Data.SqlClient.resources.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\es\Microsoft.Data.SqlClient.resources.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\fr\Microsoft.Data.SqlClient.resources.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\it\Microsoft.Data.SqlClient.resources.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\ja\Microsoft.Data.SqlClient.resources.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\ko\Microsoft.Data.SqlClient.resources.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\pt-BR\Microsoft.Data.SqlClient.resources.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\ru\Microsoft.Data.SqlClient.resources.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.csproj.AssemblyReference.cache
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.Initial.resources
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.AddTableRuanganUjian.resources
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.AddTableKompetensi.resources
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.AddTableJadwalTest.resources
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.GantiTipeDataJadwalTest.resources
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.GantiTipeDataJadwal.resources
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.GantiTipeDataJadwalT.resources
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.GantiTipeDataJadwalTw.resources
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.GantiTipeDataJadwalTwrt.resources
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.editJadwal.resources
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.addTableRubrikKompetensi.resources
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.AddRelasiRubrik.resources
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.add.resources
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.addTableNilaiKomp.resources
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.UbahFielddataNilaiRubrik.resources
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.AddTableGlonalPerformance.resources
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.TambahTableGlibalPerformance.resources
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.TambahTableGlibalPerformanceJudulStation.resources
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.TambahTableGlibalPerformanceChangeJudulStation.resources
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.TambahTableGlibalPerformanceChangeTambahIDJudulStation.resources
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.AddTableMappingPertanyaan.resources
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.AddTableLookup.resources
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.csproj.GenerateResource.cache
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.csproj.CoreCompileInputs.cache
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.csproj.CopyComplete
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.pdb
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.UpdateTableRubrikKompetensi.resources
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.updateInstruksiRubrik.resources
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.updateadata.resources
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.TambahTableMappingMahasiswwa.resources
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.sdsf.resources
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.mengubahTableMappingMahasiswa.resources
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.TambahTableDetailMappingMahasiswa.resources
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.tambahdatamappingMahasiswa.resources
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.tambahdatamappingMhsTahunAngkatan.resources
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.AddkategoriOSCE.resources
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.TambahFieldDetailMappingMahasiswa.resources
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.ChangeIsNullMappingPertanyaan.resources
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.penilaianujian.resources
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.dsc.resources
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.dscxc.resources
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.dscxcee.resources
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.dscxceer.resources
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.dscxceerxx.resources
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.dscxceerxxvv.resources
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.tablePenilaianUjiam.resources
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.tambahTableNilaiAkhir.resources
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.EditTablePenilaianMahasiswaDAnNilaiUjianMhs.resources
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.EditTableNilaiUjianMhs.resources
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.EditTableNilaiUjianMhsRemovefield.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\OSCEUKDI.Repository.dll.config
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\OSCEUKDI.Repository.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\OSCEUKDI.Repository.pdb
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\EntityFramework.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\EntityFramework.SqlServer.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Bcl.AsyncInterfaces.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Bcl.HashCode.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Data.SqlClient.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.EntityFrameworkCore.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.EntityFrameworkCore.Relational.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Extensions.Caching.Abstractions.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Extensions.Caching.Memory.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Extensions.Configuration.Binder.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Extensions.Configuration.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Extensions.DependencyInjection.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Extensions.Logging.Abstractions.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Extensions.Logging.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Extensions.Options.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Extensions.Primitives.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Identity.Client.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.IdentityModel.Logging.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.IdentityModel.Protocols.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.IdentityModel.Tokens.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Newtonsoft.Json.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\OSCEUKDI.Common.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\OSCEUKDI.Entities.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\OSCEUKDI.Services.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\System.Buffers.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\System.Collections.Immutable.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\System.ComponentModel.Annotations.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\System.Diagnostics.DiagnosticSource.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\System.IdentityModel.Tokens.Jwt.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\System.Linq.Dynamic.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\System.Memory.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\System.Numerics.Vectors.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\System.Threading.Tasks.Extensions.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\BCrypt.Net-Next.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\OSCEUKDI.Common.pdb
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\OSCEUKDI.Services.pdb
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\OSCEUKDI.Services.dll.config
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\OSCEUKDI.Entities.pdb
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\OSCEUKDI.Entities.dll.config
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\EntityFramework.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\EntityFramework.SqlServer.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Bcl.AsyncInterfaces.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Bcl.HashCode.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Data.SqlClient.pdb
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Data.SqlClient.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.EntityFrameworkCore.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.EntityFrameworkCore.Abstractions.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.EntityFrameworkCore.Relational.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Extensions.Caching.Abstractions.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Extensions.Caching.Memory.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Extensions.Configuration.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Extensions.Configuration.Abstractions.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Extensions.Configuration.Binder.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Extensions.DependencyInjection.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Extensions.Logging.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Extensions.Logging.Abstractions.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Extensions.Options.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Extensions.Primitives.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.Identity.Client.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.IdentityModel.JsonWebTokens.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.IdentityModel.Logging.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.IdentityModel.Protocols.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Microsoft.IdentityModel.Tokens.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\Newtonsoft.Json.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\System.Buffers.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\System.Collections.Immutable.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\System.Diagnostics.DiagnosticSource.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\System.IdentityModel.Tokens.Jwt.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\System.Memory.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\System.Numerics.Vectors.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\System.Threading.Tasks.Extensions.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\BCrypt.Net-Next.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\de\Microsoft.Data.SqlClient.resources.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\es\Microsoft.Data.SqlClient.resources.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\fr\Microsoft.Data.SqlClient.resources.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\it\Microsoft.Data.SqlClient.resources.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\ja\Microsoft.Data.SqlClient.resources.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\ko\Microsoft.Data.SqlClient.resources.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\pt-BR\Microsoft.Data.SqlClient.resources.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\ru\Microsoft.Data.SqlClient.resources.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\bin\Release\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.csproj.AssemblyReference.cache
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.Initial.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.AddTableRuanganUjian.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.AddTableKompetensi.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.AddTableJadwalTest.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.GantiTipeDataJadwalTest.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.GantiTipeDataJadwal.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.GantiTipeDataJadwalT.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.GantiTipeDataJadwalTw.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.GantiTipeDataJadwalTwrt.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.editJadwal.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.addTableRubrikKompetensi.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.AddRelasiRubrik.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.add.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.addTableNilaiKomp.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.UbahFielddataNilaiRubrik.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.AddTableGlonalPerformance.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.TambahTableGlibalPerformance.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.TambahTableGlibalPerformanceJudulStation.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.TambahTableGlibalPerformanceChangeJudulStation.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.TambahTableGlibalPerformanceChangeTambahIDJudulStation.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.AddTableMappingPertanyaan.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.AddTableLookup.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.UpdateTableRubrikKompetensi.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.updateInstruksiRubrik.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.updateadata.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.TambahTableMappingMahasiswwa.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.sdsf.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.mengubahTableMappingMahasiswa.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.TambahTableDetailMappingMahasiswa.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.tambahdatamappingMahasiswa.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.tambahdatamappingMhsTahunAngkatan.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.AddkategoriOSCE.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.TambahFieldDetailMappingMahasiswa.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.ChangeIsNullMappingPertanyaan.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.penilaianujian.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.dsc.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.dscxc.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.dscxcee.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.dscxceer.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.dscxceerxx.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.dscxceerxxvv.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.tablePenilaianUjiam.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.tambahTableNilaiAkhir.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.EditTablePenilaianMahasiswaDAnNilaiUjianMhs.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.EditTableNilaiUjianMhs.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.EditTableNilaiUjianMhsRemovefield.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.csproj.GenerateResource.cache
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.csproj.CoreCompileInputs.cache
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.csproj.CopyComplete
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.pdb
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.updatedatabase.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.EditTablePenilaianUjian.resources
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Repository\obj\Release\OSCEUKDI.Repository.Migrations.updatedatabaseserver.resources

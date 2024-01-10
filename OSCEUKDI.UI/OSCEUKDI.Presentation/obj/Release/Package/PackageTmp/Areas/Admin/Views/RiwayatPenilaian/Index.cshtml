@@ -1,0 +1,76 @@
+﻿@{
+    ViewBag.Title = "Riwayat Penilaian";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdminOSCE.cshtml";
+}
+@section css{
+    <style>
+        .table-riwayatPenilaian tbody tr:hover {
+            cursor: pointer;
+        }
+    </style>
+    @Scripts.Render("~/bundles/jquery")
+}
+<form action="@Url.Action("Detail","RiwayatPenilaian")" method="post" id="DetailRiwayat">
+    <input type="hidden" id="ACADCareer" name="ACADCareer" />
+    <input type="hidden" id="TahunSemester" name="TahunSemester" />
+    <input type="hidden" id="NamaPeriode" name="NamaPeriode" />
+    <input type="hidden" id="TanggalUjian" name="TanggalUjian" />
+    <input type="hidden" id="NIPDosenInti" name="NIPDosenInti" />
+</form>
+<input type="hidden" id="isCreate" value="@ViewData["isCreate"].ToString()" />
+<input type="hidden" id="isUpdate" value="@ViewData["isUpdate"].ToString()" />
+<input type="hidden" id="isDelete" value="@ViewData["isDelete"].ToString()" />
+
+<div class="">
+    <div class="page-title">
+        <div class="title_left">
+            <h3>Riwayat Penilaian</h3>
+        </div>
+    </div>
+    <div class="col-md-12 col-sm-12 ">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>List Riwayat Penilaian</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li>
+                        <a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="x_content">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card-box table-responsive">
+                            <p class="text-muted font-13 m-b-30">
+                            </p>
+                            <table id="datatable-responsive" class="table table-striped bg-gray table-bordered dt-responsive nowrap table-riwayatPenilaian" cellspacing="0" width="100%">
+                                <thead>
+                                    <tr class="bg-green text-center">
+                                        <th width="5%">No</th>
+                                        <th width="5%">Tahun Semester</th>
+                                        <th>Periode</th>
+                                        <th>Penguji</th>
+                                        <th>Kategori</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script src="~/Scripts/Admin/RiwayatPenilaian/main.js"></script>
+    <script src="~/Scripts/Admin/RiwayatPenilaian/crud.js"></script>
+}
+
+

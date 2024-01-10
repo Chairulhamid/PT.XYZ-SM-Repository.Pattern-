@@ -1,0 +1,170 @@
+﻿
+@{
+    ViewBag.Title = "Role";
+    ViewBag.MenuName = "Role";
+    ViewBag.MenuPage = "Access Menu";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdminOSCE.cshtml";
+}
+@section css{
+    @Scripts.Render("~/bundles/jquery")
+}
+<input type="hidden" id="RoleID" value="@ViewData["RoleID"].ToString()" />
+<input type="hidden" id="StatusActive" value="Active" />
+<input type="hidden" id="StatusNonActive" value="NonActive" />
+
+<div class="">
+    <div class="title_left">
+        <a href="javascript:history.back()" class="btn btn-circle text-secondary"><i class="fa fa-arrow-left"></i></a>
+        <span class="text-secondary h3"><strong>Role </strong></span><em><strong class="text-info">Access</strong></em>
+    </div>
+    <div class="col-md-12 col-sm-12 ">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2> Role Active</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li>
+                        <a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+                <div class="alert alert-success alert-dismissible d-none text-white" id="success-alert" role="alert">
+                    <i class="fa fa-check" aria-hidden="true"></i>
+                    <span class=" text-white"> Data Role Access Menu Berhasil Diupdate!</span>
+                </div>
+            </div>
+            <div class="x_content">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card-box table-responsive">
+                            <p class="text-muted font-13 m-b-30">
+                            </p>
+                            <table id="datatable-responsive" class="table table-striped bg-gray table-bordered dt-responsive nowrap " cellspacing="0" width="100%">
+                                <thead>
+                                    <tr class=" bg-green">
+                                        <th>Menu Name</th>
+                                        <th>Is Create</th>
+                                        <th>Is Update</th>
+                                        <th>Is Delete</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @{
+                                        foreach (var dt in ViewData["DataRoleAccess"] as IEnumerable<OSCEUKDI.Entities.ViewModel.VMRoleAccessMenu>)
+                                        {
+                                            if (dt.IsActive == true)
+                                            {
+                                                <tr>
+
+                                                    <td class=" text-uppercase font-weight-bolder" id="statusMenu">@dt.MenuName</td>
+
+                                                    @if (dt.IsCreate == true)
+                                                    {
+                                                        <td><div class="form-check form-switch "><input class="form-check-input ms-auto" type="checkbox" id="flexSwitchCheckDefault3" onclick="statusCRUD($('#RoleID').val(),@dt.MenuID,$('#StatusActive').val(),'Create')" checked></div></td>
+                                                    }
+                                                    else
+                                                    {
+                                                        <td><div class="form-check form-switch "><input class="form-check-input ms-auto" type="checkbox" id="flexSwitchCheckDefault3" onclick="statusCRUD($('#RoleID').val(),@dt.MenuID,$('#StatusNonActive').val(),'Create')"></div></td>
+                                                    }
+
+                                                    @if (dt.IsUpdate == true)
+                                                    {
+                                                        <td><div class="form-check form-switch "><input class="form-check-input ms-auto" type="checkbox" id="flexSwitchCheckDefault3" onclick="statusCRUD($('#RoleID').val(),@dt.MenuID,$('#StatusActive').val(),'Update')" checked></div></td>
+                                                    }
+                                                    else
+                                                    {
+                                                        <td><div class="form-check form-switch "><input class="form-check-input ms-auto" type="checkbox" id="flexSwitchCheckDefault3" onclick="statusCRUD($('#RoleID').val(),@dt.MenuID,$('#StatusNonActive').val(),'Update')"></div></td>
+                                                    }
+
+                                                    @if (dt.IsDelete == true)
+                                                    {
+                                                        <td><div class="form-check form-switch "><input class="form-check-input ms-auto" type="checkbox" id="flexSwitchCheckDefault3" onclick="statusCRUD($('#RoleID').val(),@dt.MenuID,$('#StatusActive').val(),'Delete')" checked></div></td>
+                                                    }
+                                                    else
+                                                    {
+                                                        <td><div class="form-check form-switch "><input class="form-check-input ms-auto" type="checkbox" id="flexSwitchCheckDefault3" onclick="statusCRUD($('#RoleID').val(),@dt.MenuID,$('#StatusNonActive').val(),'Delete')"></div></td>
+                                                    }
+                                                    @if (dt.IsView == true)
+                                                    {
+                                                        <td style="cursor:pointer" class="align-middle text-center text-sm">
+                                                            <a class="" rel="tooltip" title="Remove" onclick="statusMenu($('#RoleID').val(),@dt.MenuID,$('#StatusActive').val())"><i class="fa fa-ban" aria-hidden="true" style="font-size:15px"></i></a>
+                                                        </td>
+                                                    }
+
+                                                </tr>
+                                            }
+                                        }
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="col-md-12 col-sm-12 ">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2> Role Non Active</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li>
+                        <a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+                <div class="alert alert-success alert-dismissible d-none text-white" id="success-alert" role="alert">
+                    <i class="fa fa-check" aria-hidden="true"></i>
+                    <span class=" text-white"> Data Role Access Menu Berhasil Diupdate!</span>
+                </div>
+            </div>
+            <div class="x_content">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card-box table-responsive">
+                            <p class="text-muted font-13 m-b-30">
+                            </p>
+                            <table id="datatable-responsive" class="table table-striped bg-gray table-bordered dt-responsive nowrap table-role" cellspacing="0" width="100%">
+                                <thead>
+                                    <tr class="bg-green">
+                                        <th>Menu Name</th>
+                                        <th width="17%">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @{
+                                        foreach (var dt in ViewData["DataRoleAccess"] as IEnumerable<OSCEUKDI.Entities.ViewModel.VMRoleAccessMenu>)
+                                        {
+                                            if (dt.IsActive == false || dt.IsActive == null)
+                                            {
+                                                <tr>
+                                                    <td class=" text-uppercase font-weight-bolder" id="statusMenu">@dt.MenuName</td>
+
+                                                    <td style="cursor:pointer" class="align-middle text-center text-sm">
+                                                        <a class="" rel="tooltip" title="Add" onclick="statusMenu($('#RoleID').val(),@dt.MenuID,$('#StatusNonActive').val())"><i class="fa fa-check-circle-o" aria-hidden="true" style="font-size:15px"></i></a>
+                                                    </td>
+                                                </tr>
+                                            }
+                                        }
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script src="/Scripts/Admin/Role/main.js"></script>
+    <script src="~/Scripts/Admin/Role/crud.js"></script>
+}

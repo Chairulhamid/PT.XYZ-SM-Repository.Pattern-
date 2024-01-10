@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "Work Location";
+    ViewBag.MenuName = "Work Location";
+    ViewBag.MenuPage = "Work Location";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdminOSCE.cshtml";
+}
+@section css{
+    @Scripts.Render("~/bundles/jquery")
+}
+<form action="@Url.Action("UpdatePage","WorkLocation")" method="post" id="UpdateWL">
+    <input type="hidden" id="id" name="id" />
+</form>
+<input type="hidden" id="isCreate" value="@ViewData["isCreate"].ToString()" />
+<input type="hidden" id="isUpdate" value="@ViewData["isUpdate"].ToString()" />
+<input type="hidden" id="isDelete" value="@ViewData["isDelete"].ToString()" />
+
+<div class="col-12">
+    <div class="card my-4">
+        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+            <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                <h5 class="text-white text-uppercase  ps-3">Manage Work Location</h5>
+            </div>
+        </div>
+        <div class="container">
+            <div class="card-header py-1">
+            </div><hr style="border:outset" />
+            <a class="btn btn-primary btn-create" onclick="CreateWL()"> <i class="fas fa-plus-circle"></i> Add Data</a>
+            <div class="card-body px-0 pb-2">
+                <div class="table-responsive p-0">
+                    <table class="table table-hover display nowrap dataTable dtr-inline table table-bordered table-striped" id="table-workLocation" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7">No</th>
+                                <th class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Code</th>
+                                <th class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Area</th>
+                                <th class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Address</th>
+                                <th class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Status</th>
+                                <th class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script src="/Scripts/Admin/WorkLocation/main.js"></script>
+    <script src="~/Scripts/Admin/WorkLocation/crud.js"></script>
+}

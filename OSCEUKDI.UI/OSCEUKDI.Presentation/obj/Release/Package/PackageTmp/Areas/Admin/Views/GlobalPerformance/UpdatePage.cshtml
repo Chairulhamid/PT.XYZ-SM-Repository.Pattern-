@@ -1,0 +1,149 @@
+﻿
+
+@{
+    ViewBag.Title = "Update Global Performance";
+    ViewBag.MenuName = "Global Performance";
+    ViewBag.MenuPage = "Form Update";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdminOSCE.cshtml";
+}
+@section css{
+    @Scripts.Render("~/bundles/jquery")
+}
+@model OSCEUKDI.Entities.Models.OSCEUKDI.GlobalPerformance
+
+<div class="">
+    <div class="">
+        <div class="page-title">
+            <div class="title_left">
+                <h3>Update Data</h3>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="alert alert-warning d-none  alert-dismissible  text-white" id="danger-alert" role="alert">
+            <i class="fa fa-exclamation-triangle" style="font-size:20px" aria-hidden="true"></i>
+            <span id="alertText" class="" style="font-size:20px"></span>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="x_panel">
+                    <div class="x_title">
+                        <h2>Global Performance</h2>
+                        <ul class="nav navbar-right panel_toolbox">
+                            <li>
+                                <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                            </li>
+                            <li>
+                                <a class="close-link"><i class="fa fa-close"></i></a>
+                            </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                        <form class="" action="" method="post" novalidate>
+
+                            <div class="form-group row">
+                                <h4 class="col-form-label  col-md-3 col-sm-3 ">Acad Career<span class="required text-danger"> * </span></h4>
+                                <div class="col-sm-8">
+                                    <select name="ACADCareer" id="ACADCareer" class="form-control input-data">
+                                        @{
+                                            <option value="" selected disabled>Acad Career</option>
+                                            foreach (var dt in ViewData["ACAD"] as IEnumerable<OSCEUKDI.Entities.ViewModel.VMDropDown>)
+                                            {
+                                                <option value="@dt.Nama"
+                                                        @{ if (@Model.ACADCareer.ToString() == dt.Nama.ToString()) { <text> selected</text>
+                                                            }
+                                                        }>
+                                                    @dt.Nama
+                                                </option>
+                                            }
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <h4 class="col-form-label  col-md-3 col-sm-3 ">Tahun Semester<span class="required text-danger"> * </span></h4>
+                                <div class="col-sm-8">
+                                    <select name="TahunSemester" id="TahunSemester" class="form-control input-data" required autocomplete="off">
+                                        @{
+                                            foreach (var dt in ViewData["semester"] as IEnumerable<OSCEUKDI.Entities.ViewModel.VMDropDownTahunSemester>)
+                                            {
+                                                <option value="@dt.Nilai" @{ if (@Model.TahunSemester.ToString() == dt.Nilai.ToString()) { <text> selected</text> } }>@dt.Nama</option>
+                                            }
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <h4 class="col-form-label  col-md-3 col-sm-3 ">Judul Station<span class="required text-danger"> * </span></h4>
+                                <div class="col-sm-8">
+                                    <select name="JudulStation" id="JudulStation" class="form-control input-data">
+                                        @{
+
+                                            foreach (var dt in ViewData["Judul"] as IEnumerable<OSCEUKDI.Entities.ViewModel.VMDropDown>)
+                                            {
+                                                <option value="@dt.Nilai"
+                                                        @{ if (@Model.RubrikKompetensiID.ToString() == dt.Nama.ToString()) { <text> selected</text>
+                                                            }
+                                                        }>
+                                                    @dt.Nama
+                                                </option>
+                                            }
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <h4 class="col-form-label  col-md-3 col-sm-3 ">Nama<span class="required text-danger"> * </span></h4>
+                                <div class="col-sm-8">
+                                    <input type="hidden" id="ID" value="@Model.ID" />
+                                    <select name="Nama" id="Nama" class="form-control input-data">
+                                        @{
+                                            foreach (var dt in ViewData["GlobalPerformance"] as IEnumerable<OSCEUKDI.Entities.ViewModel.VMDropDown>)
+                                            {
+                                                <option value="@dt.Nilai"
+                                                        @{ if (@Model.Nama.ToString() == dt.Nama.ToString()) { <text> selected</text>
+                                                            }
+                                                        }>
+                                                    @dt.Nama
+                                                </option>
+                                            }
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <h4 class="col-form-label  col-md-3 col-sm-3 ">Performance<span class="required text-danger"> * </span></h4>
+                                <div class="col-sm-2">
+                                    <input type="number" class="form-control" id="NMin" placeholder="Minimal" name="NMin" value="@Model.NMin">
+                                </div>
+                                <div class="col-sm-2">
+                                    <input type="number" class="form-control" id="NMax" name="NMax" placeholder="Maximal" value="@Model.NMax">
+                                </div>
+                            </div>
+                            <div class="ln_solid ">
+                                <div class="form-group mt-3">
+                                    <div class="col-md-6 offset-md-3">
+                                        <button type='button' class="btn btn-round btn-success" onclick="PostUpdate()">
+                                            <i class="fa fa-save" aria-hidden="true"></i> Save
+                                        </button>
+                                        <button type='button' class="btn btn-round btn-secondary" onclick="history.back()">
+                                            <i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i> Back
+                                        </button>
+                                        <button type='reset' class="btn btn-round btn-danger">
+                                            <i class="fa fa-refresh" aria-hidden="true"></i> Reset
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script src="~/Scripts/Admin/GLobalPerformance/crud.js"></script>
+}

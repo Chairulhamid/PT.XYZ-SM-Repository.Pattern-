@@ -1,0 +1,179 @@
+﻿@{
+    ViewBag.Title = "Rubrik Station";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdminOSCE.cshtml";
+}
+@section css{
+    <style>
+        .table-rubrikKompetensi tbody tr:hover {
+            cursor: pointer;
+        }
+        .alert-modal {
+            color: #E9EDEF;
+            background-color: rgb(113 151 175 / 88%);
+            border-color: rgba(52,152,219,0.88);
+        }
+        .clasModal {
+            margin-left: 20px;
+        }
+    </style>
+    @Scripts.Render("~/bundles/jquery")
+}
+@section modal{
+    <div class="modal fade" id="TambahRole" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document" id="modal-inner">
+
+        </div>
+    </div>
+}
+<form action="@Url.Action("UpdatePage","RubrikKompetensi")" method="post" id="updateRubrikKompetensi">
+    <input type="hidden" id="id" name="id" />
+</form>
+<form action="@Url.Action("Nilai","RubrikKompetensi")" method="post" id="RubrikNilaiKompetensi">
+    <input type="hidden" id="idKomp" name="idKomp" />
+</form>
+
+<form action="@Url.Action("NilaiModal","RubrikKompetensi")" method="post" id="NilaiModal">
+    <input type="hidden" id="IdModal" name="IdModal" />
+</form>
+<input type="hidden" id="isCreate" value="@ViewData["isCreate"].ToString()" />
+<input type="hidden" id="isUpdate" value="@ViewData["isUpdate"].ToString()" />
+<input type="hidden" id="isDelete" value="@ViewData["isDelete"].ToString()" />
+
+<div class="">
+    <div class="page-title">
+        <div class="title_left">
+            <h3>Manage Rubrik Station</h3>
+        </div>
+    </div>
+    <div class="col-md-12 col-sm-12 ">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>List Rubrik Station</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li>
+                        <a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <button type="button" class="btn btn-round btn-info" onclick="CreateData()"> <i class="fa fa-plus-circle" aria-hidden="true"></i> Add Data</button>
+            <div class="x_content">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card-box table-responsive">
+                            <p class="text-muted font-13 m-b-30">
+                            </p>
+                            <table id="datatable-responsive" class="table table-striped bg-gray table-bordered dt-responsive nowrap table-rubrikKompetensi" cellspacing="0" width="100%">
+                                <thead>
+                                    <tr class="bg-green text-center">
+                                        <th width="10%"><i class="fa fa-gear" aria-hidden="true" style="font-size:20px"></i></th>
+                                        <th>No</th>
+                                        <th width="5%">Acad Career</th>
+                                        <th width="5%">Semester</th>
+                                        <th>Judul Station</th>
+                                        <th>Alokasi Waktu</th>
+                                        <th>Tingkat Kemampuan</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="ModalMeal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title "></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-gray-900 fit">
+                <div class="p-3" style="background-image: linear-gradient(135deg, #f8f9fc 100px, #dddfeb 50%, #f8f9fc 100%)">
+                    <h5 class="font-weight-bold mb-5 text-center"><em>Detail</em> Rubrik Station</h5>
+                    <div class="row align-items-center mb-2" id="ModalVaccineAreaEmployee">
+                        <div class="col-12">
+                            <div class="alert alert-modal">
+                                <table>
+                                    <h5 class="font-italic" id="Judul"></h5>
+                                    <tr>
+                                        <td><h5>Semester</h5></td>
+                                        <td><h5 class="pr-3 pl-3">:</h5></td>
+                                        <td><h6 class="font-italic" id="RSmtr"></h6></td>
+                                    </tr>
+                                    <tr>
+                                        <td><h5>Acad Career</h5></td>
+                                        <td><h5 class="pr-3 pl-3">:</h5></td>
+                                        <td><h6 class="font-italic" id="RAcad"></h6></td>
+                                    </tr>
+                                </table>
+                                <h6 id="RKemampuan"></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                    <h5 class="font-weight-bold mt-4 text-decoration-underline ">Kategori Sistem Tubuh :</h5>
+                    <div class="clasModal" id="RClassification"></div>
+    
+            
+                    <h5 class="font-weight-bold mt-4  ">Instruksi Peserta Ujian :</h5>
+                    <div class="clasModal" id="RPeserta" ></div>
+  
+
+                    <h5 class="font-weight-bold mt-4 ">Instruksi Penguji :</h5>
+                    <div class="clasModal" id="RPenguji"></div>
+ 
+                </div>
+                <div>
+                    <hr />
+                </div>
+                <div class="modal-body">
+                    <div class="row d-flex flex-sm-row flex-column-reverse justify-content-center">
+                        <div class="col-12 col-sm-auto">
+                            <button class="btn btn-block btn-secondary mb-2 shadow-sm" type="button" data-dismiss="modal">Kembali</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+
+
+@section scripts{
+    <script src="~/Scripts/Admin/RubrikKompetensi/main.js"></script>
+    <script src="~/Scripts/Admin/RubrikKompetensi/crud.js"></script>
+    <script>
+        $('.table-rubrikKompetensi tbody').on('click', ' .child', function () {
+            var data = $(this).closest("tr").find(".dataID").text();
+            $('#ModalMeal').modal({ backdrop: 'static', keyboard: false, show: true });
+
+            dataparam = {
+                Id : data
+            }
+            getDataAjax(tmpUrlink.ModalPage, dataparam, true, setDataModal);
+        });
+        function setDataModal(data) {
+            $('#Judul').html("<strong class='text-uppercase text-dark ' >" + data.JudulStation + "</strong><span class='text-danger'> ( " + data.AlokasiWaktu + " Menit )</span>");
+            $('#RSmtr').html(data.TahunSemester);
+            $('#RAcad').html(data.ACADCareer);
+            $('#RKemampuan').html(data.TingkatKemampuan); 
+            $('#RClassification').html(data.Classification); 
+            $('#RPeserta').html(data.InstruksiPeserta); 
+            $('#RPenguji').html(data.InstruksiPenguji); 
+        }
+    </script>
+}
+
+

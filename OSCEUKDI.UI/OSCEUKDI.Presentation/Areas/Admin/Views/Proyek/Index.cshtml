@@ -1,0 +1,211 @@
+﻿@{
+    ViewBag.Title = "Master proyek";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdminOSCE.cshtml";
+}
+@section css{
+    <style>
+        table.dataTable tbody tr.selected {
+            background-color: #B0BED9;
+        }
+    </style>
+    @Scripts.Render("~/bundles/jquery")
+}
+<form action="@Url.Action("UpdatePage", "Proyek")" method="post" id="updateProyek">
+    <input type="hidden" id="id" name="id" />
+</form>
+<input type="hidden" id="isCreate" value="@ViewData["isCreate"].ToString()" />
+<input type="hidden" id="isUpdate" value="@ViewData["isUpdate"].ToString()" />
+<input type="hidden" id="isDelete" value="@ViewData["isDelete"].ToString()" />
+
+<div class="">
+    <div class="page-title">
+        <div class="title_left">
+            <h3>Proyek</h3>
+        </div>
+    </div>
+    <div class="col-md-12 col-sm-12 ">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>List Proyek</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li>
+                        <a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            @{
+                if (ViewData["StatusApproval"].ToString() == "Approve")
+                {
+                    <button type="button" class="btn btn-round btn-info" onclick="CreateData()"> <i class="fa fa-plus-circle" aria-hidden="true"></i> Add Data</button><div class="x_content">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="card-box table-responsive">
+                                    <p class="text-muted font-13 m-b-30">
+                                    </p>
+                                    <table id="datatable-responsive" class="table table-striped bg-gray table-bordered dt-responsive nowrap table-Proyek" cellspacing="0" width="100%">
+                                        <thead>
+                                            <tr class="bg-green text-center">
+                                                <th width="10%"><i class="fa fa-gear" aria-hidden="true" style="font-size:20px"></i></th>
+                                                <th width="5%">No</th>
+                                                <th>Nama</th>
+                                                <th>Deskripsi</th>
+                                                <th>Email Perusahaan</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div id="nodata" class="text-center ">
+                        <img src='~/assets/img/nodata.jpeg' class='img-fluid' style='max-height:300px;' />
+                        <div class='mb-4 px-2'><strong>Anda Belum Bisa Melakukan Submit Proyek.</strong></div>
+                    </div>
+                }
+            }
+
+
+        </div>
+    </div>
+</div>
+@section scripts{
+
+    <script>
+        function CreateData() {
+            window.location.href = "/Admin/Proyek/CreatePage";
+        }
+        var tableMenuUser = $('.table-Proyek').DataTable({
+            "columnDefs": [{
+                "searchable": false,
+                "orderable": false,
+                "paging": false,
+                "targets": 0
+            }],
+            "order": [[0, 'asc']],
+            "aaSorting": [[0, "asc"]],
+            "ajax": {
+                url: '/Admin/Proyek/GetDataALL',
+                type: 'POST',
+                dataSrc: ''
+            },
+            "language": {
+                "emptyTable": "No record found.",
+                "processing":
+                    '<i class="fa fa-spinner fa-spin fa-3x fa-fw" style="color:#2a2b2b;"></i><span class="sr-only">Loading...</span> ',
+                "search": "Search:",
+                "searchPlaceholder": "",
+                "paginate": {
+                    "previous": "<<",
+                    "next": ">>"
+                }
+            },
+            "columns": [
+                {
+                    "data": "ID",
+                    "render": function (data, type, row, meta) {
+                        if ($('#isUpdate').val() == "False") {
+                            $('.btn-update').addClass('d-none')
+                        }
+                        if ($('#isDelete').val() == "False") {
+                            $('.btn-delete').addClass('d-none')
+                        }
+                        return `<div class="row justify-content-center">
+                                    <div class="col" style="text-align:center">
+                                        <a class="btn-update " href="javascript:void(0)" onclick="javascript:$('#id').val('${data}');$('#updateProyek').submit();" rel="tooltip" title="Edit" ><i class="fa fa-pencil-square-o" aria-hidden="true"style="font-size:20px"></i></a>
+                                        <a class="btn-delete" rel="tooltip" title="remove" onclick="Delete('${data}')" class="table-action remove" href="javascript:void(0)" title="Delete"><i class="fa fa-trash-o" aria-hidden="true"style="font-size:20px"></i></a>
+                                    </div>
+                                </div>`;
+                    }
+                },
+                {
+                    "data": null,
+                    "render": function (data, type, full, meta) {
+                        num = meta.row + meta.settings._iDisplayStart + 1;
+                        return '<strong class="center">' + num + '</strong>';
+                    }
+                },
+                {
+                    "data": "Nama",
+                    "name": "Nama",
+                    "render": function (data, type, row, meta) {
+                        return '<div class="center">' + data + '</div>';
+                    }
+                },
+                {
+                    "data": "Deskripsi",
+                    "name": "Deskripsi",
+                    "render": function (data, type, row, meta) {
+                        return '<div class="center">' + data + '</div>';
+                    }
+                },
+                {
+                    "data": "CreatedBy",
+                    "name": "CreatedBy",
+                    "render": function (data, type, row, meta) {
+                        return '<div class="center">' + data + '</div>';
+                    }
+                },
+            ],
+            /* <a class="btn-update" href="javascript:void(0)" onclick="javascript:$('#id').val('${data}');$('#UpdateRole').submit();" rel="tooltip" title="Edit" ><i class="fa fa-pencil-square-o" aria-hidden="true"style="font-size:20px"></i></a>*/
+            "initComplete": function (d) {
+                var notApplyFilterOnColumn = [0, 1];
+                var inputFilterOnColumn = [];
+                var showFilterBox = 'afterHeading'; //beforeHeading, afterHeading
+                $('.gtp-dt-filter-row').remove();
+                var theadSecondRow = '<tr class="gtp-dt-filter-row">';
+                $(this).find('thead tr th').each(function (index, result) {
+                    theadSecondRow += '<td class="gtp-dt-select-filter-' + index + ' bg-light"></td>';
+                });
+                theadSecondRow += '</tr>';
+
+                if (showFilterBox === 'beforeHeading') {
+                    $(this).find('thead').prepend(theadSecondRow);
+                } else if (showFilterBox === 'afterHeading') {
+                    $(theadSecondRow).insertAfter($(this).find('thead tr'));
+                }
+                this.api().columns().every(function (index) {
+                    var column = this;
+
+                    if (inputFilterOnColumn.indexOf(index) >= 0 && notApplyFilterOnColumn.indexOf(index) < 0) {
+                        $('td.gtp-dt-select-filter-' + index).html('<input type="text" class="rounded gtp-dt-input-filter border border-secondary form-control">');
+                        $('td input.gtp-dt-input-filter').on('keyup change clear', function () {
+                            if (column.search() !== this.value) {
+                                column
+                                    .search(this.value)
+                                    .draw();
+                            }
+                        });
+                    } else if (notApplyFilterOnColumn.indexOf(index) < 0) {
+
+                        var select = $('<select class="form-control"><option value="">All</option></select>')
+                            .on('change', function () {
+                                var val = $.fn.dataTable.util.escapeRegex(
+                                    $(this).val()
+                                );
+
+                                column
+                                    .search(val ? '^' + val + '$' : '', true, false)
+                                    .draw();
+                            });
+                        $('td.gtp-dt-select-filter-' + index).html(select);
+                        column.data().unique().sort().each(function (d, j) {
+                            select.append('<option value="' + d + '">' + d + '</option>')
+                        });
+                    }
+                });
+            }
+        });
+    </script>
+}
+
+

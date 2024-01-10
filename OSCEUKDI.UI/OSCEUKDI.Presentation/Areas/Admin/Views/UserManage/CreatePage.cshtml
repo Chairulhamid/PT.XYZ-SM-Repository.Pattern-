@@ -1,0 +1,114 @@
+﻿
+@{
+    ViewBag.Title = "Create User";
+    ViewBag.MenuName = "UserManage";
+    ViewBag.MenuPage = "Form Create";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdminOSCE.cshtml";
+}
+@section css{
+    <link href="~/Content/select2.min.css" rel="stylesheet" />
+    @Scripts.Render("~/bundles/jquery")
+}
+
+<div class="">
+    <div class="title_left">
+        <a href="javascript:history.back()" class="btn btn-circle text-secondary"><i class="fa fa-arrow-left"></i></a>
+        <span class="text-secondary h3"><strong>Tambah </strong></span><em><strong class="text-info">Data</strong></em>
+    </div>
+    <div class="clearfix"></div>
+    <div class="alert alert-warning d-none  alert-dismissible  text-white" id="danger-alert" role="alert">
+        <i class="fa fa-exclamation-triangle" style="font-size:20px" aria-hidden="true"></i>
+        <span id="alertText" class="" style="font-size:20px"></span>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>User</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                        <li>
+                            <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                        </li>
+                        <li>
+                            <a class="close-link"><i class="fa fa-close"></i></a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <form class="" action="" method="post">
+                        <h4 class="col-form-label">Nama<span class="required text-danger"> * </span></h4>
+                        <select name="Nama" id="Nama" class="form-control input-data col-8">
+                            <option value="" selected disabled>Pilih Karyawan</option>
+                            @{
+                                foreach (var dt in ViewData["User"] as IEnumerable<OSCEUKDI.Entities.ViewModel.VMDropDown>)
+                                {
+                                    <option value="@dt.Nilai|||@dt.Nama">@dt.Nama - @dt.Nilai</option>
+                                }
+                            }
+                        </select>
+                        <h4 class="col-form-label">Role<span class="required text-danger"> * </span></h4>
+                        <select name="Role" id="Role" class="form-control input-data col-8">
+                            <option value="" selected disabled>Role</option>
+                            @{
+                                foreach (var dt in ViewData["Role"] as IEnumerable<OSCEUKDI.Entities.Models.Role>)
+                                {
+                                    <option value="@dt.ID">@dt.RoleName</option>
+                                }
+                            }
+                        </select>
+                        <h4 class="col-form-label">Email<span class="required text-danger"> * </span></h4>
+                        <input type="email" class="form-control input-data  col-6" name="Email" id="Email" placeholder="Example: chairul@gmail.com" />
+                        <p id="email-error" style="color: red; display: none;">Format email salah.</p>
+                        <p id="email-success" style="color: green; display: none;">Format email benar.</p>
+
+
+                        <h4 class="col-form-label">Password<span class="required text-danger"> * </span></h4>
+                        <input type="password" class="form-control input-data  col-6" name="Password" id="Password" placeholder="Password" />
+                        <p id="password-error" style="color: red; display: none;"></p>
+                        <p id="password-success" style="color: green; display: none;"></p>
+
+                        <input type="hidden" class="form-control input-data  col-6" name="NamaUser" id="NamaUser" />
+                        <input type="hidden" class="form-control input-data  col-6" name="NipUser" id="NipUser" />
+
+                        <div class="ln_solid ">
+                            <div class="form-group mt-3">
+                                <div class="col-md-12 text-center">
+                                    <button type='button' class="btn btn-round btn-success" onclick="PostCreate()">
+                                        <i class="fa fa-save" aria-hidden="true"></i> Save
+                                    </button>
+                                    <button type='button' class="btn btn-round btn-secondary" onclick="history.back()">
+                                        <i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i> Back
+                                    </button>
+                                    <button type='reset' class="btn btn-round btn-danger">
+                                        <i class="fa fa-refresh" aria-hidden="true"></i> Reset
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+@section scripts{
+    <script src="/Scripts/Admin/UserManage/main.js"></script>
+    <script src="~/Scripts/Admin/UserManage/crud.js"></script>
+    <script src="~/Scripts/select2.min.js"></script>
+
+    <script>
+        $("#Nama").change(function () {
+            const string = $("#Nama").val();
+            const result = string.split("|||");
+            $("#NamaUser").val(result[1]);
+            $("#NipUser").val(result[0]);
+        });
+    </script>
+}

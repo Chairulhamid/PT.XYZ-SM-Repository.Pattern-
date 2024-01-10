@@ -1,0 +1,68 @@
+﻿@{
+    ViewBag.Title = "Menu";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdminOSCE.cshtml";
+}
+@section css{
+    @Scripts.Render("~/bundles/jquery")
+}
+<form action="@Url.Action("UpdatePage","Menu")" method="post" id="updateMenu">
+    <input type="hidden" id="id" name="id" />
+</form>
+<input type="hidden" id="isCreate" value="@ViewData["isCreate"].ToString()" />
+<input type="hidden" id="isUpdate" value="@ViewData["isUpdate"].ToString()" />
+<input type="hidden" id="isDelete" value="@ViewData["isDelete"].ToString()" />
+
+<div class="">
+    <div class="page-title">
+        <div class="title_left">
+            <h3>Manage Menu</h3>
+        </div>
+    </div>
+    <div class="col-md-12 col-sm-12 ">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>List Menu</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li>
+                        <a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <button type="button" class="btn btn-round btn-info" onclick="CreateMenu()"> <i class="fa fa-plus-circle" aria-hidden="true"></i> Add Data</button>
+            <div class="x_content">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card-box table-responsive">
+                            <p class="text-muted font-13 m-b-30">
+                            </p>
+
+                            <table id="datatable-responsive" class="table table-striped bg-gray table-bordered dt-responsive nowrap table-menu" cellspacing="0" width="100%">
+                                <thead>
+                                    <tr class="bg-green text-center">
+                                        <th>No</th>
+                                        <th>Nama Menu</th>
+                                        <th>Menu Url</th>
+                                        <th>Menu Icon</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script src="~/Scripts/Admin/Menu/main.js"></script>
+    <script src="~/Scripts/Admin/Menu/crud.js"></script>
+}
+
+

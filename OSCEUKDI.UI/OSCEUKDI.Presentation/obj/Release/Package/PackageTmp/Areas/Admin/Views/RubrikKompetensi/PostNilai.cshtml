@@ -1,0 +1,261 @@
+﻿@{
+    ViewBag.Title = "Rubrik Station";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdminOSCE.cshtml";
+}
+@section css{
+    <script src="~/assets/vendors/ckeditor/ckeditor.js"></script>
+    <script src="~/assets/vendors/ckeditor/samples/js/sample.js"></script>
+
+    @Scripts.Render("~/bundles/jquery")
+    <style>
+        .checkbox label:after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        .checkbox .cr {
+            position: relative;
+            display: inline-block;
+            border: 1px solid #a9a9a9;
+            border-radius: .25em;
+            width: 1.3em;
+            height: 1.3em;
+            float: left;
+            margin-right: .5em;
+        }
+
+            .checkbox .cr .cr-icon {
+                position: absolute;
+                font-size: .8em;
+                line-height: 0;
+                top: 50%;
+                left: 15%;
+            }
+
+        .checkbox label input[type="checkbox"] {
+            display: none;
+        }
+
+            .checkbox label input[type="checkbox"] + .cr > .cr-icon {
+                opacity: 0;
+            }
+
+            .checkbox label input[type="checkbox"]:checked + .cr > .cr-icon {
+                opacity: 1;
+            }
+
+            .checkbox label input[type="checkbox"]:disabled + .cr {
+                opacity: .5;
+            }
+    </style>
+}
+@model IEnumerable<OSCEUKDI.Entities.ViewModel.VMRubrikNilai>
+<form action="@Url.Action("Nilai","RubrikKompetensi")" method="post" id="RubrikNilaiKompetensi">
+    <input type="hidden" id="idKomp" name="idKomp" />
+</form>
+@foreach (var item in Model)
+{
+    <div class="">
+        <div class="title_left">
+            <a href="javascript:history.back()" class="btn btn-circle text-secondary"><i class="fa fa-arrow-left"></i></a>
+            <span class="text-secondary h3"><strong>Post </strong></span><em><strong class="text-info">Nilai</strong></em>
+        </div>
+        <div class="clearfix"></div>
+        <div class="alert alert-warning d-none  alert-dismissible  text-white" id="danger-alert" role="alert">
+            <i class="fa fa-exclamation-triangle" style="font-size:20px" aria-hidden="true"></i>
+            <span id="alertText" class="" style="font-size:20px"></span>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="x_panel">
+                    <div class="x_title">
+                        <h2>Rubrik Station</h2>
+                        <ul class="nav navbar-right panel_toolbox">
+                            <li>
+                                <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                            </li>
+                            <li>
+                                <a class="close-link"><i class="fa fa-close"></i></a>
+                            </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+
+                        <div class="bs-example">
+                            <div class="jumbotron">
+                                <h3 class="text-center text-secondary"><i class="mr-2">Setting </i>Nilai Rubrik</h3>
+                                <table>
+                                    <h5 class="font-italic"><strong>@item.JudulStation</strong> - ( @item.AlokasiWaktu Menit )</h5>
+                                    <tr>
+                                        <td><h5>Kompetensi</h5></td>
+                                        <td><h5 class="pr-3 pl-3">:</h5></td>
+                                        <td><h6 class="font-italic">@item.Kompetensi</h6></td>
+                                    </tr>
+                                    <tr>
+                                        <td><h5>Semester</h5></td>
+                                        <td><h5 class="pr-3 pl-3">:</h5></td>
+                                        <td><h6 class="font-italic">@item.DESCR</h6></td>
+                                    </tr>
+                                    <tr>
+                                        <td><h5>Acad Career</h5></td>
+                                        <td><h5 class="pr-3 pl-3">:</h5></td>
+                                        <td><h6 class="font-italic">@item.ACADCareer</h6></td>
+                                    </tr>
+                                </table>
+                                <h6>@item.TingkatKemampuan</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="x_content">
+                        <form class="" action="" method="post">
+                            <input type="hidden" id="ID" value="@item.ID">
+                            <input type="hidden" id="KompetensiID" value="@item.KompetensiID">
+                            <input type="hidden" id="RubrikKompetensiID" value="@item.RubrikKompetensiID">
+                            <div class="field item form-group">
+                                <div class="container">
+                                    <h4 class="col-form-label  label-align">Rubrik Nilai <span class="required text-danger"> * </span></h4>
+                                </div>
+
+                                <div class="col-md-10 col-sm-10 mt-3">
+                                    <div class="form-check form-check-inline">
+                                        <div class="checkbox form-check form-check-inline mr-4">
+                                            <label>
+                                                <input type="checkbox" id="checkbox0" @{if (item.Nilai0 != null) { <text> checked value="true" </text>  } else { <text> value="false" </text>  } }>
+                                                <span class="cr"><i class="cr-icon glyphicon glyphicon-ok "></i></span>
+                                                0
+                                            </label>
+                                        </div>
+                                        <div class="checkbox form-check form-check-inline mr-4">
+                                            <label>
+                                                <input type="checkbox" id="checkbox1" @{if (item.Nilai1 != null) { <text> checked value="true" </text>  } else { <text> value="false" </text>  } }>
+                                                <span class="cr"><i class="cr-icon glyphicon glyphicon-ok "></i></span>
+                                                1
+                                            </label>
+                                        </div>
+
+                                        <!-- Checked checkbox -->
+                                        <div class="checkbox form-check form-check-inline mr-4">
+                                            <label>
+                                                <input type="checkbox" id="checkbox2" @{if (item.Nilai2 != null) { <text> checked value="true" </text>  } else { <text> value="false" </text>  } }>
+                                                <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                                2
+                                            </label>
+                                        </div>
+                                        <div class="checkbox form-check form-check-inline mr-4">
+                                            <label>
+                                                <input type="checkbox" id="checkbox3" @{if (item.Nilai3 != null) { <text> checked value="true" </text>  } else { <text> value="false" </text>  } }>
+                                                <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                                3
+                                            </label>
+                                        </div>
+                                        <div class="checkbox form-check form-check-inline mr-4">
+                                            <label>
+                                                <input type="checkbox" id="checkbox4" @{if (item.Nilai4 != null) { <text> checked value="true" </text>  } else { <text> value="false" </text>  } }>
+                                                <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                                4
+                                            </label>
+                                        </div>
+                                        <div class="checkbox form-check form-check-inline mr-4">
+                                            <label>
+                                                <input type="checkbox" id="checkbox5" @{if (item.Nilai5 != null) { <text> checked value="true" </text>  } else { <text> value="false" </text>  } }>
+                                                <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                                5
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="x_title"></div>
+                            <div id="textarea0" class="@{if (item.Nilai0 != null){ <text>field item form-group  textarea0</text> } else { <text>field item form-group d-none textarea0</text>} }">
+                                <div class="container">
+                                    <h4 class="col-form-label  label-align">Deskripsi Nilai 0 <span class="required text-danger"> * </span></h4>
+                                </div>
+                                <div class="col-md-10 col-sm-10">
+                                    <textarea class="form-control inputText0 " id="Nilai0" name="Nilai0" rows="2">@item.Nilai0</textarea>
+                                </div>
+                            </div>
+
+                            <div class="@{if (item.Nilai1 != null){ <text>field item form-group  textarea1</text> } else { <text>field item form-group d-none textarea1</text>} }">
+                                <div class="container">
+                                    <h4 class="col-form-label  label-align">Deskripsi Nilai 1 <span class="required text-danger"> * </span></h4>
+                                </div>
+                                <div class="col-md-10 col-sm-10">
+                                    <textarea class="form-control inputText1" id="Nilai1" name="Nilai1" rows="2">@item.Nilai1</textarea>
+                                </div>
+                            </div>
+                            <div class="@{if (item.Nilai2 != null){ <text>field item form-group  textarea2</text> } else { <text>field item form-group d-none textarea2</text>} }">
+                                <div class="container">
+                                    <h4 class="col-form-label  label-align">Deskripsi Nilai 2 <span class="required text-danger"> * </span></h4>
+                                </div>
+                                <div class="col-md-10 col-sm-10">
+                                    <textarea class="form-control inputText2" id="Nilai2" name="Nilai2" rows="2">@item.Nilai2</textarea>
+                                </div>
+                            </div>
+                            <div class="@{if (item.Nilai3 != null){ <text>field item form-group  textarea3</text> } else { <text>field item form-group d-none textarea3</text>} }">
+                                <div class="container">
+                                    <h4 class="col-form-label  label-align">Deskripsi Nilai 3 <span class="required text-danger"> * </span></h4>
+                                </div>
+                                <div class="col-md-10 col-sm-10">
+                                    <textarea class="form-control inputText3" id="Nilai3" name="Nilai3" rows="2">@item.Nilai3</textarea>
+                                </div>
+                            </div>
+                            <div class="@{if (item.Nilai4 != null){ <text>field item form-group  textarea4</text> } else { <text>field item form-group d-none textarea4</text>} }">
+                                <div class="container">
+                                    <h4 class="col-form-label  label-align">Deskripsi Nilai 4 <span class="required text-danger"> * </span></h4>
+                                </div>
+                                <div class="col-md-10 col-sm-10">
+                                    <textarea class="form-control inputText4" id="Nilai4" name="Nilai4" rows="2">@item.Nilai4</textarea>
+                                </div>
+                            </div>
+                            <div class="@{if (item.Nilai5 != null){ <text>field item form-group  textarea5</text> } else { <text>field item form-group d-none textarea5</text>} }">
+                                <div class="container">
+                                    <h4 class="col-form-label  label-align">Deskripsi Nilai 5 <span class="required text-danger"> * </span></h4>
+                                </div>
+                                <div class="col-md-10 col-sm-10">
+                                    <textarea class="form-control inputText5" id="Nilai5" name="Nilai5" rows="2" placeholder="">@item.Nilai5</textarea>
+                                </div>
+                            </div>
+
+                            <div class="field item form-group">
+                                <div class="container">
+                                    <h4 class="col-form-label  label-align">Bobot <span class="required text-danger"> * </span></h4>
+                                </div>
+
+                                <div class="col-md-10 col-sm-10">
+                                    <input type="number" class="form-control input-data" id="Bobot" name="Bobot" placeholder="Bobot Nilai" value="@item.Bobot">
+                                </div>
+                            </div>
+
+                            <div class="ln_solid ">
+                                <div class="form-group mt-3">
+                                    <div class="col-md-12 text-center">
+                                        <button type='button' class="btn btn-round btn-success" onclick="PostCreate()">
+                                            <i class="fa fa-save" aria-hidden="true"></i> Save
+                                        </button>
+                                        <button type='button' class="btn btn-round btn-secondary" onclick="history.back()">
+                                            <i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i> Back
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    @*}*@
+                </div>
+
+            </div>
+        </div>
+    </div>
+}
+@section scripts{
+    <script src="~/Scripts/Admin/RubrikKompetensi/crudNilaiRubrik.js"></script>
+    <script>
+        initSample();
+    </script>
+}

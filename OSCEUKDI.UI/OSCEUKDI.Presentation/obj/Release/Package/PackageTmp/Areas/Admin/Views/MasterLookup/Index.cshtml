@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewBag.Title = "Master Lookup - SIHRIS";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout2.cshtml";
+}
+@section css{
+
+    <link rel="stylesheet" type="text/css" href="~/Content/Admin/inputResponsive.css">
+    @Scripts.Render("~/bundles/jquery")
+
+
+    @Scripts.Render("~/bundles/jquery")
+    <script src="~/Scripts/sweetalert2.all.min.js"></script>
+}
+@section modal{
+    <div class="modal fade" id="TambahMasterLookUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document" id="modal-inner">
+
+        </div>
+    </div>
+}
+
+
+
+<div class="container-fluid" style="padding: 0px">
+    <div class="card center-block" style="background-color: white; width: 100%; padding: 0px">
+        <div class="card-body" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); border: 3px solid coral; padding: 0px ">
+            <h4 class="card-title" style="padding-top: 30px; padding-right: 20px; padding-left: 30px; font-weight: bold; font-size: 30px; color: black;">
+                MASTER LOOKUP
+            </h4>
+            <hr />
+            <div class="container" style="width: 100%;">
+                <button class="btn btn-success" onclick="IndexCreateMasterLookup()"><i class="fas fa-plus-circle"></i> Tambah Master Lookup</button>
+                <br />
+                <br />
+                <div id="table-data-master-lookup-overflow">
+                    <table id="table-data-master-lookup" class="table table-bordered table-spacing js-basic-example dataTable table-responsive display nowrap">
+                        <thead>
+                            <tr>
+                                <th class="zero-padding no-border vertical-center sorting">Action</th>
+                                <th class="zero-padding no-border vertical-center sorting">No.</th>
+                                <th class="zero-padding no-border vertical-center sorting">Tipe Lookup</th>
+                                <th class="zero-padding no-border vertical-center sorting">Name Lookup</th>
+                                <th class="zero-padding no-border vertical-center sorting">Nilai</th>
+                                <th class="zero-padding no-border vertical-center sorting">Tanggal Buat</th>
+                                <th class="zero-padding no-border vertical-center sorting">Dibuat Oleh</th>
+                                <th class="zero-padding no-border vertical-center sorting">Tanggal Ubah</th>
+                                <th class="zero-padding no-border vertical-center sorting">Diubah Oleh</th>
+                                <th class="zero-padding no-border vertical-center sorting">Status</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script src="~/Scripts/Admin/MasterLookup/main.js"></script>
+    <script src="~/Scripts/Admin/MasterLookup/crud.js"></script>
+    <script src="~/Scripts/loading/loadingoverlay.min.js"></script>
+}
+

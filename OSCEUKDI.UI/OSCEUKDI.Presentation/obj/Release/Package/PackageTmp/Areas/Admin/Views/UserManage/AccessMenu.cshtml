@@ -1,0 +1,145 @@
+﻿
+@{
+    ViewBag.Title = "User";
+    ViewBag.MenuName = "User";
+    ViewBag.MenuPage = "Access Menu";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdminOSCE.cshtml";
+}
+@section css{
+    @Scripts.Render("~/bundles/jquery")
+}
+<input type="hidden" id="RoleID" value="@ViewData["RoleID"].ToString()" />
+<input type="hidden" id="UserID" value="@ViewData["UserID"].ToString()" />
+<input type="hidden" id="StatusActive" value="Active" />
+<input type="hidden" id="StatusNonActive" value="NonActive" />
+<div class="col-12">
+    <div class="card my-4">
+        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+            <div class="bg-gradient-faded-secondary-vertical shadow-dark border-radius-lg pt-4 pb-3">
+                <h6 class="text-light  ps-3 text-uppercase  text-center"><b>User Access Menu : @ViewData["UserName"].ToString()</b></h6>
+            </div>
+        </div>
+        <div class="container">
+            <div class="card-header py-1">
+            </div><hr style="border:outset" />
+            <div class="alert alert-success alert-dismissible d-none text-white" id="success-alert" role="alert">
+                <i class="material-icons text-white ">
+                    check_circle_outline
+                </i>
+                <span class=""> Data User Access Menu Berhasil Diupdate!</span>
+            </div>
+            <div class="alert alert-success alert-dismissible d-none text-white" id="success-alert" role="alert">
+                <i class="material-icons text-white ">
+                    success
+                </i>
+                <span class="">Data User Access Menu berhasil diupdate!.</span>
+            </div>
+            <a class="btn btn-danger" href="/Admin/UserManage">  <i class="material-icons opacity-10">arrow_back</i> Back</a>
+            <a class="btn btn-warning" onclick="ResetAccess(@ViewData["UserID"])">  <i class="material-icons opacity-10">restart_alt</i> Reset Access</a>
+            <div class="card-body px-0 pb-2">
+                <div class="table-responsive p-0">
+                    <table class="table table-hover display nowrap dataTable dtr-inline table table-bordered  " id="table-role-access" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th class="text-center text-uppercase text-secondary  font-weight-bolder opacity-7">Menu Name</th>
+                                <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Status Menu</th>
+                                <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Is Create</th>
+                                <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Is Update</th>
+                                <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Is Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{
+                                foreach (var dt in ViewData["DataUserAccess"] as IEnumerable<OSCEUKDI.Entities.ViewModel.VMRoleAccessMenu>)
+                                {
+                                <tr>
+                                    <td class=" text-uppercase font-weight-bolder" id="statusMenu">@dt.MenuName</td>
+                                    @if (dt.IsActive == true)
+                                    {
+                                        <td style="cursor:pointer" class="align-middle text-center text-sm">
+                                            <span class="badge badge-sm bg-gradient-success" onclick="statusMenu($('#RoleID').val(),$('#UserID').val(),@dt.MenuID,$('#StatusActive').val())">Active</span>
+                                        </td>
+                                    }
+                                    else if (dt.IsActive == false || dt.IsActive == null)
+                                    {
+                                        <td style="cursor:pointer" class="align-middle text-center text-sm">
+                                            <span class="badge badge-sm bg-gradient-dark" onclick="statusMenu($('#RoleID').val(),$('#UserID').val(),@dt.MenuID,$('#StatusNonActive').val())">Non Active</span>
+                                        </td>
+                                    }
+                                    @*@if (dt.IsActive == true)
+                                    {
+                                        if (dt.IsView == true)
+                                        {
+                                            <td><div class="form-check form-switch "><input class="form-check-input ms-auto" type="checkbox" id="flexSwitchCheckDefault3" onclick="statusCRUD($('#RoleID').val(),$('#UserID').val(),@dt.MenuID,$('#StatusActive').val(),'View')" checked></div></td>
+                                        }
+                                        else
+                                        {
+                                            <td><div class="form-check form-switch "><input class="form-check-input ms-auto" type="checkbox" id="flexSwitchCheckDefault3" onclick="statusCRUD($('#RoleID').val(),$('#UserID').val(),@dt.MenuID,$('#StatusNonActive').val(),'View')"></div></td>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <td><div class="form-check form-switch "><input class="form-check-input ms-auto" disabled type="checkbox" id="flexSwitchCheckDefault3" onclick="statusCRUD($('#RoleID').val(),$('#UserID').val(),@dt.MenuID,$('#StatusNonActive').val(),'View')"></div></td>
+                                    }*@
+                                    @if (dt.IsActive == true)
+                                    {
+                                        if (dt.IsCreate == true)
+                                        {
+                                            <td><div class="form-check form-switch "><input class="form-check-input ms-auto" type="checkbox" id="flexSwitchCheckDefault3" onclick="statusCRUD($('#RoleID').val(),$('#UserID').val(),@dt.MenuID,$('#StatusActive').val(),'Create')" checked></div></td>
+                                        }
+                                        else
+                                        {
+                                            <td><div class="form-check form-switch "><input class="form-check-input ms-auto" type="checkbox" id="flexSwitchCheckDefault3" onclick="statusCRUD($('#RoleID').val(),$('#UserID').val(),@dt.MenuID,$('#StatusNonActive').val(),'Create')"></div></td>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <td><div class="form-check form-switch "><input class="form-check-input ms-auto" disabled type="checkbox" id="flexSwitchCheckDefault3" onclick="statusCRUD($('#RoleID').val(),$('#UserID').val(),@dt.MenuID,$('#StatusNonActive').val(),'Create')"></div></td>
+                                    }
+                                    @if (dt.IsActive == true)
+                                    {
+                                        if (dt.IsUpdate == true)
+                                        {
+                                            <td><div class="form-check form-switch "><input class="form-check-input ms-auto" type="checkbox" id="flexSwitchCheckDefault3" onclick="statusCRUD($('#RoleID').val(),$('#UserID').val(),@dt.MenuID,$('#StatusActive').val(),'Update')" checked></div></td>
+                                        }
+                                        else
+                                        {
+                                            <td><div class="form-check form-switch "><input class="form-check-input ms-auto" type="checkbox" id="flexSwitchCheckDefault3" onclick="statusCRUD($('#RoleID').val(),$('#UserID').val(),@dt.MenuID,$('#StatusNonActive').val(),'Update')"></div></td>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <td><div class="form-check form-switch "><input class="form-check-input ms-auto" disabled type="checkbox" id="flexSwitchCheckDefault3" onclick="statusCRUD($('#RoleID').val(),$('#UserID').val(),@dt.MenuID,$('#StatusNonActive').val(),'Update')"></div></td>
+                                    }
+                                    @if (dt.IsActive == true)
+                                    {
+                                        if (dt.IsDelete == true)
+                                        {
+                                            <td><div class="form-check form-switch "><input class="form-check-input ms-auto" type="checkbox" id="flexSwitchCheckDefault3" onclick="statusCRUD($('#RoleID').val(),$('#UserID').val(),@dt.MenuID,$('#StatusActive').val(),'Delete')" checked></div></td>
+                                        }
+                                        else
+                                        {
+                                            <td><div class="form-check form-switch "><input class="form-check-input ms-auto" type="checkbox" id="flexSwitchCheckDefault3" onclick="statusCRUD($('#RoleID').val(),$('#UserID').val(),@dt.MenuID,$('#StatusNonActive').val(),'Delete')"></div></td>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <td><div class="form-check form-switch "><input class="form-check-input ms-auto" disabled type="checkbox" id="flexSwitchCheckDefault3" onclick="statusCRUD($('#RoleID').val(),$('#UserID').val(),@dt.MenuID,$('#StatusNonActive').val(),'Delete')"></div></td>
+                                    }
+                                </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script src="~/Scripts/Admin/UserManage/main.js"></script>
+    <script src="~/Scripts/Admin/UserManage/crud.js"></script>
+
+}
+

@@ -1,0 +1,107 @@
+﻿@{
+    ViewBag.Title = "Create Menu";
+    ViewBag.MenuName = "Menu";
+    ViewBag.MenuPage = "Form Create";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdminOSCE.cshtml";
+}
+@section css{
+    @Scripts.Render("~/bundles/jquery")
+}
+<div class="">
+    <div class="title_left">
+        <a href="javascript:history.back()" class="btn btn-circle text-secondary"><i class="fa fa-arrow-left"></i></a>
+        <span class="text-secondary h3"><strong>Tambah </strong></span><em><strong class="text-info">Data</strong></em>
+    </div>
+    <div class="clearfix"></div>
+    <div class="alert alert-warning d-none  alert-dismissible  text-white" id="danger-alert" role="alert">
+        <i class="fa fa-exclamation-triangle" style="font-size:20px" aria-hidden="true"></i>
+        <span id="alertText" class="" style="font-size:20px"></span>
+    </div>
+    <div class="col-md-12 ">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Menu</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li>
+                        <a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <br />
+                <form class="form-label-left input_mask">
+                    <div class="form-group row">
+                        <div class="col-md-6 col-sm-6  form-group has-feedback">
+                            <h6 for="">Menu Name <b class="text-danger">*</b> </h6>
+                            <input type="text" class="form-control input-data" name="MenuName" id="MenuName" placeholder="Menu Name">
+                        </div>
+                        <div class="col-md-6 col-sm-6  form-group has-feedback">
+                            <h6 for="">Menu Description <b class="text-danger">*</b> </h6>
+                            <textarea class="form-control" name="MenuDescription" id="MenuDescription" rows="1" placeholder="Menu Description" spellcheck="false"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-6 col-sm-6  form-group has-feedback">
+                            <h6 for="">Menu Url <b class="text-danger">*</b> </h6>
+                            <input type="text" class="form-control input-data" name="MenuUrl" id="MenuUrl" placeholder="Menu Url">
+                        </div>
+                        <div class="col-md-6 col-sm-6  form-group has-feedback">
+                            <h6 for="">Menu Icon <b class="text-danger">*</b> </h6>
+                            <input type="text" class="form-control input-data" name="MenuIcon" id="MenuIcon" placeholder="Menu Icon">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-6 col-sm-6  form-group has-feedback">
+                            <h6 for="">Jenis Menu <b class="text-danger">*</b> </h6>
+                            <select class="form-control  input-data" name="JenisMenu" id="JenisMenu">
+                                <option value="" disabled selected>Choose Menu</option>
+                                <option value="parent">Menu Parent</option>
+                                <option value="sub"> Sub Menu Parent</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 col-sm-6  form-group has-feedback">
+                            <h6 for="">Menu Order <b class="text-danger">*</b> </h6>
+                            <input type="text" class="form-control input-data" name="MenuOrder" id="MenuOrder" placeholder="Menu Order">
+                        </div>
+                    </div>
+                    <div class="form-group row d-none" id="DivMenuParent">
+                        <div class="col-md-12 col-sm-12  form-group has-feedback">
+                            <h6 for="">Menu Parent <b class="text-danger">*</b> </h6>
+                            <select class="form-control " name="MenuParent" id="MenuParent">
+                                <option value="" disabled selected>Choose Menu Parent</option>
+                                @{
+                                    foreach (var data in ViewData["MenuParent"] as IEnumerable<OSCEUKDI.Entities.ViewModel.VMMenu>)
+                                    {
+                                        <option value="@data.Nilai">@data.Nama</option>
+                                    }
+                                }
+                            </select>
+                        </div>
+                    </div>
+                    <div class="ln_solid"></div>
+                    <div class="form-group mt-3">
+                        <div class="col-md-12 text-center">
+                            <button type='button' class="btn btn-round btn-success" onclick="PostCreate()">
+                                <i class="fa fa-save" aria-hidden="true"></i> Save
+                            </button>
+                            <button type='button' class="btn btn-round btn-secondary" onclick="history.back()">
+                                <i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i> Back
+                            </button>
+                            <button type='reset' class="btn btn-round btn-danger">
+                                <i class="fa fa-refresh" aria-hidden="true"></i> Reset
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script src="~/Scripts/Admin/Menu/main.js"></script>
+    <script src="~/Scripts/Admin/Menu/crud.js"></script>
+}

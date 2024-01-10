@@ -1,0 +1,58 @@
+﻿
+@{
+    Layout = null;
+}
+
+<div class="modal-content data-content-modal" id="created-Kegiatan">
+    <div class="modal-header" style="background-color: #FF8A04; ">
+        <h5 class="card-title text-center" style="font-weight: bold; font-size: 30px; color: black;">
+            TAMBAH KEGIATAN
+            <button type="button" onclick="CancelCreate()" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </h5>
+    </div>
+    <div class="modal-body">
+        <form class="form-horizontal" enctype=multipart/form-data id="createKegiatan" autocomplete="off">
+            <div class="form-group">
+                <label for="Code" class="col-sm-3 control-label">Tahun Semester</label>
+                <div class="col-sm-9">
+                    @*<select name="tahunSemester" id="tahunSemester" class="form-control input-md">
+                        </select>*@
+                    <select name="STRM" id="STRM" class="form-control select2 input-md input-data">
+                        <option value="" selected disabled>-- Pilih Tahun Semester --</option>
+                        @{
+                            foreach (var dt in ViewData["semester"] as IEnumerable<MBKM.Entities.ViewModel.VMSemester>)
+                            {
+                                <option value="@dt.Nilai">@dt.Nama</option>
+                            }
+                        }
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="RoleName" class="col-sm-3 control-label">Keterangan</label>
+                <div class="col-sm-9">
+                    <textarea name="keterangan" id="keterangan" class="form-control input-pendaftaran input-data" style="width: 100%;" rows="5" placeholder="Input Keterangan"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="RoleName" class="col-sm-3 control-label">Upload File</label>
+                <div class="col-sm-9 ">
+                    <input type="file" class="form-control input-pendaftaran input-data" id="FileKegiatan" name="FileKegiatan" multiple="">
+                    <small class="describe text-danger">Ukuran File max 2MB!</small>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-2 col-md-offset-10">
+                    <button type="button" onclick="PostCreate()" class="btn btn-warning">Simpan</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+@section scripts{
+    <script src="~/Scripts/Portal/AdministrasiMbkm/crud.js"></script>
+    <script src="~/Scripts/Portal/AdministrasiMbkm/main.js"></script>
+    <script src="~/Scripts/loading/loadingoverlay.min.js"></script>
+}

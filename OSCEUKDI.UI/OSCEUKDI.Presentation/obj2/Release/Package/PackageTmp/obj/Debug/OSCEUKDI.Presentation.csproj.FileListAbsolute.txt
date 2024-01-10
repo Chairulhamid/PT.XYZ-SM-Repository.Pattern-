@@ -1,0 +1,170 @@
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\obj\Debug\OSCEUKDI.Presentation.csproj.AssemblyReference.cache
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\obj\Debug\OSCEUKDI.Presentation.csproj.CoreCompileInputs.cache
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\OSCEUKDI.Presentation.dll.config
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\OSCEUKDI.Presentation.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\OSCEUKDI.Presentation.pdb
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\csc.exe
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\csc.exe.config
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\csc.rsp
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\csi.exe
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\csi.rsp
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\System.AppContext.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\System.Collections.Immutable.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\System.IO.FileSystem.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\System.Reflection.Metadata.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\vbc.exe
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\vbc.exe.config
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\vbc.rsp
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\VBCSCompiler.exe
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\VBCSCompiler.exe.config
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\Antlr3.Runtime.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\Autofac.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\Autofac.Integration.Mvc.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\EntityFramework.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\EntityFramework.SqlServer.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\EPPlus.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\MathNet.Numerics.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\Microsoft.IO.RecyclableMemoryStream.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\Microsoft.Web.Infrastructure.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\Newtonsoft.Json.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\OSCEUKDI.Common.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\OSCEUKDI.Entities.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\OSCEUKDI.Repository.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\OSCEUKDI.Services.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\Rotativa.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\System.Web.Helpers.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\System.Web.Mvc.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\System.Web.Optimization.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\System.Web.Razor.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\System.Web.WebPages.Deployment.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\System.Web.WebPages.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\System.Web.WebPages.Razor.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\WebGrease.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\BCrypt.Net-Next.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\System.Linq.Dynamic.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\OSCEUKDI.Common.pdb
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\OSCEUKDI.Services.pdb
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\OSCEUKDI.Services.dll.config
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\OSCEUKDI.Entities.pdb
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\OSCEUKDI.Entities.dll.config
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\OSCEUKDI.Repository.pdb
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\OSCEUKDI.Repository.dll.config
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\Autofac.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\Autofac.Integration.Mvc.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\EntityFramework.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\EntityFramework.SqlServer.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\EPPlus.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\MathNet.Numerics.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\Microsoft.IO.RecyclableMemoryStream.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\Newtonsoft.Json.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\System.Web.Helpers.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\System.Web.Mvc.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\System.Web.Optimization.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\System.Web.Razor.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\System.Web.WebPages.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\System.Web.WebPages.Deployment.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\System.Web.WebPages.Razor.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\Antlr3.Runtime.pdb
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\BCrypt.Net-Next.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\obj\Debug\OSCEUKDI.Presentation.csproj.CopyComplete
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\obj\Debug\OSCEUKDI.Presentation.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\obj\Debug\OSCEUKDI.Presentation.pdb
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\obj\Debug\OSCEUKDI.Presentation.csproj.AssemblyReference.cache
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\obj\Debug\OSCEUKDI.Presentation.csproj.CoreCompileInputs.cache
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\OSCEUKDI.Presentation.dll.config
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\OSCEUKDI.Presentation.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\OSCEUKDI.Presentation.pdb
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\csc.exe
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\csc.exe.config
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\csc.rsp
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\csi.exe
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\csi.rsp
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\System.AppContext.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\System.Collections.Immutable.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\System.IO.FileSystem.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\System.Reflection.Metadata.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\vbc.exe
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\vbc.exe.config
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\vbc.rsp
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\VBCSCompiler.exe
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\roslyn\VBCSCompiler.exe.config
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\Antlr3.Runtime.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\Autofac.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\Autofac.Integration.Mvc.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\EntityFramework.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\EntityFramework.SqlServer.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\EPPlus.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\MathNet.Numerics.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\Microsoft.IO.RecyclableMemoryStream.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\Microsoft.Web.Infrastructure.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\Newtonsoft.Json.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\OSCEUKDI.Common.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\OSCEUKDI.Entities.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\OSCEUKDI.Repository.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\OSCEUKDI.Services.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\Rotativa.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\System.Web.Helpers.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\System.Web.Mvc.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\System.Web.Optimization.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\System.Web.Razor.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\System.Web.WebPages.Deployment.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\System.Web.WebPages.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\System.Web.WebPages.Razor.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\WebGrease.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\BCrypt.Net-Next.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\System.Linq.Dynamic.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\OSCEUKDI.Common.pdb
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\OSCEUKDI.Services.pdb
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\OSCEUKDI.Services.dll.config
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\OSCEUKDI.Entities.pdb
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\OSCEUKDI.Entities.dll.config
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\OSCEUKDI.Repository.pdb
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\OSCEUKDI.Repository.dll.config
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\Autofac.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\Autofac.Integration.Mvc.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\EntityFramework.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\EntityFramework.SqlServer.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\EPPlus.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\MathNet.Numerics.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\Microsoft.IO.RecyclableMemoryStream.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\Newtonsoft.Json.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\System.Web.Helpers.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\System.Web.Mvc.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\System.Web.Optimization.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\System.Web.Razor.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\System.Web.WebPages.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\System.Web.WebPages.Deployment.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\System.Web.WebPages.Razor.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\Antlr3.Runtime.pdb
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\bin\BCrypt.Net-Next.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\obj\Debug\OSCEUKDI.Presentation.csproj.CopyComplete
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\obj\Debug\OSCEUKDI.Presentation.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.UI\OSCEUKDI.Presentation\obj\Debug\OSCEUKDI.Presentation.pdb

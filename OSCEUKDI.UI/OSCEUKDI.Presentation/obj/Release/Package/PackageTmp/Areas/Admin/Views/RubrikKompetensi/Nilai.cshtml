@@ -1,0 +1,68 @@
+﻿@{
+    ViewBag.Title = "Rubrik Nilai Station";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdminOSCE.cshtml";
+}
+@section css{
+    @Scripts.Render("~/bundles/jquery")
+}
+<form action="@Url.Action("PostNilai","RubrikKompetensi")" method="post" id="PostRubrikNilaiKompetensi">
+    <input type="hidden" id="idKomp" name="idKomp" />
+    <input type="hidden" id="idRubrik" name="idRubrik" />
+</form>
+
+<div class="">
+    <div class="title_left">
+        <a href="javascript:history.back()" class="btn btn-circle text-secondary"><i class="fa fa-arrow-left"></i></a>
+        <span class="text-secondary h3"><strong>Nilai </strong></span><em><strong class="text-info">Rubrik Station</strong></em>
+    </div>
+    <div class="col-md-12 col-sm-12 ">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Daftar Nilai Rubrik Station</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li>
+                        <a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <input type="hidden" id="nID" name="nID" value="@ViewData["ID"].ToString()" />
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card-box table-responsive">
+                            <p class="text-muted font-13 m-b-30">
+                            </p>
+                            <table id="datatable-responsive" class="table table-striped bg-gray table-bordered dt-responsive nowrap table-rubrikNilai" cellspacing="0" width="100%">
+                                <thead>
+                                    <tr class="bg-green text-center">
+                                        <th><i class="fa fa-gear" aria-hidden="true" style="font-size:20px"></i></th>
+                                        <th>No</th>
+                                        <th>Kompentensi</th>
+                                        <th>Bobot</th>
+                                        <th><i class="fa fa-folder-open-o aria-hidden="true" style="font-size:20px"></i></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script src="~/Scripts/Admin/RubrikKompetensi/crudNilaiRubrik.js"></script>
+    <script>
+        $(document).ready(function () {
+            getData()
+        })
+    </script>
+}
+
+

@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <link href="~/Content/select2.min.css" rel="stylesheet" />
+    <link rel="icon" href="~/Asset/Atma-Logo.png" type="image/x-icon">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - SIMBKM</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<style>
+    body {
+        padding-top: 105px;
+        font-family: 'Roboto';
+    }
+    a:hover {
+        cursor: pointer;
+    }
+    input {
+        max-width: 100%;
+    }
+    select {
+        max-width: 100%;
+    }
+</style>
+<body>
+    <div class="navbar navbar-fixed-top" style="background-color: #FF8A04;">
+        <img src="~/Asset/Lambang_Unika_Atma_Jaya.png" style="max-height: 75px; margin: 15px 25px;" />
+    </div>
+
+    <div class="body-content">
+        @RenderBody()
+        <footer style="background-color: white; position: fixed; left: 0; bottom: 0; width: 100%; text-align: center; ">
+            <p> &copy; Copyright 2021 Universitas Katolik Indonesia Atma Jaya - All Right Reserved</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script src="~/Scripts/select2.min.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

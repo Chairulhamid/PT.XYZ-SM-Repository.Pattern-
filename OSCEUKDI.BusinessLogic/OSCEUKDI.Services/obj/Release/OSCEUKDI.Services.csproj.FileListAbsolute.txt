@@ -1,0 +1,50 @@
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\bin\Release\OSCEUKDI.Services.dll.config
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\bin\Release\OSCEUKDI.Services.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\bin\Release\OSCEUKDI.Services.pdb
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\bin\Release\BCrypt.Net-Next.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\bin\Release\OSCEUKDI.Common.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\bin\Release\OSCEUKDI.Entities.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\bin\Release\System.Buffers.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\bin\Release\System.Memory.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\bin\Release\Newtonsoft.Json.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\bin\Release\EntityFramework.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\bin\Release\OSCEUKDI.Entities.pdb
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\bin\Release\OSCEUKDI.Entities.dll.config
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\bin\Release\OSCEUKDI.Common.pdb
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\bin\Release\BCrypt.Net-Next.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\bin\Release\System.Buffers.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\bin\Release\System.Memory.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\bin\Release\Newtonsoft.Json.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\bin\Release\EntityFramework.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\obj\Release\OSCEUKDI.Services.csproj.AssemblyReference.cache
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\obj\Release\OSCEUKDI.Services.csproj.CoreCompileInputs.cache
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\obj\Release\OSCEUKDI.Services.csproj.CopyComplete
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\obj\Release\OSCEUKDI.Services.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\obj\Release\OSCEUKDI.Services.pdb
+E:\SourceCode\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\bin\Release\OSCEUKDI.Services.dll.config
+E:\SourceCode\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\bin\Release\OSCEUKDI.Services.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\bin\Release\OSCEUKDI.Services.pdb
+E:\SourceCode\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\bin\Release\BCrypt.Net-Next.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\bin\Release\OSCEUKDI.Common.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\bin\Release\OSCEUKDI.Entities.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\bin\Release\System.Buffers.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\bin\Release\System.Memory.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\bin\Release\Newtonsoft.Json.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\bin\Release\EntityFramework.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\bin\Release\OSCEUKDI.Entities.pdb
+E:\SourceCode\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\bin\Release\OSCEUKDI.Entities.dll.config
+E:\SourceCode\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\bin\Release\OSCEUKDI.Common.pdb
+E:\SourceCode\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\bin\Release\BCrypt.Net-Next.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\bin\Release\System.Buffers.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\bin\Release\System.Memory.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\bin\Release\Newtonsoft.Json.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\bin\Release\EntityFramework.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\obj\Release\OSCEUKDI.Services.csproj.AssemblyReference.cache
+E:\SourceCode\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\obj\Release\OSCEUKDI.Services.csproj.CoreCompileInputs.cache
+E:\SourceCode\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\obj\Release\OSCEUKDI.Services.csproj.CopyComplete
+E:\SourceCode\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\obj\Release\OSCEUKDI.Services.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Services\obj\Release\OSCEUKDI.Services.pdb

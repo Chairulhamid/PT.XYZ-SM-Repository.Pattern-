@@ -1,0 +1,776 @@
+﻿
+@{
+    ViewBag.Title = "Penilaian";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdminOSCE.cshtml";
+}
+@section css{
+    <style>
+        .label {
+            font-weight: bold;
+        }
+        .hoverText :hover {
+            color:red
+        }
+        .modal {
+            overflow-y: auto;
+        }
+        .panel-heading {
+            padding: 0;
+            border: 0;
+        }
+
+        .panel-title > a, .panel-title > a:active {
+            display: block;
+            padding: 15px;
+            color: #555;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            word-spacing: 3px;
+            text-decoration: none;
+        }
+
+        .panel-heading a:before {
+            font-family: 'Glyphicons Halflings';
+            content: "\e114";
+            float: right;
+            transition: all 0.5s;
+        }
+
+        .panel-heading.active a:before {
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            transform: rotate(180deg);
+        } 
+    </style>
+    @*<link rel="stylesheet" type="text/css" href="~/Content/Admin/inputResponsive.css">
+        @Scripts.Render("~/bundles/jquery")
+        <script src="~/Scripts/sweetalert2.all.min.js"></script>*@
+}
+
+<div class="" role="main">
+    <div class="">
+        <div class="page-title">
+            <div class="title_left">
+                <h3>Form Penilaian</h3>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12 ">
+                <div class="x_panel">
+                    <div class="x_title">
+                        <ul class="nav navbar-right panel_toolbox">
+                            <li>
+                                <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                            </li>
+
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                        @{
+                            foreach (var dt in ViewData["DataDetailMhs"] as IEnumerable<OSCEUKDI.Entities.ViewModel.VMDetailMhs>)
+                            {
+                                <div class="card-body fit" style="background-color: #f7f7f7;">
+                                    <div class="row line-height-normal">
+                                        <div class="container-fluid">
+                                            <span class="image">
+                                                <img src="~/assets/img/user/userDefault.png" alt="img" width="100" class="img-circle img-fluid">
+                                            </span>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <h5 class="font-weight-bold text-truncate mt-0 mb-3">Informasi Mahasiswa</h5>
+                                        </div>
+                                        <div class="my-3"><hr class="my-0" /></div>
+                                        <div class="col-lg-6">
+                                            <div class="row mb-2">
+                                                <div class="col-sm-4 text-truncate label">Nama</div>
+                                                <div class="col-sm-6 value"><i class="fas fa-fw fa-circle-notch fa-spin"></i>@dt.Nama</div>
+                                            </div>
+                                            <div class="row mb-2">
+                                                <div class="col-sm-4 text-truncate label">Student ID</div>
+                                                <div class="col-sm-6 value dataMhsId">@dt.MahasiswaID</div>
+                                                <input type="hidden" id="MhsId" value="@dt.MahasiswaID" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+
+                                            <div class="row mb-2">
+                                                <div class="col-sm-4 text-truncate label">Tahun Angkatan</div>
+                                                <div class="col-sm-6 value">@dt.TahunAngkatan</div>
+                                                <input type="hidden" id="thAngkatan" value="@dt.TahunAngkatan" />
+                                            </div>
+                                            <div class="row mb-2">
+                                                <div class="col-sm-4 text-truncate label">Program Studi</div>
+                                                <div class="col-sm-6 value">@dt.ProgramStudi</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="my-3"><hr class="my-0" /></div>
+                                </div>
+                            }
+                        }
+
+                        <!-- End SmartWizard Content -->
+                    </div>
+
+                    <!-- start accordion -->
+                    <div class="accordion x_content" id="accordion" role="tablist" aria-multiselectable="true">
+                        <div class="panel">
+                            <div class="panel-heading " role="tab" id="headingOne">
+                                <h5 class="font-weight-bold text-truncate mt-1">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                        Soal Ujian Station - <span class="NomorStation"></span>
+                                    </a>
+                                </h5>
+                            </div>
+
+                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                <div class="panel-body">
+                                    <div class="">
+                                        <div class="">
+                                            <ul class="nav nav-tabs bar_tabs" id="myTab" role="tablist">
+                                                <li class="nav-item">
+                                                    <a class="nav-link active h6" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Detail Soal</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link h6" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Kompetensi</a>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content" id="myTabContent">
+                                                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                                    <div class="container">
+                                                        <form class="" action="" method="post" novalidate>
+                                                            <div class=" field item form-group">
+                                                                <h6 class=" col-md-3 col-sm-3  ">Judul Station</h6>
+                                                                <div class=" col-md-6 col-sm-6" id="SJudul">
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="field item form-group">
+                                                                <h6 class="  col-md-3 col-sm-3 ">Alokasi Waktu</h6>
+                                                                <div class=" col-md-6 col-sm-6" id="Salokasi">
+                                                                </div>
+                                                            </div>
+                                                            <div class="field item form-group">
+                                                                <h6 class="  col-md-3 col-sm-3 ">Tingkat kemampuan</h6>
+                                                                <div class=" col-md-6 col-sm-6" id="STKemampuan">
+                                                                </div>
+                                                            </div>
+                                                            <div class="field item form-group">
+                                                                <h6 class=" col-md-3 col-sm-3 ">Sistem Kategori Tubuh</h6>
+                                                                <div class=" col-md-6 col-sm-6" id="SSKategoriTubuh">
+                                                                </div>
+                                                            </div>
+                                                            <div class="field item form-group">
+                                                                <h6 class=" col-md-3 col-sm-3 ">Instruksi Peserta Ujian</h6>
+                                                                <div class=" col-md-6 col-sm-6" id="SInstruksiPeserta">
+                                                                </div>
+                                                            </div>
+                                                            <div class="field item form-group">
+                                                                <h6 class=" col-md-3 col-sm-3 ">Instruksi Penguji</h6>
+                                                                <div class=" col-md-6 col-sm-6" id="SInstruksiPenguji">
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade container-fluid mb-3" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                                    <h6>Kompetensi yang akan diujikan:</h6>
+                                                    <div class="card">
+                                                        <ul class="list-group">
+                                                            @{
+                                                                foreach (var dt in ViewData["DataKompetensi"] as IEnumerable<OSCEUKDI.Entities.ViewModel.VMKompetensiPenilaian>)
+                                                                {
+                                                                    <li class="list-group-item"><i class="fa fa-minus" aria-hidden="true"></i> @dt.NamaKompetensi</li>
+                                                                }
+                                                            }
+                                                        </ul>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                            <div id="wizard" class="form_wizard wizard_horizontal">
+                                <h5 class="mt-3 mb-3 text-center">Pilih Kompetensi Nilai Untuk Mahasiswa</h5>
+
+                                <ul class="wizard_steps">
+                                    @{ int index = 1;
+                                        foreach (var dt in ViewData["DataKompetensi"] as IEnumerable<OSCEUKDI.Entities.ViewModel.VMKompetensiPenilaian>)
+                                        {
+                                            <li>
+                                                <a href="#step-@index" id="data-@index">
+                                                    <span class="step_no">@index</span>
+                                                    <div class="link-danger hoverText" onclick="ShowDesc(@dt.ID)">
+                                                        <span class="step_descr">
+                                                            @*Step @index*@
+                                                            @dt.NamaKompetensi
+                                                            <br />
+                                                        </span>
+                                                        <small class="font-weight-bold" id="Bobot"> Bobot: @dt.Bobot</small>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            index++;
+                                        }
+                                        var length = index - 1;
+                                    }
+                                </ul>
+                                <input type="hidden" id="dataLength" value="@length" />
+
+                                @{ int index2 = 1;
+                                    foreach (var dt2 in ViewData["DataKompetensi"] as IEnumerable<OSCEUKDI.Entities.ViewModel.VMKompetensiPenilaian>)
+                                    {
+                                        <div id="step-@index2">
+                                            <div class="col-md-12 col-sm-12 mt-3 ml-3 text-center">
+                                                <div class="form-check form-check-inline">
+                                                    <input type="hidden" id="KompetensiID-@index2" value="@dt2.KompetensiID" />
+                                                    <input type="hidden" id="Bobot-@index2" value="@dt2.Bobot" />
+                                                    <input type="hidden" id="NamaKompetensi-@index2" value="@dt2.NamaKompetensi" />
+                                                    <input type="hidden" id="RubrikKompetensiID-@index2" value="@dt2.ID" />
+                                                    @if (dt2.N0 != null)
+                                                    {
+
+                                                        <div class="checkbox form-check form-check-inline mr-4">
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                    <input type="checkbox" class="flat" id="Nilai0-@index2" name="iCheck3">
+                                                                </label>
+                                                                <label class="font-weight-bold h5">0</label>
+                                                            </div>
+                                                        </div>
+                                                    }
+                                                    <input type="hidden" id="N0-@index2" value="@dt2.N0" />
+                                                    @if (dt2.N1 != null)
+                                                    {
+                                                        <div class="checkbox form-check form-check-inline mr-4">
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                    <input type="checkbox" class="flat" id="Nilai1-@index2" name="iCheck3">
+                                                                </label>
+                                                                <label class="font-weight-bold h5">1</label>
+                                                            </div>
+                                                        </div>
+                                                    }
+                                                    <input type="hidden" id="N1-@index2" value="@dt2.N1" />
+                                                    @if (dt2.N2 != null)
+                                                    {
+                                                        <div class="checkbox form-check form-check-inline mr-4">
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                    <input type="checkbox" class="flat" id="Nilai2-@index2" name="iCheck3">
+                                                                </label>
+                                                                <label class="font-weight-bold h5">2</label>
+                                                            </div>
+                                                        </div>
+                                                    }
+                                                    <input type="hidden" id="N2-@index2" value="@dt2.N2" />
+                                                    @if (dt2.N3 != null)
+                                                    {
+                                                        <div class="checkbox form-check form-check-inline mr-4">
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                    <input type="checkbox" class="flat" id="Nilai3-@index2" name="iCheck3">
+                                                                </label>
+                                                                <label class="font-weight-bold h5">3</label>
+                                                            </div>
+                                                        </div>
+                                                    }
+                                                    <input type="hidden" id="N3-@index2" value="@dt2.N3" />
+                                                    @if (dt2.N4 != null)
+                                                    {
+                                                        <div class="checkbox form-check form-check-inline mr-4">
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                    <input type="checkbox" class="flat" id="Nilai4-@index2" name="iCheck3">
+                                                                </label>
+                                                                <label class="font-weight-bold h5">4</label>
+                                                            </div>
+                                                        </div>
+                                                    }
+                                                    <input type="hidden" id="N4-@index2" value="@dt2.N4" />
+                                                    @if (dt2.N5 != null)
+                                                    {
+                                                        <div class="checkbox form-check form-check-inline ">
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                    <input type="checkbox" class="flat" id="Nilai5-@index2" name="iCheck3">
+                                                                </label>
+                                                                <label class="font-weight-bold h5">5</label>
+                                                            </div>
+                                                        </div>
+                                                    }
+                                                    <input type="hidden" id="N5-@index2" value="@dt2.N5" />
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        index2++;
+                                    }
+                                }
+                            </div>
+                    </div>
+                    <!-- end of accordion -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="ModalPerformance" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title "></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-gray-900 fit">
+                <div class="p-3" style="background-image: linear-gradient(35755deg, #f8f9fc 100px, #95c3af 80%, #518784 100%); border-radius:10px">
+                    <h5 class="font-weight-bold mb-5 text-center"><em>GLOBAL RATING</em> SCALE</h5>
+                    <div class="row align-items-center mb-2" id="">
+                        <div class="col-12">
+                            <div class="alert alert-modal">
+                                <div class="col-md-12 col-sm-12 ">
+                                    @{
+                                        foreach (var item in ViewData["DataGlobalPerformance"] as IEnumerable<OSCEUKDI.Entities.Models.Lookup>)
+                                        {
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" class="flat" value="@item.Nilai" name="iCheck">
+                                                </label>
+                                                <label class="font-weight-bold h6">@item.Nama</label>
+                                            </div>
+                                        }
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <hr />
+            </div>
+            <div class="modal-body">
+                <div class="row d-flex flex-sm-row flex-column-reverse justify-content-center">
+                    <div class="col-12 col-sm-auto">
+                        <button class="btn btn-block btn-round btn-secondary mb-2 shadow-sm" type="button" data-dismiss="modal">Kembali</button>      
+                    </div>
+                    <div class="col-auto">
+                        <div class="row">
+                            <div class="col-12 col-sm-auto">
+                                <button class="btn btn-block btn-round btn-success mb-4 shadow-sm" id="btnSave"><span id="loaderForm"><i class="fas fa-fw fa-circle-notch fa-spin"></i></span> Simpan</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="ModalNilai" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title ">Apakah anda yakin dengan nilai ini?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-gray-900 fit">
+                <div class="p-3">
+                    <div class="row align-items-center mb-2" id="">
+                        <div class="col-12 table-responsive">
+                            <table id="datatable-responsive" class="table table-striped bg-gray table-bordered dt-responsive nowrap table-nilaiAkhir" cellspacing="0" width="100%">
+                                <thead>
+                                    <tr class=" text-secondary text-center">
+                                        <th width="1%">No</th>
+                                        <th>Kompetensi Yang Dinilai</th>
+                                        <th width="5%">Bobot</th>
+                                        <th width="5%">Nilai</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-3" style="background-image: linear-gradient(35755deg, #f8f9fc 100px, #95c3af 80%, #518784 100%); border-radius:10px">
+                    <h5 class="font-weight-bold mt-4 text-decoration-underline ">Global Rating : <span class="h5"  id="GRating"></span></h5>
+                    <div class="clasModal"></div>
+                </div>
+                </div>
+                <div>
+                    <hr />
+                </div>
+                <div class="modal-body">
+                    <div class="row d-flex flex-sm-row flex-column-reverse justify-content-center">
+                        <div class="col-12 col-sm-auto">
+                            <button class="btn btn-block btn-round btn-secondary mb-2 shadow-sm" type="button" data-dismiss="modal">Kembali</button>
+                        </div>
+                        <div class="col-auto">
+                            <div class="row">
+                                <div class="col-12 col-sm-auto">
+                                    <button class="btn btn-block btn-round btn-success mb-4 shadow-sm" id="btnSaveNilai"><span id="loaderForm"><i class="fas fa-fw fa-circle-notch fa-spin"></i></span> Simpan</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+
+<div class="modal fade" id="ModalKompetensi" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title ">Detail Nilai Kompetensi</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-gray-900 fit">
+                <div class="p-3">
+                    <div class="row align-items-center mb-2" id="">
+                        <div class="col-12 table-responsive">
+                            <table id="datatable-responsive" class="table table-striped bg-gray table-bordered dt-responsive nowrap table-nilaiKompetensi" cellspacing="0" width="100%">
+                                <thead>
+                                    <tr class=" text-secondary text-center">
+                                        <th>Nilai</th>
+                                        <th >Keterangan</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <hr />
+            </div>
+            <div class="modal-body">
+                <div class="row d-flex flex-sm-row flex-column-reverse justify-content-center">
+                    <div class="col-12 col-sm-auto">
+                        <button class="btn btn-block btn-round btn-secondary mb-2 shadow-sm" type="button" data-dismiss="modal">Kembali</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section scripts{
+    <script src="~/Scripts/Admin/Penilaian/crud.js"></script>
+    <script>
+        datatemp = [];
+        dataGLobalRating = [];
+        dataDetaikKompetensi = [];
+        var IsEmpty = 0;
+        var NoStation = 0;
+        $(document).ready(function () {
+            getDataAjax("/Admin/Penilaian/GetSoal", "", true, setSoal);
+
+        });
+        function setSoal(data) {
+            $('#SJudul').html(data[0].JudulStation);
+            $('#Salokasi').html(data[0].AlokasiWaktu + " Menit");
+            $('#STKemampuan').html(data[0].TingkatKemampuan);
+            $('#SSKategoriTubuh').html(data[0].SistemKategoriTubuh);
+            $('#SInstruksiPeserta').html(data[0].InstruksiPeserta);
+            $('#SInstruksiPenguji').html(data[0].InstruksiPenguji);
+            $('.NomorStation').html(data[0].NomorStation);
+            NoStation = data[0].NomorStation;
+        }
+
+        function ShowDesc(id) {
+            getDataAjax("/Admin/Penilaian/GetDetailKomptensi", {id :id}, true, setDetaulKompetensi);
+        }
+        function setDetaulKompetensi(data) {
+            dataDetaikKompetensi = [];
+            for (var i = 0; i <= 5; i++) {
+                if (data["Nilai" + i] != null) dataDetaikKompetensi.push({ Nilai: i, Keterangan: data["Nilai" + i] });
+            }
+           $('#ModalKompetensi').modal({ backdrop: 'static', keyboard: false, show: true });
+            loadTableDetailKompetensi(dataDetaikKompetensi)
+        }
+
+        function KosongkanData(i) {
+            $(`#Nilai0-${i}:checked`).val();
+            $(`#Nilai1-${i}:checked`).val();
+            $(`#Nilai2-${i}:checked`).val();
+            $(`#Nilai3-${i}:checked`).val();
+            $(`#Nilai4-${i}:checked`).val();
+            $(`#Nilai5-${i}:checked`).val();
+        }
+        var err = 0;
+        function adddataTemp() {
+            err = 0;
+            var dataLength = $('#dataLength').val()
+            for (var i = 1; i <= dataLength; i++) {
+            var dataVal = "";
+                if (($(`#N1-${i}`).val() != "" || $(`#N2-${i}`).val() != "" || $(`#N3-${i}`).val() != "" || $(`#N4-${i}`).val() != "" || $(`#N5-${i}`).val() != "" || $(`#N0-${i}`).val() != "")) {
+                    if ($(`#Nilai0-${i}:checked`).val()) {
+                        dataVal = 0;
+                    } else if ($(`#Nilai1-${i}:checked`).val()) {
+                        dataVal = 1;
+                    } else if ($(`#Nilai2-${i}:checked`).val()) {
+                        dataVal = 2;
+                    } else if ($(`#Nilai3-${i}:checked`).val()) {
+                        dataVal = 3;
+                    } else if ($(`#Nilai4-${i}:checked`).val()) {
+                        dataVal = 4;
+                    } else if ($(`#Nilai5-${i}:checked`).val()) {
+                        dataVal = 5;
+                    }
+                    if (dataVal !== "") {
+                        let obj = datatemp.find(o => o.RubrikKompetensiID == $(`#RubrikKompetensiID-${i}`).val());
+                        if (obj != undefined) {
+                            datatemp = datatemp.filter((kom) => {
+                                return kom.RubrikKompetensiID != $(`#RubrikKompetensiID-${i}`).val()
+                            })
+                        }
+                        datatemp.push({
+                            MahasiswaID: $('#MhsId').val(),
+                            TahunAngkatan: $('#thAngkatan').val(),
+                            RubrikKompetensiID:  $(`#KompetensiID-${i}`).val(),
+                            RubrikNilaiKompID: $(`#RubrikKompetensiID-${i}`).val(),
+                            Nilai: dataVal,
+                            Bobot: $(`#Bobot-${i}`).val(),
+                            NamaKompetensi: $(`#NamaKompetensi-${i}`).val(),
+                            NomorStation: NoStation
+                        });
+
+                    } else {
+                        err = 1;
+                        Swal.fire({
+                            title: 'Data masih ada yang kosong!',
+                            icon: 'warning',
+                            confirmButtonColor: '#3c7a6b',
+                        })
+                        return false;
+                    }
+                }
+            }
+            if (err == 0) $('#ModalPerformance').modal({ backdrop: 'static', keyboard: false, show: true });
+
+        }
+
+        $("#btnSave").click(function () {
+            dataGLobalRating = []
+            var arr = JSON.parse('@Html.Raw(Json.Encode(@ViewData["DataGlobalPerformance"]))')
+            
+            if ($("input[type='radio'].flat").is(':checked')) {
+                var card_type = $("input[type='radio'].flat:checked").val();
+                var GlobalScaleName = arr.filter(function (item) { return item.Nilai === card_type; })[0].Nama;
+            }
+            if (card_type != undefined) {
+                dataGLobalRating.push({
+                    Val: card_type,
+                    Name: GlobalScaleName
+                });
+            } else {
+                Swal.fire({
+                    title: 'Global Rating Scale belum dipilih!',
+                    icon: 'warning',
+                    confirmButtonColor: '#3c7a6b',
+                })
+                return false
+            }
+            $("#ModalPerformance").on('hidden.bs.modal', function () {
+                $(this).data('bs.modal', null);
+            });
+            InsertNilai()
+        })
+        function InsertNilai() {
+            $('#ModalNilai').modal({ backdrop: 'static', keyboard: false, show: true });
+            $('#GRating').html(dataGLobalRating[0].Name);
+            setTimeout(function () {
+                console.log(datatemp);
+                loadTableReq(datatemp);
+            }, 1000);
+            
+        }
+        var loadTableReq = function (data) {
+            $('.table-nilaiAkhir').DataTable().destroy();
+            var groupColumn = 0;
+            var table = $('.table-nilaiAkhir').DataTable({
+                "columnDefs": [{
+                    "searchable": false,
+                    "orderable": false,
+                    "paging": false,
+                    "targets": 0
+                }],
+                "paging": false,
+                "ordering": false,
+                "info": false,
+                "searching": false,
+                "order": [[0, 'asc']],
+                "aaSorting": [[0, "asc"]],
+                "data": data,
+                "columns": [
+                    {
+                        "data": null,
+                        "orderable": "false",
+                        "render": function (data, type, full, meta) {
+                            num = meta.row + 1;
+                            return '<strong class="center">' + num + '</strong>';
+                        }
+                    },
+                    {
+                        "data": "NamaKompetensi",
+                        "name": "NamaKompetensi",
+                        "render": function (data, type, row, meta) {
+                            return '<div class="center">' + data + '</div>';
+                        }
+                    },
+                    {
+                        "data": "Bobot",
+                        "name": "Bobot",
+                        "render": function (data, type, row, meta) {
+                            return '<div class="center">' + data + '</div>';
+                        }
+                    },
+                    {
+                        "data": "Nilai",
+                        "name": "Nilai",
+                        "render": function (data, type, row, meta) {
+                            return '<div class="center">' + data + '</div>';
+                        }
+                    },
+                ],
+            })
+        }
+        var loadTableDetailKompetensi = function (data) {
+            $('.table-nilaiKompetensi').DataTable().destroy();
+            var groupColumn = 0;
+            var table = $('.table-nilaiKompetensi').DataTable({
+                "columnDefs": [{
+                    "searchable": false,
+                    "orderable": false,
+                    "paging": false,
+                    "targets": 0
+                }],
+                "paging": false,
+                "ordering": false,
+                "info": false,
+                "searching": false,
+                "data": data,
+                "columns": [
+                    {
+                        "data": "Nilai",
+                        "name": "Nilai",
+                        "render": function (data, type, row, meta) {
+                            return '<div class="text-center">' + data + '</div>';
+                        }
+                    },
+                    {
+                        "data": "Keterangan",
+                        "name": "Keterangan",
+                        "render": function (data, type, row, meta) {
+                            return '<div class="center">' + data + '</div>';
+                        }
+                    },
+                ],
+            })
+        }
+
+        $("#btnSaveNilai").click(function () {
+            Swal.fire({
+                title: "Yakin?",
+                type: "warning",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: "#3c7a6b",
+                confirmButtonText: "Ya",
+                closeOnConfirm: false
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    var tmp = {
+                        datatable: datatemp,
+                        dataGlobal: [{ GlobalRating: dataGLobalRating[0].Val, GlobalRatingName: dataGLobalRating[0].Name }]
+                    }
+                    PostNilaiDataAjax(tmp, "/Admin/Penilaian/PostPenilaian", "/Admin/Penilaian/Index")
+                }
+            })
+        })
+        function PostNilaiDataAjax(datapost, urlpath, urlload) {
+            ShowLoading();
+            var base_url = window.location.origin;
+            $.ajax({
+                url: base_url + urlpath,
+                type: 'post',
+                datatype: 'json',
+                data: JSON.stringify(datapost),
+                cache: false,
+                contentType: false,
+                processData: false,
+                contentType: 'application/json',
+            }).then(function (response) {
+                if (response.status == 500) {
+                    $.LoadingOverlay("hide");
+                    document.getElementById('alertText').innerText = response.message;
+                    $('#danger-alert').removeClass('d-none')
+                    $("#danger-alert").fadeTo(2000, 500).slideUp(500, function () {
+                        $("#danger-alert").slideUp(500);
+                    });
+                } else if (response.status == 200) {
+                    Swal.fire({
+                        title: 'Berhasil',
+                        icon: 'success',
+                        html: response.message,
+                        showCloseButton: true,
+                        showCancelButton: false,
+                        focusConfirm: false,
+                        confirmButtonColor: '#3c7a6b',
+                        confirmButtonText: 'OK'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            window.location.replace(urlload);
+                        }
+                    })
+                    $.LoadingOverlay("hide");
+                }
+                else if (response.status == 400) {
+                    $.LoadingOverlay("hide");
+                    document.getElementById('alertText').innerText = response.message;
+                    $('#danger-alert').removeClass('d-none')
+                    $("#danger-alert").fadeTo(2000, 500).slideUp(500, function () {
+                        $("#danger-alert").slideUp(500);
+                    });
+                }
+            })
+        }
+
+
+
+        $('.panel-collapse').on('show.bs.collapse', function () {
+            $(this).siblings('.panel-heading').addClass('active');
+        });
+
+        $('.panel-collapse').on('hide.bs.collapse', function () {
+            $(this).siblings('.panel-heading').removeClass('active');
+        });
+    </script>
+}
+
+
+

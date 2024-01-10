@@ -1,0 +1,68 @@
+﻿@{
+    ViewBag.Title = "Master Lookup";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdminOSCE.cshtml";
+}
+@section css{
+    @Scripts.Render("~/bundles/jquery")
+}
+@model OSCEUKDI.Entities.Models.Lookup
+<div class="">
+    <div class="title_left">
+        <a href="javascript:history.back()" class="btn btn-circle text-secondary"><i class="fa fa-arrow-left"></i></a>
+        <span class="text-secondary h3"><strong>Update </strong></span><em><strong class="text-info">Data</strong></em>
+    </div>
+    <div class="clearfix"></div>
+    <div class="alert alert-warning d-none  alert-dismissible  text-white" id="danger-alert" role="alert">
+        <i class="fa fa-exclamation-triangle" style="font-size:20px" aria-hidden="true"></i>
+        <span id="alertText" class="" style="font-size:20px"></span>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>Lookup</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                        <li>
+                            <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                        </li>
+                        <li>
+                            <a class="close-link"><i class="fa fa-close"></i></a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <form class="" action="" method="post">
+                        <input type="hidden" id="ID" value="@Model.ID" />
+                        <h4 class="col-form-label">Tipe <span class="required text-danger"> * </span></h4>
+                        <input class="form-control input-data" name="Tipe" id="Tipe" placeholder="Ex : Global Performance" value="@Model.Tipe" />
+                        <h4 class="col-form-label">Nama Lookup <span class="required text-danger"> * </span></h4>
+                        <input class="form-control input-data" name="Nama" id="Nama" placeholder="Ex : LULUS" value="@Model.Nama" />
+                        <h4 class="col-form-label">Nilai Lookup <span class="required text-danger"> * </span></h4>
+                        <input class="form-control input-data" name="Nilai" id="Nilai" placeholder="Ex : LULUS" value="@Model.Nilai" />
+                        <div class="ln_solid ">
+                            <div class="form-group mt-3">
+                                <div class="col-md-12 text-center">
+                                    <button type='button' class="btn btn-round btn-success" onclick="PostUpdate()">
+                                        <i class="fa fa-save" aria-hidden="true"></i> Save
+                                    </button>
+                                    <button type='button' class="btn btn-round btn-secondary" onclick="history.back()">
+                                        <i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i> Back
+                                    </button>
+                                    <button type='reset' class="btn btn-round btn-danger">
+                                        <i class="fa fa-refresh" aria-hidden="true"></i> Reset
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+
+    <script src="~/Scripts/Admin/Lookup/crud.js"></script>
+}

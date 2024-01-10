@@ -1,0 +1,97 @@
+﻿
+
+@{
+    ViewBag.Title = "Jadwal Test";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdminOSCE.cshtml";
+}
+@section css{
+    @Scripts.Render("~/bundles/jquery")
+}
+
+<div class="">
+    <div class="title_left">
+        <a href="javascript:history.back()" class="btn btn-circle text-secondary"><i class="fa fa-arrow-left"></i></a>
+        <span class="text-secondary h3"><strong>Tambah </strong></span><em><strong class="text-info">Data</strong></em>
+    </div>
+    <div class="clearfix"></div>
+    <div class="alert alert-warning d-none  alert-dismissible  text-white" id="danger-alert" role="alert">
+        <i class="fa fa-exclamation-triangle" style="font-size:20px" aria-hidden="true"></i>
+        <span id="alertText" class="" style="font-size:20px"></span>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>Jadwal Test</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                        <li>
+                            <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                        </li>
+                        <li>
+                            <a class="close-link"><i class="fa fa-close"></i></a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <form class="" action="" method="post">
+                        <h4 class="col-form-label">Periode<span class="required text-danger"> * </span></h4>
+                        <input type="text" class="form-control input-data" name="NamaPeriode" id="NamaPeriode" placeholder="Nama Periode" />
+                        <h4 class="col-form-label">Acad Career<span class="required text-danger"> * </span></h4>
+                        <select name="ACADCareer" id="ACADCareer" class="form-control input-data col-8">
+                            <option value="" selected disabled>Pilih Acad Career</option>
+                            @{
+                                foreach (var dt in ViewData["ACAD"] as IEnumerable<OSCEUKDI.Entities.ViewModel.VMDropDown>)
+                                {
+                                    <option value="@dt.Nama">@dt.Nama</option>
+                                }
+                            }
+                        </select>
+                        <h4 class="col-form-label">Tahun Semester<span class="required text-danger"> * </span></h4>
+                        <select name="TahunSemester" id="TahunSemester" class="form-control input-data col-8">
+                            <option value="" selected disabled>Pilih Tahun Semester</option>
+                            @{
+                                foreach (var dt in ViewData["semester"] as IEnumerable<OSCEUKDI.Entities.ViewModel.VMDropDownTahunSemester>)
+                                {
+                                    <option value="@dt.Nilai">@dt.Nama</option>
+                                }
+                            }
+                        </select>
+                        <h4 class="col-form-label">Kategori<span class="required text-danger"> * </span></h4>
+                        <select name="KategoriOsce" id="KategoriOsce" class="form-control input-data col-8">
+                            <option value="" selected disabled>Pilih Kategori</option>
+                            @{
+                                foreach (var dt in ViewData["KategoriOsce"] as IEnumerable<OSCEUKDI.Entities.ViewModel.VMDropDown>)
+                                {
+                                    <option value="@dt.Nilai">@dt.Nama</option>
+                                }
+                            }
+                        </select>
+                        <h4 class="col-form-label">Tanggal Ujian<span class="required text-danger"> * </span></h4>
+                        <input type="date" class="form-control input-data  col-3" data-date-format="DD/MMM/YYYY" name="TanggalUjian" id="TanggalUjian" placeholder="TanggalUjian" />
+                        <div class="ln_solid ">
+                            <div class="form-group mt-3">
+                                <div class="col-md-12 text-center">
+                                    <button type='button' class="btn btn-round btn-success" onclick="PostCreate()">
+                                        <i class="fa fa-save" aria-hidden="true"></i> Save
+                                    </button>
+                                    <button type='button' class="btn btn-round btn-secondary" onclick="history.back()">
+                                        <i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i> Back
+                                    </button>
+                                    <button type='reset' class="btn btn-round btn-danger">
+                                        <i class="fa fa-refresh" aria-hidden="true"></i> Reset
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+
+    <script src="~/Scripts/Admin/JadwalTest/crud.js"></script>
+}

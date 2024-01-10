@@ -1,0 +1,28 @@
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Entities\bin\Release\OSCEUKDI.Entities.dll.config
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Entities\bin\Release\OSCEUKDI.Entities.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Entities\bin\Release\OSCEUKDI.Entities.pdb
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Entities\bin\Release\EntityFramework.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Entities\bin\Release\EntityFramework.SqlServer.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Entities\bin\Release\Newtonsoft.Json.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Entities\bin\Release\EntityFramework.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Entities\bin\Release\EntityFramework.SqlServer.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Entities\bin\Release\Newtonsoft.Json.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Entities\obj\Release\OSCEUKDI.Entities.csproj.AssemblyReference.cache
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Entities\obj\Release\OSCEUKDI.Entities.csproj.CoreCompileInputs.cache
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Entities\obj\Release\OSCEUKDI.Entities.csproj.CopyComplete
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Entities\obj\Release\OSCEUKDI.Entities.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Entities\obj\Release\OSCEUKDI.Entities.pdb
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Entities\bin\Release\OSCEUKDI.Entities.dll.config
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Entities\bin\Release\OSCEUKDI.Entities.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Entities\bin\Release\OSCEUKDI.Entities.pdb
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Entities\bin\Release\EntityFramework.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Entities\bin\Release\EntityFramework.SqlServer.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Entities\bin\Release\Newtonsoft.Json.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Entities\bin\Release\EntityFramework.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Entities\bin\Release\EntityFramework.SqlServer.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Entities\bin\Release\Newtonsoft.Json.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Entities\obj\Release\OSCEUKDI.Entities.csproj.AssemblyReference.cache
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Entities\obj\Release\OSCEUKDI.Entities.csproj.CoreCompileInputs.cache
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Entities\obj\Release\OSCEUKDI.Entities.csproj.CopyComplete
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Entities\obj\Release\OSCEUKDI.Entities.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.Data\OSCEUKDI.Entities\obj\Release\OSCEUKDI.Entities.pdb

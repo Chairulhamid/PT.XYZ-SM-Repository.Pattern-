@@ -1,0 +1,470 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdminOSCE.cshtml";
+}
+@section css{
+    <style>
+        .table-mappingMahasiswa tbody tr:hover {
+            cursor: pointer;
+        }
+
+        .alert-modal {
+            color: #E9EDEF;
+            background-color: rgb(113 151 175 / 88%);
+            border-color: rgba(52,152,219,0.88);
+        }
+
+        .clasModal {
+            margin-left: 20px;
+        }
+    </style>
+    @*<link rel="stylesheet" type="text/css" href="~/Content/Admin/inputResponsive.css">
+        @Scripts.Render("~/bundles/jquery")
+        <script src="~/Scripts/sweetalert2.all.min.js"></script>*@
+}
+<form action="@Url.Action("Nilai","Penilaian")" method="post" id="GetDetailMahasiswaPenilaian">
+    <input type="hidden" id="id" name="id" />
+</form>
+<div class="" role="main">
+    <div class="">
+        <div class="page-title">
+            <div class="title_left">
+                <h3>Penilaian</h3>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div class="row form-penilaian">
+            <div class="col-md-12 col-sm-12 ">
+                <div class="x_panel">
+                    <div class="x_title">
+                        <h2>Form Penilaian</h2>
+                        <ul class="nav navbar-right panel_toolbox">
+                            <li>
+                                <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                            </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                        @{
+                            foreach (var dt in ViewData["DataDosen"] as IEnumerable<OSCEUKDI.Entities.ViewModel.VMDosenPenilaian>)
+                            {
+                                <input hidden value="@dt.NIPDosenInti" id="NIPDosenInti" name="NIPDosenInti" />
+                                <input hidden value="@dt.NoStation" id="NomorStation" name="NomorStation" />
+                                <input hidden value="@dt.NamaPeriode" id="NamaPeriode" name="NamaPeriode" />
+                                <input hidden value="@dt.TanggalUjian" id="TanggalUjian" name="TanggalUjian" />
+                                <div class="col-md-3 col-sm-3  profile_left">
+                                    <div class="profile_img">
+                                        <div id="crop-avatar">
+                                            <img class="img-responsive avatar-view" src="~/assets/img/user/userDefault.png" alt="Avatar" width="200">
+                                        </div>
+                                    </div>
+                                    <h3>@dt.Nama1</h3>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <strong><i class="fa fa-users user-profile-icon"></i> Desen 2</strong>
+                                            </td>
+                                            <td> : </td>
+                                            <td>@dt.Nama2 - @dt.NIPDosen2</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <strong><i class="fa fa-users user-profile-icon"></i> Desen 3</strong>
+                                            </td>
+                                            <td> : </td>
+                                            <td>@dt.Nama3 - @dt.NIPDosen3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <strong><i class="fa fa-home user-profile-icon"></i> Ruangan</strong>
+                                            </td>
+                                            <td> : </td>
+                                            <td>@dt.NamaRuangan</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <strong><i class="fa fa-book user-profile-icon"></i> Kategori</strong>
+                                            </td>
+                                            <td> : </td>
+                                            <td>@dt.KategoriOsce</td>
+                                        </tr>
+                                    </table>
+                                    <div class="clearfix"><hr /></div><br />
+                                    <!-- start skills -->
+                                    <div class="text-center jumbotron">
+                                        <h4>Jumlah Peserta:</h4>
+                                        <h3 class=" text-center text-info" id="LengthMhs"></h3>
+                                    </div>
+                                </div>
+                            }
+                        }
+
+                        <div class="col-md-9 col-sm-9 ">
+
+                            <div class="profile_title">
+                                <div class="col-md-6">
+                                    <h6 id="JudulStation"></h6>
+                                </div>
+                                <div class="col-md-6">
+                                    <div id="reportrange" class="pull-right" style="margin-top: 5px; background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #E6E9ED">
+                                        <i class=" fa fa-calendar"></i>
+                                        <span id="TanggalUjianshow"></span> <b class="caret"></b>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="card-box table-responsive">
+                                        <p class="text-muted font-13 m-b-30">
+                                        </p>
+                                        <table id="datatable-responsive" class="table table-striped bg-gray table-bordered dt-responsive nowrap table-mappingMahasiswa" cellspacing="0" width="100%">
+                                            <thead>
+                                                <tr class=" text-secondary text-center">
+                                                    <th width="5%">No</th>
+                                                    <th width="5%">Tahun Angkatan</th>
+                                                    <th width="5%">Campus ID</th>
+                                                    <th width="5%">Nama</th>
+                                                    <th width="5%">Status</th>
+                                                    @*<th>Nama Mahasiswa</th>*@
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="clearfix"><hr /></div>
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12  profile_details">
+                                    <div class="well profile_view" style="display:inherit !important">
+                                        <div class="col-sm-12">
+                                            <h4 class="brief"><i>Mahasiswa Selanjutnya</i></h4>
+                                            <div class="right col-md-5 col-sm-5 text-center Chimg d-none">
+                                                <img src="~/assets/img/user/userDefault.png" alt="img" width="100" class="img-circle img-fluid">
+                                            </div>
+                                            <div class="left col-md-7 col-sm-7">
+                                                <h2 id="ChNama"></h2>
+                                                <p><strong id="ChMhsID"></strong> </p>
+                                                <p class="mi-1" id="ChStatus"></p>
+                                            </div>
+
+                                        </div>
+                                        <div class=" profile-bottom text-center">
+                                            <div class=" col-sm-12 emphasis" id="ChBtn">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="x_content">
+                            <ul class="nav nav-tabs bar_tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Detail Soal</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Kompetensi</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                    <div class="container">
+                                        <form class="" action="" method="post" novalidate>
+                                            <div class=" field item form-group">
+                                                <h6 class="col-form-label col-md-3 col-sm-3  ">Judul Station</h6>
+                                                <div class="col-form-label col-md-6 col-sm-6" id="SJudul">
+
+                                                </div>
+                                            </div>
+                                            <div class="field item form-group">
+                                                <h6 class="col-form-label  col-md-3 col-sm-3 ">Alokasi Waktu</h6>
+                                                <div class="col-form-label col-md-6 col-sm-6" id="Salokasi">
+                                                </div>
+                                            </div>
+                                            <div class="field item form-group">
+                                                <h6 class="col-form-label  col-md-3 col-sm-3 ">Tingkat kemampuan</h6>
+                                                <div class="col-form-label col-md-6 col-sm-6" id="STKemampuan">
+                                                </div>
+                                            </div>
+                                            <div class="field item form-group">
+                                                <h6 class="col-form-label  col-md-3 col-sm-3 ">Sistem Kategori Tubuh</h6>
+                                                <div class="col-form-label col-md-6 col-sm-6" id="SSKategoriTubuh">
+                                                </div>
+                                            </div>
+                                            <div class="field item form-group">
+                                                <h6 class="col-form-label  col-md-3 col-sm-3 ">Instruksi Peserta Ujian</h6>
+                                                <div class="col-form-label col-md-6 col-sm-6" id="SInstruksiPeserta">
+                                                </div>
+                                            </div>
+                                            <div class="field item form-group">
+                                                <h6 class="col-form-label  col-md-3 col-sm-3 ">Instruksi Penguji</h6>
+                                                <div class="col-form-label col-md-6 col-sm-6" id="SInstruksiPenguji">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade container-fluid" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                    <h6>Kompetensi yang akan diujikan:</h6>
+                                    <div class="card">
+                                        <ul class="list-group">
+                                            @{
+                                                foreach (var dt in ViewData["DataKompetensi"] as IEnumerable<OSCEUKDI.Entities.ViewModel.VMKompetensiPenilaian>)
+                                                {
+                                                    <li class="list-group-item"><i class="fa fa-minus" aria-hidden="true"></i> @dt.NamaKompetensi</li>
+                                                }
+                                            }
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="nodata" class="text-center d-none">
+            <img src='~/assets/img/nodata.jpeg' class='img-fluid' style='max-height:300px;' />
+            <div class='mb-4 px-2 h3'><strong>Anda tidak memiliki jadwal ujian hari ini!</strong></div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="ModalDetailNilai" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title ">Nilai Mahasiswa</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-gray-900 fit">
+                <div class="p-3">
+                    <div class="row align-items-center mb-2" id="">
+                        <div class="col-12 table-responsive">
+                            <table id="datatable-responsive" class="table table-striped bg-gray table-bordered dt-responsive nowrap table-DetailnilaiAkhir" cellspacing="0" width="100%">
+                                <thead>
+                                    <tr class=" text-secondary text-center">
+                                        <th width="1%">No</th>
+                                        <th>Kompetensi Yang Dinilai</th>
+                                        <th width="5%">Nilai</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-3" style="background-image: linear-gradient(35755deg, #f8f9fc 100px, #95c3af 80%, #518784 100%); border-radius:10px">
+                    <h5 class="font-weight-bold mt-4 text-decoration-underline ">Global Rating : <span class="h5" id="GRating"></span></h5>
+                    <div class="clasModal"></div>
+                </div>
+            </div>
+            <div>
+                <hr />
+            </div>
+            <div class="modal-body">
+                <div class="row d-flex flex-sm-row flex-column-reverse justify-content-center">
+                    <div class="col-12 col-sm-auto">
+                        <button class="btn btn-block btn-round btn-secondary mb-2 shadow-sm" type="button" data-dismiss="modal">Kembali</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section scripts{
+    <script>
+        var tgl
+        $(document).ready(function () {
+
+            var arr = JSON.parse('@Html.Raw(Json.Encode(ViewData["DataDosen"]))')
+            $("#JudulStation").html("Mahasiswa Station " + $('#NomorStation').val() + " - " + $('#NamaPeriode').val());
+            tgl = $('#TanggalUjian').val()
+            $("#TanggalUjianshow").html(moment(tgl).format("ddd, D MMMM YYYY"));
+            if (arr.length > 0) {
+                getDataAjax("/Admin/Penilaian/GetSoal", "", true, setSoal);
+                getDataAjax("/Admin/Penilaian/GetMahasiswa", "", true, setMahasiswa);
+            } else {
+                $('.form-penilaian').hide();
+                $('#nodata').removeClass('d-none')
+            }
+        });
+        var tmpData = [];
+        $('.table-mappingMahasiswa tbody').on('click', ' .child', function () {
+            tmpData = [];
+            tmpData.push({
+                Id: $(this).closest("tr").find(".dataID").text(),
+                MahasiswaID: $(this).closest("tr").find(".Cmp").text(),
+                Nama: $(this).closest("tr").find(".Nama").text(),
+                Status: $(this).closest("tr").find(".Status").text(),
+                Tanggal: tgl,
+            });
+            if ($(this).closest("tr").find(".Status").text() == "Menunggu") {
+                secheckMhs(tmpData)
+            } else {
+                temp = {
+                    Id: $(this).closest("tr").find(".dataID").text(),
+                    MahasiswaID: $(this).closest("tr").find(".Cmp").text(),
+                    Nama: $(this).closest("tr").find(".Nama").text(),
+                    Status: $(this).closest("tr").find(".Status").text(),
+                    Tanggal: tgl,
+                }
+                getDataAjax("/Admin/Penilaian/GetSelesaiPenilaian", temp, true, setDetailModalMahasiswa);
+            }
+        });
+        function setDetailModalMahasiswa(data) {
+            $('#ModalDetailNilai').modal({ backdrop: 'static', keyboard: false, show: true });
+            $('#GRating').html(data[0].GlobalRating)
+            loadTableDetailNilai(data)
+        }
+        function secheckMhs(data) {
+            $(".Chimg").removeClass("d-none");
+            $('#ChNama').html(data[0].Nama);
+            $('#ChMhsID').html(data[0].MahasiswaID);
+            $('#ChStatus').html(`<span class='badge badge-danger'>${data[0].Status}</span>`);
+            $('#ChBtn').html(` <button type="button" class="btn btn-info  btn-round btn-sm" style="min-width:250px" onclick="CreateData(${data[0].Id})">  <i class="fa fa-arrow-circle-o-right"> </i> Nilai</button>`);
+
+        }
+        function setSoal(data) {
+            $('#SJudul').html(data[0].JudulStation);
+            $('#Salokasi').html(data[0].AlokasiWaktu + " Menit");
+            $('#STKemampuan').html(data[0].TingkatKemampuan);
+            $('#SSKategoriTubuh').html(data[0].SistemKategoriTubuh);
+            $('#SInstruksiPeserta').html(data[0].InstruksiPeserta);
+            $('#SInstruksiPenguji').html(data[0].InstruksiPenguji);
+        }
+        function setMahasiswa(data) {
+            $('#LengthMhs').html(Object.keys(data).length);
+            loadTableReq(data)
+        }
+        var loadTableReq = function (data) {
+            $('.table-mappingMahasiswa').DataTable().destroy();
+            var groupColumn = 0;
+            var table = $('.table-mappingMahasiswa').DataTable({
+                "columnDefs": [{
+                    "searchable": false,
+                    "orderable": false,
+                    "paging": false,
+                    "targets": 0
+                }],
+                "pageLength": 5,
+                "lengthMenu": [[5, 10, 20, -1], [5, 10, 20, 'All']],
+
+                "order": [[0, 'asc']],
+                "aaSorting": [[0, "asc"]],
+                "data": data,
+                "columns": [
+                    {
+                        "data": null,
+                        "orderable": "false",
+                        "render": function (data, type, full, meta) {
+                            num = meta.row + 1;
+                            return '<strong class="center child">' + num + '</strong>';
+                        }
+                    },
+                    {
+                        "data": "TahunAngkatan",
+                        "name": "TahunAngkatan",
+                        "render": function (data, type, row, meta) {
+                            return '<div class="center child">' + data + '</div><span hidden class="dataID ">' + row.MhsID + '</span >';
+                        }
+                    },
+                    {
+                        "data": "MahasiswaID",
+                        "name": "MahasiswaID",
+                        "render": function (data, type, row, meta) {
+                            return '<div class="center child Cmp ">' + data + '</div>';
+                        }
+                    },
+                    {
+                        "data": "Nama",
+                        "name": "Nama",
+                        "render": function (data, type, row, meta) {
+                            return '<div class="center Nama child">' + data + '</div>';
+                        }
+                    },
+                    {
+                        "data": "Status",
+                        "name": "Status",
+                        "render": function (data, type, row, meta) {
+                            if (data == 1) {
+                                return '<div class="center text-center Status child"><span class="badge badge-success">Selesai</span></div>';
+                            } else {
+                                return '<div class="center text-center Status child"><span class="badge badge-danger">Menunggu</span></div>';
+                            }
+                        }
+                    },
+                ],
+            })
+        }
+        var loadTableDetailNilai = function (data) {
+            $('.table-DetailnilaiAkhir').DataTable().destroy();
+            var groupColumn = 0;
+            var table = $('.table-DetailnilaiAkhir').DataTable({
+                "columnDefs": [{
+                    "searchable": false,
+                    "orderable": false,
+                    "paging": false,
+                    "targets": 0
+                }],
+                "paging": false,
+                "ordering": false,
+                "info": false,
+                "searching": false,
+                "order": [[0, 'asc']],
+                "aaSorting": [[0, "asc"]],
+                "data": data,
+                "columns": [
+                    {
+                        "data": null,
+                        "orderable": "false",
+                        "render": function (data, type, full, meta) {
+                            num = meta.row + 1;
+                            return '<strong class="center">' + num + '</strong>';
+                        }
+                    },
+                    {
+                        "data": "NamaKompetensi",
+                        "name": "NamaKompetensi",
+                        "render": function (data, type, row, meta) {
+                            return '<div class="center">' + data + '</div>';
+                        }
+                    },
+                    {
+                        "data": "NilaiKompetensi",
+                        "name": "NilaiKompetensi",
+                        "render": function (data, type, row, meta) {
+                            return '<div class="center">' + data + '</div>';
+                        }
+                    },
+                ],
+            })
+        }
+
+    </script>
+    <script src="~/Scripts/Admin/Penilaian/crud.js"></script>
+
+}
+
+
+

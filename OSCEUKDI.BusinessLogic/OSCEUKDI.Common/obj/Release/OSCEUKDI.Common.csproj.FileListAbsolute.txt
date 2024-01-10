@@ -1,0 +1,28 @@
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Common\bin\Release\OSCEUKDI.Common.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Common\bin\Release\OSCEUKDI.Common.pdb
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Common\bin\Release\OSCEUKDI.Entities.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Common\bin\Release\Newtonsoft.Json.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Common\bin\Release\EntityFramework.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Common\bin\Release\OSCEUKDI.Entities.pdb
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Common\bin\Release\OSCEUKDI.Entities.dll.config
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Common\bin\Release\Newtonsoft.Json.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Common\bin\Release\EntityFramework.xml
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Common\obj\Release\OSCEUKDI.Common.csproj.AssemblyReference.cache
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Common\obj\Release\OSCEUKDI.Common.csproj.CoreCompileInputs.cache
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Common\obj\Release\OSCEUKDI.Common.csproj.CopyComplete
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Common\obj\Release\OSCEUKDI.Common.dll
+D:\Profession\Metrodata\Atma Jaya\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Common\obj\Release\OSCEUKDI.Common.pdb
+E:\SourceCode\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Common\bin\Release\OSCEUKDI.Common.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Common\bin\Release\OSCEUKDI.Common.pdb
+E:\SourceCode\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Common\bin\Release\OSCEUKDI.Entities.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Common\bin\Release\Newtonsoft.Json.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Common\bin\Release\EntityFramework.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Common\bin\Release\OSCEUKDI.Entities.pdb
+E:\SourceCode\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Common\bin\Release\OSCEUKDI.Entities.dll.config
+E:\SourceCode\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Common\bin\Release\Newtonsoft.Json.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Common\bin\Release\EntityFramework.xml
+E:\SourceCode\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Common\obj\Release\OSCEUKDI.Common.csproj.AssemblyReference.cache
+E:\SourceCode\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Common\obj\Release\OSCEUKDI.Common.csproj.CoreCompileInputs.cache
+E:\SourceCode\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Common\obj\Release\OSCEUKDI.Common.csproj.CopyComplete
+E:\SourceCode\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Common\obj\Release\OSCEUKDI.Common.dll
+E:\SourceCode\osce-uaj\OSCEUKDI.BusinessLogic\OSCEUKDI.Common\obj\Release\OSCEUKDI.Common.pdb

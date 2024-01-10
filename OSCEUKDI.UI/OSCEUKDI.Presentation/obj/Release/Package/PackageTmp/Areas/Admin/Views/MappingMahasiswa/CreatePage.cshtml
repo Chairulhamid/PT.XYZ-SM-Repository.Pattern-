@@ -1,0 +1,213 @@
+﻿@{
+    ViewBag.Title = "Mapping Mahasiswa";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdminOSCE.cshtml";
+}
+@section css{
+
+    <link href="~/Content/select2.min.css" rel="stylesheet" />
+    @Scripts.Render("~/bundles/jquery")
+}
+
+<div class="">
+    <div class="title_left">
+        <a href="javascript:history.back()" class="btn btn-circle text-secondary"><i class="fa fa-arrow-left"></i></a>
+        <span class="text-secondary h3"><strong>Tambah </strong></span><em><strong class="text-info">Data</strong></em>
+    </div>
+    <div class="clearfix"></div>
+    <div class="alert alert-warning d-none  alert-dismissible  text-white" id="danger-alert" role="alert">
+        <i class="fa fa-exclamation-triangle" style="font-size:20px" aria-hidden="true"></i>
+        <span id="alertText" class="" style="font-size:20px"></span>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>Mapping Mahasiswa</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                        <li>
+                            <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                        </li>
+                        <li>
+                            <a class="close-link"><i class="fa fa-close"></i></a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <form class="" action="" method="post">
+                        <div class="form-group row">
+                            <div class="col-md-6 col-sm-6  form-group has-feedback">
+                                <h6 for="">Acad Career <b class="text-danger">*</b> </h6>
+                                <select name="ACADCareer" id="ACADCareer" class="form-control input-data">
+                                    <option value="" selected disabled>Pilih Acad Career</option>
+                                    @{
+                                        foreach (var dt in ViewData["ACAD"] as IEnumerable<OSCEUKDI.Entities.ViewModel.VMDropDown>)
+                                        {
+                                            <option value="@dt.Nama">@dt.Nama</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                            <div class="col-md-6 col-sm-6  form-group has-feedback">
+                                <h6 for="">Tahun Semester <b class="text-danger">*</b> </h6>
+                                <select disabled name="TahunSemester" id="TahunSemester" class="form-control input-data">
+                                    <option value="" selected disabled>Pilih Tahun Semester</option>
+                                    @{
+                                        foreach (var dt in ViewData["semester"] as IEnumerable<OSCEUKDI.Entities.ViewModel.VMDropDownTahunSemester>)
+                                        {
+                                            <option value="@dt.Nilai">@dt.Nama</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-4 col-sm-4  form-group has-feedback">
+                                <h6 for="">Jadwal Test <b class="text-danger">*</b> </h6>
+                                <select disabled name="JadwalTestID" id="JadwalTestID" class="form-control fit input-data">
+                                    <option value="" selected disabled>Pilih Jadwal Test</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 col-sm-4  form-group has-feedback">
+                                <h6 for="">Prgram Studi <b class="text-danger">*</b> </h6>
+                                <select disabled name="AcadProg" id="AcadProg" class="form-control input-data">
+                                    <option value="" selected disabled>Pilih Program Studi</option>
+                                    @{
+                                        foreach (var dt in ViewData["AcadProg"] as IEnumerable<OSCEUKDI.Entities.ViewModel.VMDropDown>)
+                                        {
+                                            <option value="@dt.Nilai">@dt.Nama</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                            <div class="col-md-4 col-sm-4  form-group has-feedback">
+                                <h6 for="">Tahun Angkatan <b class="text-danger">*</b> </h6>
+                                <select disabled name="TahunAngkatanMhs" id="TahunAngkatanMhs" class="form-control fit input-data">
+                                    <option value="" selected disabled>Pilih Tahun Angkatan</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="x_content ">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="card-box table-responsive">
+                                        <p class="text-muted font-13 m-b-30">
+                                        </p>
+                                        <div class="btn-group mb-3" role="group">
+                                            <button class="btn btn-success shadow-sm" id="btnSelectAll"><em>Select All</em></button>
+                                            <button class="btn btn-danger shadow-sm" id="btnDeselectAll"><em>Deselect All</em></button>
+                                            <button type="button" onclick="ShowTmpData()" class="btn btn-secondary shadow-sm"><em> Show Records</em></button>
+                                        </div>
+                                        <p><em>Jumlah mahasiswa yang dipilih :</em> <span id="lengthRecord">0</span> records</p>
+                                        <table id="datatable-responsive" class="table table-striped  bg-gray table-bordered dt-responsive nowrap table-temp  " cellspacing="0" width="100%">
+                                            <thead>
+                                                <tr class="bg-light text-center">
+                                                    <th width="5%">No</th>
+                                                    <th>Tahun Angkatan</th>
+                                                    <th>Student ID</th>
+                                                    <th>Campus ID</th>
+                                                    <th>Nama</th>
+                                                    <th style="background-color: #94aeb1" width="1%"></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div id="nodata" class="text-center d-none">
+                                        <img src='~/assets/img/nodata.jpeg' class='img-fluid' style='max-height:300px;' />
+                                        <div class='mb-4 px-2'><strong>Tidak ada data yang tersedia pada tabel ini</strong></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ln_solid ">
+
+                            <div class="form-group mt-3">
+                                <div class="col-md-12 text-center">
+                                    <button type='button' class="btn btn-round btn-success" onclick="PostCreate()">
+                                        <i class="fa fa-save" aria-hidden="true"></i> Save
+                                    </button>
+                                    <button type='button' class="btn btn-round btn-secondary" onclick="history.back()">
+                                        <i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i> Back
+                                    </button>
+                                    <button type='reset' class="btn btn-round btn-danger">
+                                        <i class="fa fa-refresh" aria-hidden="true"></i> Reset
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="ModalTmp" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog  modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Detail</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="card-body modal-body">
+                <div class="table-responsive">
+                    <table id="" class="table table-striped  bg-gray table-bordered dt-responsive nowrap table-tempDetail  " cellspacing="0" width="100%">
+                        <thead>
+                            <tr class="bg-light text-center">
+                                <th width="5%">No</th>
+                                <th>Tahun Angkatan</th>
+                                <th>Campus ID</th>
+                                <th>Nama</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-body">
+                    <div class="row d-flex flex-sm-row flex-column-reverse justify-content-center">
+                        <div class="col-12 col-sm-auto">
+                            <button class="btn btn-block btn-secondary mb-2 shadow-sm" type="button" data-dismiss="modal">Kembali</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $('.table-responsive').hide();
+            $('#nodata').removeClass('d-none');
+            $("#ACADCareer").select2({
+                placeholder: "-- Pilih Acad Career --",
+                width: "100%"
+            });
+            $("#TahunSemester").select2({
+                placeholder: "-- Pilih Tahun Semester --",
+                width: "100%"
+            });
+            $("#JadwalTestID").select2({
+                placeholder: "-- Pilih Jadwal Test --",
+                width: "100%"
+            });
+            $("#AcadProg").select2({
+                placeholder: "-- Pilih Program Studi --",
+                width: "100%"
+            });
+            
+        })
+    </script>
+    <script src="~/Scripts/Admin/MappingMahasiswa/crud.js"></script>
+    <script src="~/Scripts/select2.min.js"></script>
+
+}

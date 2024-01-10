@@ -1,0 +1,244 @@
+﻿
+
+@{
+    ViewBag.Title = "Detail Riwayat Penilaian";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdminOSCE.cshtml";
+}
+@section css{
+    <style>
+        .table-detail tbody tr:hover {
+            cursor: pointer;
+        }
+    </style>
+    @Scripts.Render("~/bundles/jquery")
+}
+<div class="">
+    <div class="page-title">
+        <div class="title_left">
+            <h3>Detail Riwayat Penilaian</h3>
+        </div>
+    </div>
+    <div class="col-md-12 col-sm-12 ">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>List Detail Riwayat Penilaian - Mahasiswa</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li>
+                        <a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="x_content">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card-box table-responsive">
+                            <p class="text-muted font-13 m-b-30">
+                            </p>
+                            <table id="datatable-responsive" class="table table-striped bg-gray table-bordered dt-responsive nowrap table-detail" cellspacing="0" width="100%">
+                                <thead>
+                                    <tr  class="bg-green text-center">
+                                        <th width="5%">No</th>
+                                        <th width="5%">Tahun Angkatan</th>
+                                        <th width="5%">Mahasiswa ID</th>
+                                        <th width="5%">Nama</th>
+                                        <th width="5%">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="ModalDetailNilai" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title ">Nilai Mahasiswa</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-gray-900 fit">
+                <div class="p-3">
+                    <div class="row align-items-center mb-2" id="">
+                        <div class="col-12 table-responsive">
+                            <table id="datatable-responsive" class="table table-striped bg-gray table-bordered dt-responsive nowrap table-DetailnilaiAkhir" cellspacing="0" width="100%">
+                                <thead>
+                                    <tr class=" text-secondary text-center">
+                                        <th width="1%">No</th>
+                                        <th>Kompetensi Yang Dinilai</th>
+                                        <th width="5%">Nilai</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-3" style="background-image: linear-gradient(35755deg, #f8f9fc 100px, #95c3af 80%, #518784 100%); border-radius:10px">
+                    <h5 class="font-weight-bold mt-4 text-decoration-underline ">Global Rating : <span class="h5" id="GRating"></span></h5>
+                    <div class="clasModal"></div>
+                </div>
+            </div>
+            <div>
+                <hr />
+            </div>
+            <div class="modal-body">
+                <div class="row d-flex flex-sm-row flex-column-reverse justify-content-center">
+                    <div class="col-12 col-sm-auto">
+                        <button class="btn btn-block btn-round btn-secondary mb-2 shadow-sm" type="button" data-dismiss="modal">Kembali</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            var arr = JSON.parse('@Html.Raw(Json.Encode(Model))')
+            loadTableDetail(arr)
+        });
+        var loadTableDetail = function (data) {
+            $('.table-detail').DataTable().destroy();
+            var groupColumn = 0;
+            var table = $('.table-detail').DataTable({
+                "columnDefs": [{
+                    "searchable": false,
+                    "orderable": false,
+                    "paging": false,
+                    "targets": 0
+                }],
+                "order": [[0, 'asc']],
+                "aaSorting": [[0, "asc"]],
+                "data": data,
+                "columns": [
+                    {
+                        "data": null,
+                        "orderable": "false",
+                        "render": function (data, type, full, meta) {
+                            num = meta.row + 1;
+                            return '<strong class="center child">' + num + '</strong>';
+                        }
+                    },
+                    {
+                        "data": "TahunAngkatan",
+                        "name": "TahunAngkatan",
+                        "render": function (data, type, row, meta) {
+                            return '<div class="center child">' + data + '</div><span hidden class="dataID ">' + row.MhsID + '</span ><span hidden class="dataTanggalUjian ">' + row.TanggalUjian + '</span >';
+                        }
+                    },
+                    {
+                        "data": "MahasiswaID",
+                        "name": "MahasiswaID",
+                        "render": function (data, type, row, meta) {
+                            return '<div class="center child Cmp ">' + data + '</div>';
+                        }
+                    },
+                    {
+                        "data": "Nama",
+                        "name": "Nama",
+                        "render": function (data, type, row, meta) {
+                            return '<div class="center Nama child">' + data + '</div>';
+                        }
+                    },
+                    {
+                        "data": "Status",
+                        "name": "Status",
+                        "render": function (data, type, row, meta) {
+                            if (data == 1) {
+                                return '<div class="center text-center Status child"><span class="badge badge-success">Selesai</span></div>';
+                            } else {
+                                return '<div class="center text-center Status child"><span class="badge badge-danger">Menunggu</span></div>';
+                            }
+                        }
+                    },
+                ],
+            })
+        }
+        function capitalizeFirstLetter(sentence) {
+            return sentence.charAt(0).toUpperCase() + sentence.slice(1);
+        }
+        $('.table-detail tbody').on('click', ' .child', function () {
+            if ($(this).closest("tr").find(".Status").text() == "Menunggu") {
+                var loweSentence = $(this).closest("tr").find(".Nama").text().toLowerCase();
+                var capitalizedSentence = capitalizeFirstLetter(loweSentence);
+                Swal.fire({
+                    title: `${capitalizedSentence} belum melakukan ujian.`,
+                    icon: 'warning',
+                    confirmButtonColor: '#3c7a6b',
+                });
+                return false;
+            } else {
+                temp = {
+                    Id: $(this).closest("tr").find(".dataID").text(),
+                    MahasiswaID: $(this).closest("tr").find(".Cmp").text(),
+                    Nama: $(this).closest("tr").find(".Nama").text(),
+                    Status: $(this).closest("tr").find(".Status").text(),
+                    Tanggal: $(this).closest("tr").find(".dataTanggalUjian").text(),
+                }
+                getDataAjax("/Admin/Penilaian/GetSelesaiPenilaian", temp, true, setDetailModalMahasiswa);
+            }
+        });
+        function setDetailModalMahasiswa(data) {
+            $('#ModalDetailNilai').modal({ backdrop: 'static', keyboard: false, show: true });
+            $('#GRating').html(data[0].GlobalRating)
+            loadTableDetailNilai(data)
+        }
+        var loadTableDetailNilai = function (data) {
+            $('.table-DetailnilaiAkhir').DataTable().destroy();
+            var groupColumn = 0;
+            var table = $('.table-DetailnilaiAkhir').DataTable({
+                "columnDefs": [{
+                    "searchable": false,
+                    "orderable": false,
+                    "paging": false,
+                    "targets": 0
+                }],
+                "paging": false,
+                "ordering": false,
+                "info": false,
+                "searching": false,
+                "order": [[0, 'asc']],
+                "aaSorting": [[0, "asc"]],
+                "data": data,
+                "columns": [
+                    {
+                        "data": null,
+                        "orderable": "false",
+                        "render": function (data, type, full, meta) {
+                            num = meta.row + 1;
+                            return '<strong class="center">' + num + '</strong>';
+                        }
+                    },
+                    {
+                        "data": "NamaKompetensi",
+                        "name": "NamaKompetensi",
+                        "render": function (data, type, row, meta) {
+                            return '<div class="center">' + data + '</div>';
+                        }
+                    },
+                    {
+                        "data": "NilaiKompetensi",
+                        "name": "NilaiKompetensi",
+                        "render": function (data, type, row, meta) {
+                            return '<div class="center">' + data + '</div>';
+                        }
+                    },
+                ],
+            })
+        }
+    </script>
+    <script src="~/Scripts/Admin/RiwayatPenilaian/detailRiwayat.js"></script>
+}

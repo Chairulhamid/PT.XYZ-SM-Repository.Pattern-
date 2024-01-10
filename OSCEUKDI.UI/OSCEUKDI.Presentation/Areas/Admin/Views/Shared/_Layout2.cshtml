@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="~/Asset/Atma-Logo.png" type="image/x-icon">
+    <title>@ViewBag.Title - OSCEUKDI</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" type="text/css" href="~/Content/Admin/AdminCostumeBS4.css">
+    <link href="~/Content/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.1/css/jquery.dataTables.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    @RenderSection("css", required: false)
+</head>
+<style>
+    body {
+        padding-top: 105px;
+    }
+
+    a:hover {
+        cursor: pointer;
+    }
+
+    input {
+        max-width: 100%;
+    }
+
+    select {
+        max-width: 100%;
+    }
+
+    .split {
+        height: 96%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        overflow-x: hidden;
+        padding-top: 105px;
+    }
+    /* Control the left side */
+    .left {
+        left: 0;
+        width: 20%;
+    }
+    /* Control the right side */
+    .right {
+        right: 0;
+        width: 80%;
+        /*background-color: #c1baba;*/
+    }
+
+    li {
+        border: solid;
+        border-color: #FF8A04;
+        border-radius: 5px;
+        margin: 10px;
+        border-width: 1px;
+    }
+
+        li a {
+            color: #FF8A04;
+        }
+
+            li a:focus {
+                color: #FF8A04;
+            }
+
+            li a:hover {
+                color: #FF8A04;
+            }
+
+    textarea {
+        max-width: 100%;
+    }
+</style>
+<body>
+
+    @RenderSection("modal", required: false)
+
+    <div class="body-content split right">
+        <nav>
+            <ul class="nav split left">
+                @{
+                    var menuParent = (List<OSCEUKDI.Entities.Models.Menu>)Session["MenuList"];
+                    var menuSub = (List<OSCEUKDI.Entities.Models.Menu>)Session["MenuListSub"];
+                    var menuParentActive = (string)Session["MenuParentID"];
+                    var urlActive = (string)Session["urlActive"];
+                    if (menuParent != null)
+                    {
+                        int i = 0;
+                        foreach (var parent in menuParent)
+                        {
+                            i++;
+                            string namsub = "submenu" + i.ToString();
+                            <li>
+                                @if (menuParentActive == parent.ID.ToString())
+                                {
+                                    <a href="@parent.MenuUrl" id="btn-1" data-toggle="collapse" data-target="#@namsub" aria-expanded="true"><i class="@parent.MenuIcon"></i> @parent.MenuName</a>
+                                    <ul class="nav collapse in" id="@namsub" role="menu" aria-labelledby="btn-1" aria-expanded="true">
+                                        @foreach (var subMenu in (menuSub).Where(x => x.MenuParent == parent.ID.ToString()))
+                                        {
+                                            if (urlActive == subMenu.MenuUrl)
+                                            {
+                                                <li style="background-color:#eeeeee"><a href="@subMenu.MenuUrl"> @subMenu.MenuName</a></li>
+                                            }
+                                            else
+                                            {
+                                                <li><a href="@subMenu.MenuUrl"> @subMenu.MenuName</a></li>
+                                            }
+                                        }
+                                    </ul>
+                                }
+                                else
+                                {
+                                    <a href="@parent.MenuUrl" id="btn-1" data-toggle="collapse" data-target="#@namsub" aria-expanded="false"><i class="@parent.MenuIcon"></i> @parent.MenuName</a>
+                                    <ul class="nav collapse" id="@namsub" role="menu" aria-labelledby="btn-1">
+                                        @foreach (var subMenu in (menuSub).Where(x => x.MenuParent == parent.ID.ToString()))
+                                        {
+
+                                            <li><a href="@subMenu.MenuUrl"> @subMenu.MenuName</a></li>
+                                        }
+                                    </ul>
+                                }
+                            </li>
+                        }
+
+                    }
+                }
+            </ul>
+        </nav>
+
+        @RenderBody()
+        <div class="navbar navbar-fixed-top" style="background-color: #FF8A04;">
+            <img src="~/Asset/Lambang_Unika_Atma_Jaya.png" style="max-height: 75px; margin: 15px 25px;" /><!-- Avatar -->
+            <div class="dropdown" style="float: right; margin: 27.5px; ">
+                <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <img src="~/Asset/profile.png" height="50" alt="" />
+                    <asd style="color: black; font-weight: bold; font-size: 16px;">@HttpContext.Current.Session["username"].ToString()</asd>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                    <li>
+                        <a href="@Url.Action("Logout", "AdminLogin")">Logout</a>
+                    </li>
+                </ul>
+            </div>
+            <footer style="height: 3%; background-color: white; vertical-align: central; position: fixed; left: 0; bottom: 0; width: 100%; text-align: center; font-size: auto">
+                <p> &copy; Copyright 2021 Universitas Katolik Indonesia Atma Jaya - All Right Reserved</p>
+            </footer>
+        </div>
+    </div>
+
+    @*<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>*@
+    <script src="~/apexcharts/dist/apexcharts.js"></script>
+    <script src="~/apexcharts/dist/apexcharts.min.js"></script>
+    <script src="~/Scripts//loading/loadingoverlay.min.js"></script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script src="~/Scripts/select2.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.1/js/jquery.dataTables.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

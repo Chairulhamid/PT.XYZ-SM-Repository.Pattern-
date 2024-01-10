@@ -1,0 +1,214 @@
+﻿
+
+@{
+    ViewBag.Title = "Rubrik Station";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdminOSCE.cshtml";
+}
+@section css{
+    <script src="~/assets/vendors/ckeditor/ckeditor.js"></script>
+    <script src="~/assets/vendors/ckeditor/samples/js/sample.js"></script>
+    <link href="~/Content/select2.min.css" rel="stylesheet" />
+    @Scripts.Render("~/bundles/jquery")
+}
+
+<div class="">
+    <div class="title_left">
+        <a href="javascript:history.back()" class="btn btn-circle text-secondary"><i class="fa fa-arrow-left"></i></a>
+        <span class="text-secondary h3"><strong>Tambah </strong></span><em><strong class="text-info">Data</strong></em>
+    </div>
+    <div class="clearfix"></div>
+    <div class="alert alert-warning d-none  alert-dismissible  text-white" id="danger-alert" role="alert">
+        <i class="fa fa-exclamation-triangle" style="font-size:20px" aria-hidden="true"></i>
+        <span id="alertText" class="" style="font-size:20px"></span>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>Rubrik Station</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                        <li>
+                            <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                        </li>
+                        <li>
+                            <a class="close-link"><i class="fa fa-close"></i></a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <div class="x_content bs-example-popovers alertCopy">
+                        <div class="alert alert-secondary alert-dismissible " role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+
+                            <div class="modal-body text-gray-900 fit">
+
+
+                                <i class="fa fa-info-circle" aria-hidden="true"></i> : <b>Copy &<em> Paste</em></b>
+                                <p>
+                                    Jika ingin melakukan Copy &<em> Paste</em> data <strong>Rubrik Station</strong> dengan klik tombol berikut
+                                    <button type='reset' class="btn badge badge-secondary" onclick="ClickCopy()">
+                                        <i class="fa fa-copy" aria-hidden="true"></i> Copy
+                                    </button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group x_content card p-3 d-none contentCopy alert alert-secondary alert-dismissible" style="min-width: 170px !important;">
+                        <div class="control">
+                            <div class="input-group">
+                                <select name="CpyRubrik" id="CpyRubrik" class="form-control ">
+                                    <option value="" selected disabled>Cari Data Station</option>
+                                    @{
+                                        foreach (var dt in ViewData["RubrikKompetensi"] as IEnumerable<OSCEUKDI.Entities.Models.OSCEUKDI.RubrikKompetensi>)
+                                        {
+                                            <option value="@dt.ID">@dt.JudulStation</option>
+                                        }
+                                    }
+                                </select>
+                                <div class="input-group-prepend">
+                                    <button type="button" onclick="CopyStation()" class="btn btn-secondary shadow-sm "> Copy &<em>  Paste</em></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="x_content ">
+                    <form class="" action="" method="post">
+                        <h4 class="col-form-label">Acad Career<span class="required text-danger"> * </span></h4>
+                        <select name="ACADCareer" id="ACADCareer" class="form-control input-data col-5">
+                            <option value="" selected disabled>Acad Career</option>
+                            @{
+                                foreach (var dt in ViewData["ACAD"] as IEnumerable<OSCEUKDI.Entities.ViewModel.VMDropDown>)
+                                {
+                                    <option value="@dt.Nama">@dt.Nama</option>
+                                }
+                            }
+                        </select>
+                        <h4 class="col-form-label">Tahun Semester<span class="required text-danger"> * </span></h4>
+                        <select name="TahunSemester" id="TahunSemester" class="form-control input-data col-5">
+                            <option value="" selected disabled>Tahun Semester</option>
+                            @{
+                                foreach (var dt in ViewData["semester"] as IEnumerable<OSCEUKDI.Entities.ViewModel.VMDropDownTahunSemester>)
+                                {
+                                    <option value="@dt.Nilai">@dt.Nama</option>
+                                }
+                            }
+                        </select>
+                        <h4 class="col-form-label">Judul Station <span class="required text-danger"> * </span></h4>
+                        <textarea class="form-control input-data" id="JudulStation" name="JudulStation" rows="2" placeholder="Judul Station"></textarea>
+                        <h4 class="col-form-label">Alokasi Waktu <span class="required text-danger"> * </span></h4>
+                        <div class="form-inline">
+                            <input type="number" class="form-control col-2 input-data" id="AlokasiWaktu" name="AlokasiWaktu" placeholder="Ex: 15 Menit">
+                            <span class="input-group-btn">
+                                <span type="text" class="btn btn-light disabled">  Menit</span>
+                            </span>
+                        </div>
+                        <h4 class="col-form-label">Tingkat Kemampuan <span class="required text-danger"> * </span></h4>
+
+                        <textarea class="form-control input-data " id="TingkatKemampuan" name="TingkatKemampuan" rows="2" placeholder="Tingkat Kemampuan"></textarea>
+
+                        <h4 class="col-form-label">Kategori Sistem Tubuh <span class="required text-danger"> * </span></h4>
+                        <textarea class="form-control " id="Classification" name="editor" rows="2"></textarea>
+
+                        <h4 class="col-form-label">Instruksi Peserta Ujian <span class="required text-danger"> * </span></h4>
+                        <textarea class="form-control " id="InstruksiPeserta" name="editor1" rows="2"></textarea>
+
+                        <h4 class="col-form-label">Instruksi Penguji <span class="required text-danger"> * </span></h4>
+                        <textarea class="form-control " id="InstruksiPenguji" name="editor2" rows="2"></textarea>
+
+                        <h4 class="col-form-label">Kompetensi<span class="required text-danger"> * </span></h4>
+                        <div class="input-group">
+                            <select name="Kompetensi" id="Kompetensi" class="form-control col-8">
+                                <option value="" selected disabled>Pilih Kompetensi</option>
+                                @{
+                                    foreach (var dt in ViewData["Kompetensi"] as IEnumerable<OSCEUKDI.Entities.ViewModel.VMDropDown>)
+                                    {
+                                        <option value="@dt.Nilai">@dt.Nama</option>
+                                    }
+                                }
+                            </select>
+                            <span class="input-group-btn ml-1">
+                                <button disabled type="button" id="BtnAddKomp" class="btn btn-dark" title="Tambah Data"><i class="fa fa-plus"></i></button>
+                            </span>
+                        </div>
+
+                        <div class="x_content ">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="card-box table-responsive">
+                                        <p class="text-muted font-13 m-b-30">
+                                        </p>
+                                        <table id="datatable-responsive" class="table table-striped bg-gray table-bordered dt-responsive nowrap table-temp " cellspacing="0" width="100%">
+                                            <thead>
+                                                <tr class="bg-light text-center">
+                                                    <th width="5%">No</th>
+                                                    <th>Kompetensi</th>
+                                                    <th width="15%"><i class="fa fa-gear" aria-hidden="true" style="font-size:20px"></i></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ln_solid ">
+                            <div class="form-group mt-3">
+                                <div class="col-md-12 text-center">
+                                    <button type='button' class="btn btn-round btn-success" onclick="PostCreate()">
+                                        <i class="fa fa-save" aria-hidden="true"></i> Save
+                                    </button>
+                                    <button type='button' class="btn btn-round btn-secondary" onclick="history.back()">
+                                        <i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i> Back
+                                    </button>
+                                    <button type='reset' class="btn btn-round btn-danger">
+                                        <i class="fa fa-refresh" aria-hidden="true"></i> Reset
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script src="~/Scripts/Admin/RubrikKompetensi/crud.js"></script>
+    <script src="~/Scripts/select2.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#CpyRubrik").select2({
+                placeholder: "-- Cari Judul Station --",
+                width: "85%"
+            });
+            $("#ACADCareer").select2({
+                placeholder: "-- Cari Acad Career --",
+                width: "50%"
+            });
+            $("#TahunSemester").select2({
+                placeholder: "-- Cari Tahun Semester --",
+                width: "50%"
+            });
+            $("#Kompetensi").select2({
+                placeholder: "-- Cari Kompetensi --",
+                width: "50%"
+            });
+            $(".btnndelete").addClass("d-none");
+        })
+        function ClickCopy() {
+            $(".alertCopy").addClass("d-none");
+            $(".contentCopy").removeClass("d-none").addClass("show");
+          
+        }
+        CKEDITOR.replace('editor');
+        CKEDITOR.replace('editor1');
+        CKEDITOR.replace('editor2');
+    </script>
+}

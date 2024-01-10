@@ -1,0 +1,70 @@
+﻿.input-pendaftaran {
+    border-color: #f7ba74;
+}
+
+.input-pendaftaran:focus {
+    outline: none !important;
+    border-color: #f7ba74;
+    box-shadow: 0 0 10px #f7ba74;
+}
+
+.coral {
+    color : coral;
+}
+.center{
+    align-content:center;
+    align-items:center;
+    vertical-align : unset;
+    align-self : center;
+    text-align:center
+}
+
+.input-data {
+    border-color: #f7ba74 !important;
+}
+
+.input-data:focus {
+    outline: none !important;
+    border-color: #f7ba74;
+    box-shadow: 0 0 10px #f7ba74;
+}
+
+.vertical-center-content{
+    margin-top:auto;
+    margin-bottom:auto
+}
+
+.zero-padding{
+    padding:10px 15px !important;
+}
+.vertical-center{
+    vertical-align : middle !important;
+}
+.no-border{
+    border : 0px !important;
+}
+
+.select2-container--default .select2-selection--single {
+    border-color: #f7ba74 !important;
+}
+.select2-container--default .select2-selection--single:focus {
+    outline: none !important;
+    border-color: #f7ba74;
+    box-shadow: 0 0 10px #f7ba74;
+}
+.hidden{
+    display:none
+}
+
+.small-text{
+    font-size : 0,2vw !important;
+}
+
+.zero-padding2 {
+    padding: 10px 13x !important;
+    font-size : 0.6vw
+}
+
+.breakhere {
+    page-break-after: always
+}
