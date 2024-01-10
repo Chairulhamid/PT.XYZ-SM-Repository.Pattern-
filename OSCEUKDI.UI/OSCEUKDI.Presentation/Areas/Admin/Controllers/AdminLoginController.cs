@@ -40,7 +40,7 @@ namespace OSCEUKDI.Presentation.Areas.Admin.Controllers
 
             if (ModelState.IsValid)
             {
-                OSCEUKDI.Entities.Models.User modeldata = _userService.Find(x => x.Email == model.Username && x.IsDeleted == false).FirstOrDefault();
+                OSCEUKDI.Entities.Models.User modeldata = _userService.Find(x => x.Email == model.Username ).FirstOrDefault();
                 if (modeldata != null)
                 {
                     if (modeldata.IsActive == false)
@@ -71,7 +71,7 @@ namespace OSCEUKDI.Presentation.Areas.Admin.Controllers
                 }
                 else
                 {
-                    ModelState.AddModelError("", "Username Not Found");
+                    ModelState.AddModelError("", "User Not Found");
                 }
             }
             return View(model);

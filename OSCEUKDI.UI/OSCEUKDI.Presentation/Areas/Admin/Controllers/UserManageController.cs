@@ -90,14 +90,14 @@ namespace OSCEUKDI.Presentation.Areas.Admin.Controllers
             int status = 200;
             try
             {
-                //var tmpEmail = _userService.Find(ip => ip.Email.ToLower() == user.Email.ToLower() && ip.IsActive == true && ip.IsDeleted == false).FirstOrDefault();
+                var tmpEmail = _userService.Find(ip => ip.Email.ToLower() == user.Email.ToLower() && ip.IsActive == true && ip.IsDeleted == false).FirstOrDefault();
                 //var tmpNoPeg = _userService.Find(ip => ip.NoPegawai.ToLower() == user.NoPegawai.ToLower() && ip.IsActive == true && ip.IsDeleted == false).FirstOrDefault();
-                //if (tmpEmail != null ) 
-                //{
-                //    status = 400;
-                //    message = "Email sudah terdaftar.";
-                //    goto SkipAct;
-                //}
+                if (tmpEmail != null)
+                {
+                    status = 400;
+                    message = "Email sudah terdaftar.";
+                    goto SkipAct;
+                }
                 //if (tmpNoPeg != null)
                 //{
                 //    status = 400;
@@ -757,6 +757,13 @@ namespace OSCEUKDI.Presentation.Areas.Admin.Controllers
 
                 return Json(new ServiceResponse { status = 500, message = e.Message });
             }
+        }
+        public ActionResult EditProfile()
+        {
+            var email = Session["email"].ToString();
+            var checkUser = _userService.Find(xx => xx.Email == email).FirstOrDefault();
+            var tmpData = _userService.Get(checkUser.ID);
+            return View(tmpData);
         }
     }
 }

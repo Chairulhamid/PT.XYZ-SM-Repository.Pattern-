@@ -32,15 +32,15 @@
             }
         },
         {
-            "data": "NoPegawai",
-            "name": "NoPegawai",
+            "data": "UserName",
+            "name": "UserName",
             "render": function (data, type, row, meta) {
                 return '<div class="center">' + data + '</div>';
             }
         },
         {
-            "data": "UserName",
-            "name": "UserName",
+            "data": "Email",
+            "name": "Email",
             "render": function (data, type, row, meta) {
                 return '<div class="center">' + data + '</div>';
             }

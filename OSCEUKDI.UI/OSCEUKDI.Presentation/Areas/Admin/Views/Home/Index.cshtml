@@ -22,57 +22,49 @@
     </div>
     <div class="col-md-12 col-sm-12 ">
         <div class="x_panel">
-            <h2 class="text-center">Sistem Supply Management PT XYZ</h2>
+            <h2 class="text-center">Sistem Supply Management PT.XYZ</h2>
             <div class="clearfix"><hr /></div>
-                        <div><h5><i class="fa fa-adjust"></i> Selamat Bergabung. Anda sudah bisa melakukan submit data Proyek pada sistem kami.</h5></div>
 
-            @{ 
+            @{
                 if (Session["RoleID"].ToString() == "19")
                 {
-                    if (ViewData["StatusApproval"].ToString() =="Approve" )
+                    if (ViewData["StatusApproval"].ToString() == "Approve")
                     {
-                    }
-                    <div></div>
-                }
-            }
-            @*@{
-            if (ViewData["StatusApproval"].ToString() == "Approve")
-            {
-                <button type="button" class="btn btn-round btn-info" onclick="CreateData()"> <i class="fa fa-plus-circle" aria-hidden="true"></i> Add Data</button><div class="x_content">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="card-box table-responsive">
-                                <p class="text-muted font-13 m-b-30">
-                                </p>
-                                <table id="datatable-responsive" class="table table-striped bg-gray table-bordered dt-responsive nowrap table-Proyek" cellspacing="0" width="100%">
-                                    <thead>
-                                        <tr class="bg-green text-center">
-                                            <th width="10%"><i class="fa fa-gear" aria-hidden="true" style="font-size:20px"></i></th>
-                                            <th width="5%">No</th>
-                                            <th>Nama</th>
-                                            <th>Deskripsi</th>
-                                            <th>Email Perusahaan</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                    </tbody>
-                                </table>
-                            </div>
-
+                        <div id="nodata" class="text-center ">
+                            <img src='~/assets/img/Approve.png' class='img-fluid' style='max-height:300px;' />
+                            <div><h5 class="text-center"> Selamat Bergabung. Silahkan melakukan submit Proyek Anda.</h5></div>
                         </div>
-                    </div>
-                </div>
+                    }
+                    else if (ViewData["StatusApproval"].ToString() == "Reject")
+                    {
+                        <div id="nodata" class="text-center ">
+                            <img src='~/assets/img/Reject.png' class='img-fluid' style='max-height:300px;' />
+                            <div><h5 class="text-center"> Maaf, Anda tidak dapat melakukan Sumbit Proyek, dikarenakan persetujuan Anda ditolak.</h5></div>
+                        </div>
+                    }
+                    else if (ViewData["StatusApproval"].ToString() == "Pending")
+                    {
+                        <div id="nodata" class="text-center ">
+                            <img src='~/assets/img/prosss.png' class='img-fluid' style='max-height:300px;' />
+                            <div><h5 class="text-center"> Selamat Bergabung. Silahkan menunggu Approval sebelum Anda Submit Proyek.</h5></div>
+                        </div>
+                    }
+                    else if (ViewData["StatusApproval"].ToString() == "Pending-1")
+                    {
+        <div id="nodata" class="text-center ">
+            <img src='~/assets/img/prosss.png' class='img-fluid' style='max-height:300px;' />
+            @if (ViewData["BidangUsaha"].ToString() != "" && ViewData["JenisPerusahaan"].ToString() != "")
+            {
+                <div><h5 class="text-center"> Data Anda sedang dalam Prosess.</h5></div>
             }
             else
             {
-                <div id="nodata" class="text-center ">
-                    <img src='~/assets/img/nodata.jpeg' class='img-fluid' style='max-height:300px;' />
-                    <div class='mb-4 px-2'><strong>Anda Belum Bisa Melakukan Submit Proyek.</strong></div>
-                </div>
+                <div><h5 class="text-center"> Silahkan lengkapi data Anda Terlebih dahulu. <a href="#" asp-area="" onclick="window.location.href = '/Admin/UserManage/EditProfile'" class="text-danger"> klik disini</a> untuk melengkapi data.</h5></div>
             }
-        }*@
-
-
+        </div>
+                    }
+                }
+            }
         </div>
     </div>
 </div>

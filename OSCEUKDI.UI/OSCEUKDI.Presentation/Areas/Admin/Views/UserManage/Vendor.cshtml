@@ -68,9 +68,10 @@
     </div>
 </div>
 @section scripts{
-    @*<script src="~/Scripts/Admin/RuangUjian/main.js"></script>
-    <script src="~/Scripts/Admin/RuangUjian/crud.js"></script>*@
     <script>
+        function Delete(id) {
+            DeleteDataAjax(id, "/Admin/UserManage/DeleteUser", "/Admin/UserManage/Vendor");
+        }
         var tableMenuUser = $('.table-vendor').DataTable({
             "columnDefs": [{
                 "searchable": false,
@@ -107,11 +108,11 @@
                             $('.btn-delete').addClass('d-none')
                         }
                         return `<div class="row justify-content-center">
-                            <div class="col" style="text-align:center">
-                                <a class="btn-update " href="javascript:void(0)" onclick="javascript:$('#id').val('${data}');$('#updateV').submit();" rel="tooltip" title="Edit" ><i class="fa fa-pencil-square-o" aria-hidden="true"style="font-size:20px"></i></a>
-                                <a class="btn-delete" rel="tooltip" title="remove" onclick="Delete('${data}')" class="table-action remove" href="javascript:void(0)" title="Delete"><i class="fa fa-trash-o" aria-hidden="true"style="font-size:20px"></i></a>
-                            </div>
-                        </div>`;
+                                <div class="col" style="text-align:center">
+                                    <a class="btn-update " href="javascript:void(0)" onclick="javascript:$('#id').val('${data}');$('#updateV').submit();" rel="tooltip" title="Edit" ><i class="fa fa-pencil-square-o" aria-hidden="true"style="font-size:20px"></i></a>
+                                    <a class="btn-delete" rel="tooltip" title="remove" onclick="Delete('${data}')" class="table-action remove" href="javascript:void(0)" title="Delete"><i class="fa fa-trash-o" aria-hidden="true"style="font-size:20px"></i></a>
+                                </div>
+                            </div>`;
                     }
                 },
                 {
@@ -173,19 +174,24 @@
                     "data": "StatusApproval",
                     "name": "StatusApproval",
                     "render": function (data, type, row, meta) {
-                        if (data == "Pending-1") {
-                            return '<div class="center">Pending</div>';
-                        } else {
-                        return '<div class="center">' + data + '</div>';
-                        }
+                        const statusMap = {
+                            "Pending-1": { text: "Approve Admin", color: "info" },
+                            "Approve": { text: "Approve Manager", color: "success" },
+                            "Pending": { text: "Pending", color: "dark" },
+                            "Reject": { text: "Reject", color: "danger" }
+                        };
 
+                        const status = statusMap[data] || { text: "", color: "" };
+
+                        return `<div class="text-center"><badge class="btn-${status.color} btn-round p-1">${status.text}</badge></div>`;
                     }
-                },
-                
+                }
+
+
             ],
             /* <a class="btn-update" href="javascript:void(0)" onclick="javascript:$('#id').val('${data}');$('#UpdateRole').submit();" rel="tooltip" title="Edit" ><i class="fa fa-pencil-square-o" aria-hidden="true"style="font-size:20px"></i></a>*/
             "initComplete": function (d) {
-                var notApplyFilterOnColumn = [0,1,4,5,6, 7];
+                var notApplyFilterOnColumn = [0, 1, 4, 5, 6, 7];
                 var inputFilterOnColumn = [];
                 var showFilterBox = 'afterHeading'; //beforeHeading, afterHeading
                 $('.gtp-dt-filter-row').remove();

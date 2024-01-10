@@ -34,8 +34,12 @@ namespace OSCEUKDI.Presentation.Areas.Admin.Controllers
             ViewData["isUpdate"] = HttpContext.Session["isUpdate"].ToString();
             ViewData["isDelete"] = HttpContext.Session["IsDelete"].ToString();
             var email = Session["email"].ToString();
+            ViewData["StatusApproval"] = "";
             var checkUser = _userService.Find(xx => xx.Email == email).FirstOrDefault();
+            if (checkUser.RoleID == 19)
+            {
             ViewData["StatusApproval"] = checkUser.StatusApproval.ToString();
+            }
             return View();
         }
         public ActionResult CreatePage()
@@ -107,16 +111,16 @@ namespace OSCEUKDI.Presentation.Areas.Admin.Controllers
                 return Json(new ServiceResponse { status = 500, message = e.Message });
             }
         }
-        //[HttpPost]
-        //public ActionResult DeleteData(int id)
-        //{
-        //    var data = _ruangUjianService.Get(id);
-        //    data.IsDeleted = true;
-        //    data.IsActive= false;
-        //    data.UpdatedBy = Session["username"] as string;
-        //    data.UpdatedDate = DateTime.Now;
-        //    _ruangUjianService.Save(data);
-        //    return Json(data);
-        //}
+        [HttpPost]
+        public ActionResult DeleteData(int id)
+        {
+            var data = _proyekService.Get(id);
+            data.IsDeleted = true;
+            data.IsActive = false;
+            data.UpdatedBy = Session["username"] as string;
+            data.UpdatedDate = DateTime.Now;
+            _proyekService.Save(data);
+            return Json(data);
+        }
     }
 }

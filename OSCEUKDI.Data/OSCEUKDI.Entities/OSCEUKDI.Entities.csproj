@@ -59,15 +59,11 @@
     <Compile Include="Map\MenuMap.cs" />
     <Compile Include="Map\MenuRoleMap.cs" />
     <Compile Include="Map\OSCEUKDIMap\ProyekMap.cs" />
-    <Compile Include="Map\OSCEUKDIMap\KompetensiMap.cs" />
-    <Compile Include="Map\OSCEUKDIMap\RuangUjianMap.cs" />
     <Compile Include="Map\RoleMap.cs" />
     <Compile Include="Map\UserMap.cs" />
     <Compile Include="Models\Menu.cs" />
     <Compile Include="Models\MenuRole.cs" />
-    <Compile Include="Models\OSCEUKDI\Kompetensi.cs" />
     <Compile Include="Models\OSCEUKDI\Proyek.cs" />
-    <Compile Include="Models\OSCEUKDI\RuangUjian.cs" />
     <Compile Include="Models\Role.cs" />
     <Compile Include="ViewModel\VMRegression.cs" />
     <Compile Include="ViewModel\VMMahasiswaPenilaian.cs" />

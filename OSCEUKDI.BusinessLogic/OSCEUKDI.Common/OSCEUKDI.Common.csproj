@@ -53,9 +53,7 @@
     <Compile Include="Interfaces\RepoInterfaces\IMenuRoleRepository.cs" />
     <Compile Include="Interfaces\RepoInterfaces\IRoleRepository.cs" />
     <Compile Include="Interfaces\RepoInterfaces\IUserRepository.cs" />
-    <Compile Include="Interfaces\RepoInterfaces\OSCEUKDIRepoInterfaces\IKompetensiRepository.cs" />
     <Compile Include="Interfaces\RepoInterfaces\OSCEUKDIRepoInterfaces\IProyekRepository.cs" />
-    <Compile Include="Interfaces\RepoInterfaces\OSCEUKDIRepoInterfaces\IRuangUjianRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

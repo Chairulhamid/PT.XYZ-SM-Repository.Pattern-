@@ -59,5 +59,5 @@ function PostUpdate() {
     }
 }
 function Delete(id) {
-    DeleteDataAjax(id, tmpUrlink.PostDelete, tmpUrlink.Load);
+    DeleteDataAjax(id, tmpUrlink.PostDelete, "/Admin/Menu");
 }

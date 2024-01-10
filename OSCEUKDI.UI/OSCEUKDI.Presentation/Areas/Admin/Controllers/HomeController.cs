@@ -15,7 +15,7 @@ namespace OSCEUKDI.Presentation.Areas.Admin.Controllers
     {
         private IMenuService _menuService;
         private IUserService _userService;
-     
+
         public HomeController(IMenuService menuService, IUserService userService)
         {
             _menuService = menuService;
@@ -26,9 +26,20 @@ namespace OSCEUKDI.Presentation.Areas.Admin.Controllers
         {
             var email = Session["email"].ToString();
             var checkUser = _userService.Find(xx => xx.Email == email).FirstOrDefault();
-            ViewData["StatusApproval"] = checkUser.StatusApproval.ToString();
+            if (checkUser.RoleID == 19)
+            {
+                ViewData["StatusApproval"] = checkUser.StatusApproval.ToString();
+                ViewData["BidangUsaha"] = "";
+                ViewData["JenisPerusahaan"] = "";
+                if (checkUser.BidangUsaha != null)
+                {
+                    ViewData["BidangUsaha"] = checkUser.BidangUsaha.ToString();
+                    ViewData["JenisPerusahaan"] = checkUser.JenisPerusahaan.ToString();
+                }
+            }
             return View();
         }
+
         //TESTING HOME GIT
         public ActionResult Home()
         {

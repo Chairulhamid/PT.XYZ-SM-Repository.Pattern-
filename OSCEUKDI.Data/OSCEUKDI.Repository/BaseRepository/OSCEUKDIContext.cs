@@ -29,17 +29,13 @@ namespace OSCEUKDI.Repository.BaseRepository
         public DbSet<User> Users { get; set; }    
         public DbSet<Role> Roles { get; set; }
         public DbSet<MenuRole> MenuRoles { get; set; }
-        public DbSet<Menu> Menus { get; set; }
-        public DbSet<RuangUjian> RuangUjians { get; set; }      
-        public DbSet<Kompetensi> Kompetensis { get; set; }      
+        public DbSet<Menu> Menus { get; set; } 
         public DbSet<Proyek> Proyeks { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new MenuMap());
             modelBuilder.Configurations.Add(new RoleMap());
             modelBuilder.Configurations.Add(new UserMap());         
-            modelBuilder.Configurations.Add(new RuangUjianMap());
-            modelBuilder.Configurations.Add(new KompetensiMap());
             modelBuilder.Configurations.Add(new ProyekMap());
 
             base.OnModelCreating(modelBuilder);

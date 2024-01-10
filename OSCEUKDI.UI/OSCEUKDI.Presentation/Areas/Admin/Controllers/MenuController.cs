@@ -163,7 +163,7 @@ namespace OSCEUKDI.Presentation.Areas.Admin.Controllers
             data.UpdatedDate = DateTime.Now;
 
             _menuService.Save(data);
-            return Json(data);
+            return Json(new ServiceResponse { status = 200, message = "Data Berhasil Dihapus!" });
         }
     }
 }

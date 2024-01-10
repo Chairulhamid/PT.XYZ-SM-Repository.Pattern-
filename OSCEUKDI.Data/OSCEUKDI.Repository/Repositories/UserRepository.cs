@@ -23,7 +23,7 @@ namespace OSCEUKDI.Repository.Repositories
         {
             using (var context = new OSCEUKDIContext())
             {
-                var result = context.Users.Where(x => x.IsDeleted == false && x.IsActive == true);
+                var result = context.Users.Where(x => x.IsDeleted == false && x.IsActive == true && x.RoleID !=19);
                 var listmodel = result.Select(
                     z => new GridData
                     {

@@ -38,9 +38,13 @@
                 <div class="clearfix"></div>
             </div>
             @{
-                if (ViewData["StatusApproval"].ToString() == "Approve")
+                if (ViewData["StatusApproval"].ToString() == "Approve" || ViewData["StatusApproval"].ToString() == "")
                 {
-                    <button type="button" class="btn btn-round btn-info" onclick="CreateData()"> <i class="fa fa-plus-circle" aria-hidden="true"></i> Add Data</button><div class="x_content">
+                    if (ViewData["StatusApproval"].ToString() != "")
+                    {
+                        <button type="button" class="btn btn-round btn-info" onclick="CreateData()"> <i class="fa fa-plus-circle" aria-hidden="true"></i> Add Data</button>
+                    }
+                    <div class="x_content">
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="card-box table-responsive">
@@ -84,6 +88,9 @@
         function CreateData() {
             window.location.href = "/Admin/Proyek/CreatePage";
         }
+        function Delete(id) {
+            DeleteDataAjax(id, "/Admin/Proyek/DeleteData", "/Admin/Proyek");
+        }
         var tableMenuUser = $('.table-Proyek').DataTable({
             "columnDefs": [{
                 "searchable": false,
@@ -120,11 +127,11 @@
                             $('.btn-delete').addClass('d-none')
                         }
                         return `<div class="row justify-content-center">
-                                    <div class="col" style="text-align:center">
-                                        <a class="btn-update " href="javascript:void(0)" onclick="javascript:$('#id').val('${data}');$('#updateProyek').submit();" rel="tooltip" title="Edit" ><i class="fa fa-pencil-square-o" aria-hidden="true"style="font-size:20px"></i></a>
-                                        <a class="btn-delete" rel="tooltip" title="remove" onclick="Delete('${data}')" class="table-action remove" href="javascript:void(0)" title="Delete"><i class="fa fa-trash-o" aria-hidden="true"style="font-size:20px"></i></a>
-                                    </div>
-                                </div>`;
+                                        <div class="col" style="text-align:center">
+                                            <a class="btn-update " href="javascript:void(0)" onclick="javascript:$('#id').val('${data}');$('#updateProyek').submit();" rel="tooltip" title="Edit" ><i class="fa fa-pencil-square-o" aria-hidden="true"style="font-size:20px"></i></a>
+                                            <a class="btn-delete" rel="tooltip" title="remove" onclick="Delete('${data}')" class="table-action remove" href="javascript:void(0)" title="Delete"><i class="fa fa-trash-o" aria-hidden="true"style="font-size:20px"></i></a>
+                                        </div>
+                                    </div>`;
                     }
                 },
                 {
